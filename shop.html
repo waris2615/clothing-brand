@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - ELEGANTE | Luxury Clothing Brand</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="shop.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">ELEGANTE</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <button class="icon-btn"><i class="fas fa-search"></i></button>
+                <button class="icon-btn"><i class="fas fa-heart"></i></button>
+                <button class="icon-btn cart-btn">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+            <button class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="header-bg"></div>
+        <div class="header-content">
+            <h1>Shop</h1>
+            <p>Discover our complete collection of luxury garments</p>
+        </div>
+    </header>
+
+    <section class="shop-content">
+        <div class="shop-container">
+            <aside class="shop-sidebar">
+                <div class="filter-section">
+                    <h3>Categories</h3>
+                    <ul class="filter-list">
+                        <li><a href="#" class="active">All Products</a></li>
+                        <li><a href="#">Men's Outerwear</a></li>
+                        <li><a href="#">Women's Collection</a></li>
+                        <li><a href="#">Shirts & Tops</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Footwear</a></li>
+                    </ul>
+                </div>
+                <div class="filter-section">
+                    <h3>Price Range</h3>
+                    <div class="price-filter">
+                        <input type="range" min="0" max="3000" value="3000" class="price-slider">
+                        <div class="price-values">
+                            <span>$0</span>
+                            <span>$3,000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-section">
+                    <h3>Size</h3>
+                    <div class="size-options">
+                        <button>XS</button>
+                        <button>S</button>
+                        <button>M</button>
+                        <button>L</button>
+                        <button>XL</button>
+                    </div>
+                </div>
+                <div class="filter-section">
+                    <h3>Color</h3>
+                    <div class="color-options">
+                        <span class="color active" style="background: #1a1a1a;"></span>
+                        <span class="color" style="background: #2c3e50;"></span>
+                        <span class="color" style="background: #8b4513;"></span>
+                        <span class="color" style="background: #c9a959;"></span>
+                        <span class="color" style="background: #800020;"></span>
+                        <span class="color" style="background: #ffffff; border: 1px solid #ddd;"></span>
+                    </div>
+                </div>
+            </aside>
+
+            <main class="shop-main">
+                <div class="shop-toolbar">
+                    <div class="results-count">Showing 12 of 48 products</div>
+                    <div class="sort-options">
+                        <select>
+                            <option>Sort by: Featured</option>
+                            <option>Price: Low to High</option>
+                            <option>Price: High to Low</option>
+                            <option>Newest First</option>
+                        </select>
+                    </div>
+                    <div class="view-options">
+                        <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i></button>
+                        <button class="view-btn" data-view="list"><i class="fas fa-list"></i></button>
+                    </div>
+                </div>
+
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-3d">
+                            <div class="product-wrapper">
+                                <div class="product-img">
+                                    <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400&h=500&fit=crop" alt="Wool Jacket">
+                                    <span class="badge new">New</span>
+                                </div>
+                                <div class="product-img hover-img">
+                                    <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=500&fit=crop" alt="Wool Jacket Back">
+                                </div>
+                            </div>
+                            <div class="product-actions">
+                                <button class="action-btn"><i class="fas fa-eye"></i></button>
+                                <button class="action-btn"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-sync-alt"></i></button>
+                            </div>
+                            <button class="add-to-cart">Add to Bag</button>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Men's Outerwear</span>
+                            <h3>Classic Wool Jacket</h3>
+                            <div class="product-price">$895</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-3d">
+                            <div class="product-wrapper">
+                                <div class="product-img">
+                                    <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=500&fit=crop" alt="Silk Dress">
+                                </div>
+                                <div class="product-img hover-img">
+                                    <img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=400&h=500&fit=crop" alt="Silk Dress Back">
+                                </div>
+                            </div>
+                            <div class="product-actions">
+                                <button class="action-btn"><i class="fas fa-eye"></i></button>
+                                <button class="action-btn"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-sync-alt"></i></button>
+                            </div>
+                            <button class="add-to-cart">Add to Bag</button>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Women's Dresses</span>
+                            <h3>Silk Evening Dress</h3>
+                            <div class="product-price">$1,250</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-3d">
+                            <div class="product-wrapper">
+                                <div class="product-img">
+                                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=500&fit=crop" alt="Cotton Shirt">
+                                </div>
+                                <div class="product-img hover-img">
+                                    <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=400&h=500&fit=crop" alt="Cotton Shirt Back">
+                                </div>
+                            </div>
+                            <div class="product-actions">
+                                <button class="action-btn"><i class="fas fa-eye"></i></button>
+                                <button class="action-btn"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-sync-alt"></i></button>
+                            </div>
+                            <button class="add-to-cart">Add to Bag</button>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Men's Shirts</span>
+                            <h3>Cotton Oxford Shirt</h3>
+                            <div class="product-price">$285</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-3d">
+                            <div class="product-wrapper">
+                                <div class="product-img">
+                                    <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=400&h=500&fit=crop" alt="Leather Bag">
+                                    <span class="badge sale">Sale</span>
+                                </div>
+                                <div class="product-img hover-img">
+                                    <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=500&fit=crop" alt="Leather Bag Side">
+                                </div>
+                            </div>
+                            <div class="product-actions">
+                                <button class="action-btn"><i class="fas fa-eye"></i></button>
+                                <button class="action-btn"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-sync-alt"></i></button>
+                            </div>
+                            <button class="add-to-cart">Add to Bag</button>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Accessories</span>
+                            <h3>Italian Leather Tote</h3>
+                            <div class="product-price"><span class="original">$1,650</span> $1,450</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-3d">
+                            <div class="product-wrapper">
+                                <div class="product-img">
+                                    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=400&h=500&fit=crop" alt="Oxford Shoes">
+                                </div>
+                                <div class="product-img hover-img">
+                                    <img src="https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=400&h=500&fit=crop" alt="Oxford Shoes Side">
+                                </div>
+                            </div>
+                            <div class="product-actions">
+                                <button class="action-btn"><i class="fas fa-eye"></i></button>
+                                <button class="action-btn"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-sync-alt"></i></button>
+                            </div>
+                            <button class="add-to-cart">Add to Bag</button>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Footwear</span>
+                            <h3>Oxford Brogue Shoes</h3>
+                            <div class="product-price">$780</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-3d">
+                            <div class="product-wrapper">
+                                <div class="product-img">
+                                    <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=400&h=500&fit=crop" alt="Cashmere Sweater">
+                                </div>
+                                <div class="product-img hover-img">
+                                    <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&h=500&fit=crop" alt="Cashmere Sweater Detail">
+                                </div>
+                            </div>
+                            <div class="product-actions">
+                                <button class="action-btn"><i class="fas fa-eye"></i></button>
+                                <button class="action-btn"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-sync-alt"></i></button>
+                            </div>
+                            <button class="add-to-cart">Add to Bag</button>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Women's Knitwear</span>
+                            <h3>Cashmere V-Neck Sweater</h3>
+                            <div class="product-price">$520</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-3d">
+                            <div class="product-wrapper">
+                                <div class="product-img">
+                                    <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400&h=500&fit=crop" alt="Blazer">
+                                </div>
+                                <div class="product-img hover-img">
+                                    <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=500&fit=crop" alt="Blazer Back">
+                                </div>
+                            </div>
+                            <div class="product-actions">
+                                <button class="action-btn"><i class="fas fa-eye"></i></button>
+                                <button class="action-btn"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-sync-alt"></i></button>
+                            </div>
+                            <button class="add-to-cart">Add to Bag</button>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Men's Tailoring</span>
+                            <h3>Classic Navy Blazer</h3>
+                            <div class="product-price">$1,195</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-3d">
+                            <div class="product-wrapper">
+                                <div class="product-img">
+                                    <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=500&fit=crop" alt="Cocktail Dress">
+                                    <span class="badge new">New</span>
+                                </div>
+                                <div class="product-img hover-img">
+                                    <img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=400&h=500&fit=crop" alt="Cocktail Dress Back">
+                                </div>
+                            </div>
+                            <div class="product-actions">
+                                <button class="action-btn"><i class="fas fa-eye"></i></button>
+                                <button class="action-btn"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-sync-alt"></i></button>
+                            </div>
+                            <button class="add-to-cart">Add to Bag</button>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Women's Dresses</span>
+                            <h3>Cocktail Midi Dress</h3>
+                            <div class="product-price">$890</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-3d">
+                            <div class="product-wrapper">
+                                <div class="product-img">
+                                    <img src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=400&h=500&fit=crop" alt="Overcoat">
+                                </div>
+                                <div class="product-img hover-img">
+                                    <img src="https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=400&h=500&fit=crop" alt="Overcoat Back">
+                                </div>
+                            </div>
+                            <div class="product-actions">
+                                <button class="action-btn"><i class="fas fa-eye"></i></button>
+                                <button class="action-btn"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-sync-alt"></i></button>
+                            </div>
+                            <button class="add-to-cart">Add to Bag</button>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Men's Outerwear</span>
+                            <h3>Wool Blend Overcoat</h3>
+                            <div class="product-price">$2,450</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-3d">
+                            <div class="product-wrapper">
+                                <div class="product-img">
+                                    <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=400&h=500&fit=crop" alt="Cardigan">
+                                </div>
+                                <div class="product-img hover-img">
+                                    <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&h=500&fit=crop" alt="Cardigan Detail">
+                                </div>
+                            </div>
+                            <div class="product-actions">
+                                <button class="action-btn"><i class="fas fa-eye"></i></button>
+                                <button class="action-btn"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-sync-alt"></i></button>
+                            </div>
+                            <button class="add-to-cart">Add to Bag</button>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Women's Knitwear</span>
+                            <h3>Merino Wool Cardigan</h3>
+                            <div class="product-price">$485</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-3d">
+                            <div class="product-wrapper">
+                                <div class="product-img">
+                                    <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=400&h=500&fit=crop" alt="Briefcase">
+                                </div>
+                                <div class="product-img hover-img">
+                                    <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=500&fit=crop" alt="Briefcase Side">
+                                </div>
+                            </div>
+                            <div class="product-actions">
+                                <button class="action-btn"><i class="fas fa-eye"></i></button>
+                                <button class="action-btn"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-sync-alt"></i></button>
+                            </div>
+                            <button class="add-to-cart">Add to Bag</button>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Accessories</span>
+                            <h3>Leather Briefcase</h3>
+                            <div class="product-price">$1,850</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-3d">
+                            <div class="product-wrapper">
+                                <div class="product-img">
+                                    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=400&h=500&fit=crop" alt="Loafers">
+                                </div>
+                                <div class="product-img hover-img">
+                                    <img src="https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=400&h=500&fit=crop" alt="Loafers Side">
+                                </div>
+                            </div>
+                            <div class="product-actions">
+                                <button class="action-btn"><i class="fas fa-eye"></i></button>
+                                <button class="action-btn"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-sync-alt"></i></button>
+                            </div>
+                            <button class="add-to-cart">Add to Bag</button>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Footwear</span>
+                            <h3>Leather Penny Loafers</h3>
+                            <div class="product-price">$625</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pagination">
+                    <button class="page-btn active">1</button>
+                    <button class="page-btn">2</button>
+                    <button class="page-btn">3</button>
+                    <button class="page-btn">4</button>
+                    <button class="page-btn"><i class="fas fa-arrow-right"></i></button>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <div class="feature-icon"><i class="fas fa-gem"></i></div>
+            <h3>Premium Quality</h3>
+            <p>Only the finest materials and craftsmanship</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon"><i class="fas fa-truck"></i></div>
+            <h3>Free Shipping</h3>
+            <p>Complimentary delivery on all orders</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon"><i class="fas fa-undo"></i></div>
+            <h3>Easy Returns</h3>
+            <p>30-day hassle-free return policy</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+            <h3>Secure Payment</h3>
+            <p>Your transactions are fully protected</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="logo">ELEGANTE</div>
+                <p>Where timeless elegance meets modern sophistication.</p>
+                <div class="social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Customer Care</h4>
+                <ul>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Track Order</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Craftsmanship</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ELEGANTE. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
