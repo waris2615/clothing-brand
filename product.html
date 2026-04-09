@@ -3,747 +3,660 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Classic Wool Jacket - ELEGANTE</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Italian Wool Jacket | ELEGANTE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-:root { --primary: #1a1a1a; --accent: #c9a959; --cream: #f8f5f0; --light-gray: #e8e4df; --text: #333333; --text-light: #666666; --white: #ffffff; --font-display: 'Playfair Display', serif; --font-body: 'Cormorant Garamond', serif; --font-sans: 'Montserrat', sans-serif; }
-body { font-family: var(--font-body); color: var(--text); background: var(--cream); line-height: 1.6; }
-.cursor { width: 20px; height: 20px; border: 2px solid var(--accent); border-radius: 50%; position: fixed; pointer-events: none; z-index: 10000; }
-.cursor-follower { width: 8px; height: 8px; background: var(--accent); border-radius: 50%; position: fixed; pointer-events: none; z-index: 10000; }
-.navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1.5rem 3rem; background: rgba(248, 245, 240, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
-.nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-.logo { font-family: var(--font-display); font-size: 2rem; font-weight: 700; letter-spacing: 8px; color: var(--primary); text-decoration: none; }
-.nav-links { display: flex; list-style: none; gap: 3rem; }
-.nav-links a { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--text); text-decoration: none; }
-.nav-icons { display: flex; gap: 1.5rem; }
-.icon-btn { background: none; border: none; font-size: 1.1rem; color: var(--primary); cursor: pointer; position: relative; }
-.icon-btn a { color: var(--primary); }
-.cart-count { position: absolute; top: -8px; right: -8px; width: 18px; height: 18px; background: var(--accent); color: var(--white); font-size: 0.65rem; font-family: var(--font-sans); font-weight: 600; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
-.nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; }
-.nav-toggle span { width: 25px; height: 2px; background: var(--primary); }
-.btn { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; padding: 1rem 2rem; border-radius: 0; text-decoration: none; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem; border: 2px solid var(--primary); }
-.btn-primary { background: var(--primary); color: var(--white); border: 2px solid var(--primary); }
-.btn-primary:hover { background: var(--accent); border-color: var(--accent); }
-.btn-outline { background: transparent; color: var(--primary); border: 1px solid var(--primary); }
-.btn-outline:hover { background: var(--primary); color: var(--white); }
-.footer { background: var(--primary); color: var(--white); padding: 4rem 3rem 2rem; }
-.footer-top { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
-.footer-brand .logo { margin-bottom: 1rem; }
-.footer-brand p { color: rgba(255, 255, 255, 0.6); margin-bottom: 1.5rem; font-size: 0.95rem; }
-.social { display: flex; gap: 1rem; }
-.social a { width: 40px; height: 40px; border: 1px solid rgba(255, 255, 255, 0.3); display: flex; align-items: center; justify-content: center; color: var(--white); text-decoration: none; }
-.social a:hover { background: var(--accent); border-color: var(--accent); }
-.footer-links h4 { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.5rem; }
-.footer-links ul { list-style: none; }
-.footer-links li { margin-bottom: 0.75rem; }
-.footer-links a { color: rgba(255, 255, 255, 0.6); text-decoration: none; font-size: 0.9rem; }
-.footer-links a:hover { color: var(--accent); }
-.footer-bottom { max-width: 1400px; margin: 0 auto; padding-top: 2rem; display: flex; justify-content: space-between; }
-.footer-bottom p { font-family: var(--font-sans); font-size: 0.8rem; color: rgba(255, 255, 255, 0.5); }
-.container { max-width: 1400px; margin: 0 auto; padding: 0 3rem; }
-.breadcrumbs { padding: 10rem 3rem 2rem; font-family: var(--font-sans); font-size: 0.85rem; color: var(--text-light); }
-.breadcrumbs a { color: var(--text-light); text-decoration: none; }
-.breadcrumbs a:hover { color: var(--accent); }
-.breadcrumbs span { color: var(--primary); }
-.product-detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; padding-bottom: 6rem; }
-.gallery-main { background: var(--light-gray); margin-bottom: 1rem; overflow: hidden; }
-.gallery-main img { width: 100%; height: 600px; object-fit: cover; transition: transform 0.5s; }
-.gallery-main:hover img { transform: scale(1.05); }
-.gallery-thumbs { display: flex; gap: 1rem; }
-.gallery-thumbs img { width: 80px; height: 100px; object-fit: cover; cursor: pointer; border: 2px solid transparent; transition: border-color 0.3s; }
-.gallery-thumbs img.active, .gallery-thumbs img:hover { border-color: var(--accent); }
-.product-info-detail { padding-top: 2rem; }
-.product-category { font-family: var(--font-sans); font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; color: var(--text-light); }
-.product-info-detail h1 { font-family: var(--font-display); font-size: 2.5rem; margin: 0.5rem 0 1rem; }
-.product-rating { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
-.stars { color: var(--accent); }
-.product-rating span { font-family: var(--font-sans); font-size: 0.85rem; color: var(--text-light); }
-.product-price-detail { margin-bottom: 2rem; }
-.price { font-family: var(--font-display); font-size: 2rem; color: var(--accent); }
-.tax { display: block; font-family: var(--font-sans); font-size: 0.8rem; color: var(--text-light); margin-top: 0.25rem; }
-.option-group { margin-bottom: 1.5rem; }
-.option-group label { font-family: var(--font-sans); font-size: 0.85rem; display: block; margin-bottom: 0.75rem; }
-.option-group label strong { color: var(--primary); }
-.color-options-detail { display: flex; gap: 0.75rem; }
-.color-options-detail .color { width: 32px; height: 32px; border-radius: 50%; cursor: pointer; border: 2px solid transparent; transition: all 0.3s; }
-.color-options-detail .color.active, .color-options-detail .color:hover { box-shadow: 0 0 0 3px var(--white), 0 0 0 5px var(--accent); }
-.size-options-detail { display: flex; gap: 0.5rem; }
-.size-options-detail button { width: 50px; height: 50px; background: transparent; border: 1px solid var(--light-gray); font-family: var(--font-sans); font-size: 0.9rem; cursor: pointer; transition: all 0.3s; }
-.size-options-detail button:hover, .size-options-detail button.active { background: var(--primary); border-color: var(--primary); color: var(--white); }
-.size-guide { display: inline-block; font-family: var(--font-sans); font-size: 0.8rem; color: var(--accent); margin-top: 0.75rem; text-decoration: underline; }
-.quantity-selector { display: flex; align-items: center; gap: 1rem; width: fit-content; border: 1px solid var(--light-gray); padding: 0.5rem 1rem; }
-.quantity-selector button { background: none; border: none; font-size: 1.25rem; cursor: pointer; color: var(--text); }
-.quantity-selector input { width: 50px; text-align: center; border: none; font-family: var(--font-sans); font-size: 1rem; background: transparent; }
-.product-actions-detail { display: flex; gap: 1rem; margin: 2rem 0; }
-.btn-lg { padding: 1.25rem 3rem; font-size: 0.9rem; }
-.product-features { border-top: 1px solid var(--light-gray); padding: 1.5rem 0; margin-bottom: 2rem; }
-.feature-item { display: flex; align-items: center; gap: 1rem; padding: 0.5rem 0; font-family: var(--font-sans); font-size: 0.85rem; color: var(--text-light); }
-.feature-item i { color: var(--accent); width: 20px; }
-.product-description h3 { font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 1rem; }
-.product-description p { color: var(--text-light); margin-bottom: 1rem; }
-.product-description ul { list-style: none; margin-bottom: 2rem; }
-.product-description li { padding: 0.5rem 0; padding-left: 1.5rem; position: relative; color: var(--text-light); }
-.product-description li::before { content: '✓'; position: absolute; left: 0; color: var(--accent); }
-.accordion-item { border-bottom: 1px solid var(--light-gray); }
-.accordion-header { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 0; background: none; border: none; font-family: var(--font-sans); font-size: 0.9rem; font-weight: 500; cursor: pointer; text-align: left; }
-.accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s; }
-.accordion-content p { padding-bottom: 1.25rem; color: var(--text-light); font-size: 0.9rem; }
-.accordion-item.active .accordion-content { max-height: 200px; }
-.accordion-item.active .fa-plus { transform: rotate(45deg); }
-.related-products { padding: 4rem 0 6rem; border-top: 1px solid var(--light-gray); }
-.related-products h2 { font-family: var(--font-display); font-size: 2rem; margin-bottom: 2rem; text-align: center; }
-.products-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
-.product-card { position: relative; }
-.product-3d { position: relative; margin-bottom: 1.5rem; }
-.product-wrapper { position: relative; }
-.product-img { position: relative; width: 100%; height: 380px; overflow: hidden; background: var(--light-gray); }
-.product-img img { width: 100%; height: 100%; object-fit: cover; }
-.hover-img { position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.4s ease; }
-.product-card:hover .hover-img { opacity: 1; }
-.product-actions { position: absolute; right: 1rem; top: 1rem; display: flex; flex-direction: column; gap: 0.5rem; opacity: 0; transform: translateX(20px); transition: all 0.4s ease; }
-.product-card:hover .product-actions { opacity: 1; transform: translateX(0); }
-.action-btn { width: 40px; height: 40px; background: var(--white); border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); }
-.action-btn:hover { background: var(--accent); color: var(--white); }
-.product-link { position: absolute; inset: 0; }
-.product-info { text-align: center; }
-.product-category { font-family: var(--font-sans); font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: var(--text-light); }
-.product-info h3 { font-family: var(--font-display); font-size: 1rem; margin: 0.5rem 0; }
-.product-price { font-family: var(--font-display); font-size: 1rem; color: var(--accent); }
-@media (max-width: 992px) { .product-detail-grid { grid-template-columns: 1fr; } .products-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 768px) { .gallery-main img { height: 400px; } .products-grid { grid-template-columns: 1fr; } .product-actions-detail { flex-direction: column; } }
-</style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --ivory: #FAF7F2;
+            --champagne: #C9A96E;
+            --champagne-light: #D4B88A;
+            --charcoal: #1A1A1A;
+            --noir: #0D0D0D;
+            --graphite: #2A2A2A;
+            --sand: #B8A88A;
+            --warm-gray: #8C8477;
+            --rose: #C4A484;
+            --transition: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--ivory);
+            color: var(--charcoal);
+            overflow-x: hidden;
+            line-height: 1.7;
+            font-weight: 300;
+            -webkit-font-smoothing: antialiased;
+        }
+        ::selection { background: var(--champagne); color: var(--ivory); }
+        a { text-decoration: none; color: inherit; }
+        
+        nav {
+            position: fixed;
+            top: 0; width: 100%;
+            z-index: 1000;
+            padding: 28px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(250, 247, 242, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 1px 0 rgba(201, 169, 110, 0.15);
+        }
+        .logo { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 400; letter-spacing: 10px; color: var(--charcoal); }
+        .logo span { color: var(--champagne); }
+        .nav-links { display: flex; list-style: none; gap: 45px; }
+        .nav-links a { color: var(--charcoal); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 500; position: relative; padding: 5px 0; }
+        .nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1px; background: var(--champagne); transition: width 0.4s var(--transition); }
+        .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+        .nav-links a:hover, .nav-links a.active { color: var(--champagne); }
+        .nav-icons { display: flex; gap: 25px; align-items: center; }
+        .nav-icons a { color: var(--charcoal); font-size: 18px; transition: color 0.3s; }
+        .nav-icons a:hover { color: var(--champagne); }
+        .cart-icon { position: relative; }
+        .cart-count { position: absolute; top: -8px; right: -10px; background: var(--champagne); color: var(--ivory); font-size: 9px; width: 16px; height: 16px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+        .menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 5px; }
+        .menu-toggle span { width: 24px; height: 1.5px; background: var(--charcoal); }
+
+        .mobile-menu-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: rgba(0,0,0,0.5); z-index: 9998; opacity: 0; visibility: hidden; transition: all 0.4s ease; }
+        .mobile-menu-overlay.active { opacity: 1; visibility: visible; }
+        .mobile-menu { position: fixed; top: 0; right: -100%; width: 85%; max-width: 400px; height: 100vh; background: var(--charcoal); z-index: 9999; transition: right 0.5s cubic-bezier(0.4, 0, 0.2, 1); display: flex; flex-direction: column; }
+        .mobile-menu.active { right: 0; }
+        .mobile-menu-header { display: flex; justify-content: space-between; align-items: center; padding: 25px 30px; border-bottom: 1px solid rgba(201,169,110,0.15); }
+        .mobile-menu-logo { font-family: 'Playfair Display', serif; font-size: 24px; letter-spacing: 6px; color: var(--ivory); }
+        .mobile-menu-logo span { color: var(--champagne); }
+        .mobile-menu-close { width: 40px; height: 40px; background: none; border: 1px solid rgba(201,169,110,0.3); color: var(--ivory); font-size: 18px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+        .mobile-menu-close:hover { background: var(--champagne); border-color: var(--champagne); color: var(--charcoal); }
+        .mobile-menu-links { list-style: none; padding: 40px 30px; flex: 1; }
+        .mobile-menu-links li { border-bottom: 1px solid rgba(201,169,110,0.08); }
+        .mobile-menu-links a { display: block; padding: 18px 0; font-family: 'Playfair Display', serif; font-size: 20px; color: var(--ivory); transition: all 0.3s; }
+        .mobile-menu-links a:hover { color: var(--champagne); padding-left: 10px; }
+        .mobile-menu-footer { padding: 30px; border-top: 1px solid rgba(201,169,110,0.15); }
+        .mobile-menu-footer-title { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--warm-gray); margin-bottom: 15px; }
+        .mobile-menu-social { display: flex; gap: 12px; }
+        .mobile-menu-social a { width: 40px; height: 40px; border: 1px solid rgba(201,169,110,0.25); display: flex; align-items: center; justify-content: center; color: var(--ivory); font-size: 14px; }
+        .mobile-menu-social a:hover { background: var(--champagne); border-color: var(--champagne); color: var(--charcoal); }
+
+        .breadcrumb {
+            padding: 25px 60px;
+            background: white;
+            margin-top: 80px;
+            border-bottom: 1px solid rgba(201,169,110,0.1);
+        }
+        .breadcrumb ul { list-style: none; display: flex; gap: 15px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--warm-gray); }
+        .breadcrumb a:hover { color: var(--champagne); }
+        .breadcrumb span { color: var(--champagne); }
+
+        .product-section { padding: 60px 0 100px; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 60px; }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .product-gallery { position: sticky; top: 120px; }
+        .main-image {
+            width: 100%;
+            aspect-ratio: 3/4;
+            background: #F5F2EE;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .main-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--transition); }
+        .main-image:hover img { transform: scale(1.05); }
+        .thumbnail-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
+        .thumbnail {
+            aspect-ratio: 1;
+            background: #F5F2EE;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+        .thumbnail:hover, .thumbnail.active { border-color: var(--champagne); }
+        .thumbnail img { width: 100%; height: 100%; object-fit: cover; }
+
+        .product-details h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .product-category {
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--champagne);
+            margin-bottom: 20px;
+        }
+        .product-price {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 32px;
+            color: var(--charcoal);
+            margin-bottom: 30px;
+        }
+        .product-price .original { text-decoration: line-through; color: var(--warm-gray); font-size: 22px; margin-left: 15px; }
+
+        .product-description {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 17px;
+            line-height: 1.9;
+            color: var(--warm-gray);
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(201,169,110,0.15);
+        }
+
+        .product-options { margin-bottom: 40px; }
+        .option-group { margin-bottom: 25px; }
+        .option-label {
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+        .size-options { display: flex; gap: 10px; }
+        .size-btn {
+            width: 50px; height: 50px;
+            border: 1px solid rgba(201,169,110,0.3);
+            background: white;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .size-btn:hover, .size-btn.active { background: var(--charcoal); color: var(--ivory); border-color: var(--charcoal); }
+        .size-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+        .color-options { display: flex; gap: 12px; }
+        .color-btn {
+            width: 35px; height: 35px;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+        }
+        .color-btn::after {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+        .color-btn:hover::after, .color-btn.active::after { border-color: var(--champagne); }
+
+        .quantity-selector { display: flex; align-items: center; gap: 20px; }
+        .qty-btn {
+            width: 45px; height: 45px;
+            border: 1px solid rgba(201,169,110,0.3);
+            background: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .qty-btn:hover { background: var(--charcoal); color: var(--ivory); border-color: var(--charcoal); }
+        .qty-value { font-size: 18px; font-weight: 500; min-width: 30px; text-align: center; }
+
+        .product-actions { display: flex; gap: 15px; margin-bottom: 40px; }
+        .btn {
+            padding: 18px 45px;
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.4s var(--transition);
+        }
+        .btn-primary { background: var(--charcoal); color: var(--ivory); border: 1px solid var(--charcoal); flex: 1; }
+        .btn-primary:hover { background: var(--champagne); border-color: var(--champagne); }
+        .btn-outline { background: transparent; color: var(--charcoal); border: 1px solid rgba(201,169,110,0.3); }
+        .btn-outline:hover { border-color: var(--charcoal); background: var(--charcoal); color: var(--ivory); }
+
+        .product-meta {
+            padding-top: 30px;
+            border-top: 1px solid rgba(201,169,110,0.15);
+        }
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            font-size: 13px;
+            color: var(--warm-gray);
+        }
+        .meta-item i { color: var(--champagne); width: 20px; }
+
+        .product-tabs { margin-top: 80px; }
+        .tabs-header { display: flex; border-bottom: 1px solid rgba(201,169,110,0.15); }
+        .tab-btn {
+            padding: 20px 40px;
+            background: none;
+            border: none;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            position: relative;
+            color: var(--warm-gray);
+            transition: color 0.3s;
+        }
+        .tab-btn.active { color: var(--charcoal); }
+        .tab-btn::after {
+            content: '';
+            position: absolute;
+            bottom: -1px; left: 0; right: 0;
+            height: 2px;
+            background: var(--champagne);
+            transform: scaleX(0);
+            transition: transform 0.3s;
+        }
+        .tab-btn.active::after { transform: scaleX(1); }
+        .tab-content { padding: 40px 0; display: none; }
+        .tab-content.active { display: block; }
+        .tab-content p { font-family: 'Cormorant Garamond', serif; font-size: 17px; line-height: 1.9; color: var(--warm-gray); margin-bottom: 20px; }
+        .tab-content ul { list-style: none; }
+        .tab-content li { padding: 10px 0; border-bottom: 1px solid rgba(201,169,110,0.1); font-size: 14px; color: var(--warm-gray); display: flex; justify-content: space-between; }
+        .tab-content li span { color: var(--charcoal); }
+
+        .related-products { padding: 100px 0; background: white; }
+        .related-products h2 { font-family: 'Playfair Display', serif; font-size: 36px; text-align: center; margin-bottom: 50px; }
+        .related-products h2 em { font-style: italic; color: var(--champagne); }
+        .related-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
+        .related-card { cursor: pointer; }
+        .related-image { aspect-ratio: 3/4; background: #F5F2EE; overflow: hidden; margin-bottom: 20px; }
+        .related-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s; }
+        .related-card:hover .related-image img { transform: scale(1.05); }
+        .related-card h4 { font-family: 'Playfair Display', serif; font-size: 16px; margin-bottom: 5px; }
+        .related-card p { font-size: 14px; color: var(--champagne); }
+
+        footer { background: var(--noir); color: var(--ivory); padding: 80px 0 40px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; margin-bottom: 60px; }
+        .footer-brand .logo { margin-bottom: 25px; display: inline-block; }
+        .footer-brand p { font-family: 'Cormorant Garamond', serif; font-size: 16px; color: rgba(250,247,242,0.5); line-height: 1.8; margin-bottom: 25px; }
+        .footer-social { display: flex; gap: 15px; }
+        .footer-social a { width: 42px; height: 42px; border: 1px solid rgba(201,169,110,0.3); display: flex; align-items: center; justify-content: center; color: var(--ivory); transition: all 0.3s; }
+        .footer-social a:hover { background: var(--champagne); border-color: var(--champagne); color: var(--charcoal); }
+        .footer-col h4 { font-family: 'Playfair Display', serif; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 25px; color: var(--champagne); }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 12px; }
+        .footer-col a { color: rgba(250,247,242,0.5); font-size: 13px; transition: color 0.3s; }
+        .footer-col a:hover { color: var(--champagne); }
+        .footer-bottom { padding-top: 40px; border-top: 1px solid rgba(201,169,110,0.15); display: flex; justify-content: space-between; align-items: center; }
+        .footer-bottom p { font-size: 12px; color: rgba(250,247,242,0.4); }
+        .footer-legal { display: flex; gap: 30px; }
+        .footer-legal a { font-size: 12px; color: rgba(250,247,242,0.4); }
+        .footer-legal a:hover { color: var(--champagne); }
+
+        @media (max-width: 1024px) {
+            .product-grid { grid-template-columns: 1fr; gap: 40px; }
+            .product-gallery { position: relative; top: 0; }
+            .related-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            nav { padding: 20px 30px; }
+            .nav-links { display: none; }
+            .nav-icons { display: none; }
+            .menu-toggle { display: flex; }
+            .container { padding: 0 30px; }
+            .breadcrumb { padding: 20px 30px; margin-top: 70px; }
+            .product-section { padding: 40px 0 60px; }
+            .product-details h1 { font-size: 28px; }
+            .thumbnail-grid { grid-template-columns: repeat(4, 1fr); }
+            .size-options { flex-wrap: wrap; }
+            .product-actions { flex-direction: column; }
+            .related-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+            .tabs-header { overflow-x: auto; }
+            .tab-btn { padding: 15px 25px; white-space: nowrap; }
+            .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+            .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
+        }
+    </style>
 </head>
 <body>
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
 
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">ELEGANTE</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="collections.html">Collections</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="nav-icons">
-                <button class="icon-btn"><i class="fas fa-search"></i></button>
-                <button class="icon-btn"><i class="fas fa-heart"></i></button>
-                <button class="icon-btn cart-btn">
-                    <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
-                    <span class="cart-count">0</span>
-                </button>
-            </div>
-            <button class="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+<nav>
+    <a href="index.html" class="logo">ELEGAN<span>T</span>E</a>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-icons">
+        <a href="#"><i class="fas fa-search"></i></a>
+        <a href="#"><i class="far fa-heart"></i></a>
+        <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-bag"></i><span class="cart-count">2</span></a>
+    </div>
+    <div class="menu-toggle"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mobile-menu-overlay"></div>
+<div class="mobile-menu">
+    <div class="mobile-menu-header">
+        <a href="index.html" class="mobile-menu-logo">ELEGAN<span>T</span>E</a>
+        <button class="mobile-menu-close"><i class="fas fa-times"></i></button>
+    </div>
+    <ul class="mobile-menu-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html">My Bag (2)</a></li>
+    </ul>
+    <div class="mobile-menu-footer">
+        <div class="mobile-menu-footer-title">Follow Us</div>
+        <div class="mobile-menu-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
         </div>
-    </nav>
+    </div>
+</div>
 
-    <main class="product-detail">
-        <div class="container">
-            <div class="breadcrumbs">
-                <a href="index.html">Home</a> / 
-                <a href="shop.html">Shop</a> / 
-                <a href="shop.html">Men's Outerwear</a> / 
-                <span>Classic Wool Jacket</span>
-            </div>
+<div class="breadcrumb">
+    <div class="container">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><span>/</span></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><span>/</span></li>
+            <li><a href="shop.html">Men</a></li>
+            <li><span>/</span></li>
+            <li>Italian Wool Jacket</li>
+        </ul>
+    </div>
+</div>
 
-            <div class="product-detail-grid">
-                <div class="product-gallery">
-                    <div class="gallery-main">
-                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&h=1000&fit=crop" alt="Classic Wool Jacket" id="mainImage">
-                    </div>
-                    <div class="gallery-thumbs">
-                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=200&h=250&fit=crop" alt="Front" class="active" onclick="changeImage(this)">
-                        <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=200&h=250&fit=crop" alt="Back" onclick="changeImage(this)">
-                        <img src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=200&h=250&fit=crop" alt="Side" onclick="changeImage(this)">
-                        <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=200&h=250&fit=crop" alt="Detail" onclick="changeImage(this)">
-                    </div>
+<section class="product-section">
+    <div class="container">
+        <div class="product-grid">
+            <div class="product-gallery">
+                <div class="main-image">
+                    <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&h=1000&fit=crop" alt="Italian Wool Jacket">
                 </div>
-
-                <div class="product-info-detail">
-                    <span class="product-category">Men's Outerwear</span>
-                    <h1>Classic Wool Jacket</h1>
-                    <div class="product-rating">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <span>(24 reviews)</span>
+                <div class="thumbnail-grid">
+                    <div class="thumbnail active">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=200&h=200&fit=crop" alt="Front">
                     </div>
-                    <div class="product-price-detail">
-                        <span class="price">$895</span>
-                        <span class="tax">Tax included</span>
+                    <div class="thumbnail">
+                        <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=200&h=200&fit=crop" alt="Back">
                     </div>
-
-                    <div class="product-options">
-                        <div class="option-group">
-                            <label>Color: <strong>Charcoal</strong></label>
-                            <div class="color-options-detail">
-                                <span class="color active" style="background: #1a1a1a;" data-color="Charcoal"></span>
-                                <span class="color" style="background: #2c3e50;" data-color="Navy"></span>
-                                <span class="color" style="background: #8b4513;" data-color="Brown"></span>
-                            </div>
-                        </div>
-
-                        <div class="option-group">
-                            <label>Size</label>
-                            <div class="size-options-detail">
-                                <button>S</button>
-                                <button class="active">M</button>
-                                <button>L</button>
-                                <button>XL</button>
-                                <button>XXL</button>
-                            </div>
-                            <a href="#" class="size-guide">Size Guide</a>
-                        </div>
-
-                        <div class="option-group">
-                            <label>Quantity</label>
-                            <div class="quantity-selector">
-                                <button onclick="decreaseQty()">-</button>
-                                <input type="number" value="1" min="1" max="10" id="quantity">
-                                <button onclick="increaseQty()">+</button>
-                            </div>
-                        </div>
+                    <div class="thumbnail">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop" alt="Side">
                     </div>
-
-                    <div class="product-actions-detail">
-                        <button class="btn btn-primary btn-lg" onclick="addToCart()">Add to Bag</button>
-                        <button class="btn btn-outline"><i class="far fa-heart"></i> Save to Wishlist</button>
-                    </div>
-
-                    <div class="product-features">
-                        <div class="feature-item">
-                            <i class="fas fa-truck"></i>
-                            <span>Free shipping on orders over $500</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-undo"></i>
-                            <span>30-day returns</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-shield-alt"></i>
-                            <span>Authenticity guaranteed</span>
-                        </div>
-                    </div>
-
-                    <div class="product-description">
-                        <h3>Description</h3>
-                        <p>Crafted from the finest Italian wool, this classic jacket represents the pinnacle of traditional tailoring. The relaxed fit offers comfort while maintaining a sharp silhouette, making it perfect for both professional and casual occasions.</p>
-                        <ul>
-                            <li>100% Italian Virgin Wool</li>
-                            <li>Relaxed fit for comfort</li>
-                            <li>Peak lapels with horn buttons</li>
-                            <li>Two-button closure</li>
-                            <li>Four-button surgeon cuffs</li>
-                            <li>Fully lined with premium viscose</li>
-                            <li>Dry clean only</li>
-                        </ul>
-                    </div>
-
-                    <div class="product-details-accordion">
-                        <div class="accordion-item">
-                            <button class="accordion-header" onclick="toggleAccordion(this)">
-                                <span>Shipping & Returns</span>
-                                <i class="fas fa-plus"></i>
-                            </button>
-                            <div class="accordion-content">
-                                <p>Free standard shipping on all orders over $500. Express shipping available at checkout. Returns accepted within 30 days of delivery. Items must be unworn with original tags attached.</p>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <button class="accordion-header" onclick="toggleAccordion(this)">
-                                <span>Care Instructions</span>
-                                <i class="fas fa-plus"></i>
-                            </button>
-                            <div class="accordion-content">
-                                <p>Dry clean only. Store on a padded hanger in a breathable garment bag. Avoid direct sunlight. Steam to remove wrinkles. Do not iron directly on the wool.</p>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <button class="accordion-header" onclick="toggleAccordion(this)">
-                                <span>Size & Fit</span>
-                                <i class="fas fa-plus"></i>
-                            </button>
-                            <div class="accordion-content">
-                                <p>The model is 6'1" / 185cm wearing size M. This style fits true to size. For a more relaxed fit, we recommend sizing up.</p>
-                            </div>
-                        </div>
+                    <div class="thumbnail">
+                        <img src="https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?w=200&h=200&fit=crop" alt="Detail">
                     </div>
                 </div>
             </div>
 
-            <section class="related-products">
-                <h2>You May Also Like</h2>
-                <div class="products-grid">
-                    <div class="product-card">
-                        <div class="product-3d">
-                            <div class="product-wrapper">
-                                <div class="product-img">
-                                    <img src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=400&h=500&fit=crop" alt="Wool Blazer">
-                                </div>
-                                <div class="product-img hover-img">
-                                    <img src="https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=400&h=500&fit=crop" alt="Wool Blazer Back">
-                                </div>
-                            </div>
-                            <div class="product-actions">
-                                <button class="action-btn"><i class="fas fa-eye"></i></button>
-                                <button class="action-btn"><i class="fas fa-heart"></i></button>
-                            </div>
-                            <a href="product.html" class="product-link"></a>
-                        </div>
-                        <div class="product-info">
-                            <span class="product-category">Men's Outerwear</span>
-                            <h3>Wool Blend Blazer</h3>
-                            <div class="product-price">$1,195</div>
+            <div class="product-details">
+                <span class="product-category">Men's Outerwear</span>
+                <h1>Italian Wool Jacket</h1>
+                <div class="product-price">$1,295</div>
+                
+                <p class="product-description">
+                    Crafted from the finest Italian wool by our master artisans in Milan, this jacket represents the pinnacle of sartorial excellence. The classic silhouette is enhanced with hand-finished details, including pick-stitched lapels and surgeon cuffs. A timeless investment piece that will elevate any wardrobe for years to come.
+                </p>
+
+                <div class="product-options">
+                    <div class="option-group">
+                        <div class="option-label">Size</div>
+                        <div class="size-options">
+                            <button class="size-btn">XS</button>
+                            <button class="size-btn">S</button>
+                            <button class="size-btn active">M</button>
+                            <button class="size-btn">L</button>
+                            <button class="size-btn">XL</button>
+                            <button class="size-btn" disabled>XXL</button>
                         </div>
                     </div>
-                    <div class="product-card">
-                        <div class="product-3d">
-                            <div class="product-wrapper">
-                                <div class="product-img">
-                                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=500&fit=crop" alt="Dress Shirt">
-                                </div>
-                                <div class="product-img hover-img">
-                                    <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=400&h=500&fit=crop" alt="Dress Shirt Back">
-                                </div>
-                            </div>
-                            <div class="product-actions">
-                                <button class="action-btn"><i class="fas fa-eye"></i></button>
-                                <button class="action-btn"><i class="fas fa-heart"></i></button>
-                            </div>
-                            <a href="product.html" class="product-link"></a>
-                        </div>
-                        <div class="product-info">
-                            <span class="product-category">Men's Shirts</span>
-                            <h3>Cotton Oxford Shirt</h3>
-                            <div class="product-price">$285</div>
+
+                    <div class="option-group">
+                        <div class="option-label">Color</div>
+                        <div class="color-options">
+                            <button class="color-btn active" style="background: #1a1a1a;"></button>
+                            <button class="color-btn" style="background: #2c3e50;"></button>
+                            <button class="color-btn" style="background: #5c4033;"></button>
+                            <button class="color-btn" style="background: #8b8585;"></button>
                         </div>
                     </div>
-                    <div class="product-card">
-                        <div class="product-3d">
-                            <div class="product-wrapper">
-                                <div class="product-img">
-                                    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=400&h=500&fit=crop" alt="Oxford Shoes">
-                                </div>
-                                <div class="product-img hover-img">
-                                    <img src="https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=400&h=500&fit=crop" alt="Oxford Shoes Side">
-                                </div>
-                            </div>
-                            <div class="product-actions">
-                                <button class="action-btn"><i class="fas fa-eye"></i></button>
-                                <button class="action-btn"><i class="fas fa-heart"></i></button>
-                            </div>
-                            <a href="product.html" class="product-link"></a>
-                        </div>
-                        <div class="product-info">
-                            <span class="product-category">Footwear</span>
-                            <h3>Oxford Brogue Shoes</h3>
-                            <div class="product-price">$780</div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-3d">
-                            <div class="product-wrapper">
-                                <div class="product-img">
-                                    <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=400&h=500&fit=crop" alt="Leather Belt">
-                                </div>
-                                <div class="product-img hover-img">
-                                    <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=500&fit=crop" alt="Leather Belt Side">
-                                </div>
-                            </div>
-                            <div class="product-actions">
-                                <button class="action-btn"><i class="fas fa-eye"></i></button>
-                                <button class="action-btn"><i class="fas fa-heart"></i></button>
-                            </div>
-                            <a href="product.html" class="product-link"></a>
-                        </div>
-                        <div class="product-info">
-                            <span class="product-category">Accessories</span>
-                            <h3>Italian Leather Belt</h3>
-                            <div class="product-price">$245</div>
+
+                    <div class="option-group">
+                        <div class="option-label">Quantity</div>
+                        <div class="quantity-selector">
+                            <button class="qty-btn" id="qty-minus">−</button>
+                            <span class="qty-value" id="qty-value">1</span>
+                            <button class="qty-btn" id="qty-plus">+</button>
                         </div>
                     </div>
                 </div>
-            </section>
+
+                <div class="product-actions">
+                    <button class="btn btn-primary" id="add-to-cart">Add to Bag</button>
+                    <button class="btn btn-outline"><i class="far fa-heart"></i></button>
+                </div>
+
+                <div class="product-meta">
+                    <div class="meta-item">
+                        <i class="fas fa-truck"></i>
+                        <span>Complimentary shipping on orders over $500</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-undo"></i>
+                        <span>30-day returns with free pickup</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-award"></i>
+                        <span>Authenticity guaranteed</span>
+                    </div>
+                </div>
+            </div>
         </div>
-    </main>
 
-    <footer class="footer">
-        <div class="footer-top">
+        <div class="product-tabs">
+            <div class="tabs-header">
+                <button class="tab-btn active" data-tab="description">Description</button>
+                <button class="tab-btn" data-tab="details">Details & Care</button>
+                <button class="tab-btn" data-tab="shipping">Shipping</button>
+                <button class="tab-btn" data-tab="returns">Returns</button>
+            </div>
+            <div class="tab-content active" id="description">
+                <p>This Italian Wool Jacket is a testament to our commitment to timeless elegance and impeccable craftsmanship. Made from premium Italian wool sourced from the finest mills in Biella, each jacket undergoes over 40 hours of meticulous handwork.</p>
+                <p>The jacket features our signature pick-stitched lapels, surgeon cuffs with functional buttons, and a hand-sewn chest piece that ensures perfect drape. The interior is lined with premium silk for comfort and breathability.</p>
+            </div>
+            <div class="tab-content" id="details">
+                <ul>
+                    <li>Material <span>100% Italian Wool</span></li>
+                    <li>Origin <span>Made in Italy</span></li>
+                    <li>Lining <span>100% Silk</span></li>
+                    <li>Buttons <span>Mother of Pearl</span></li>
+                    <li>Fit <span>Tailored</span></li>
+                    <li>Care <span>Dry Clean Only</span></li>
+                </ul>
+            </div>
+            <div class="tab-content" id="shipping">
+                <p>We offer complimentary express shipping on all orders over $500. Orders are processed within 1-2 business days and typically arrive within 3-5 business days.</p>
+                <p>For orders under $500, a flat rate of $25 applies. Same-day delivery is available in select cities including New York, Los Angeles, and Chicago.</p>
+            </div>
+            <div class="tab-content" id="returns">
+                <p>We want you to be completely satisfied with your purchase. If for any reason you're not happy, you may return unused items within 30 days of delivery for a full refund.</p>
+                <p>Returns are complimentary—we'll arrange for free pickup at your convenience. Simply contact our concierge team to initiate a return.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="related-products">
+    <div class="container">
+        <h2>You May Also <em>Like</em></h2>
+        <div class="related-grid">
+            <div class="related-card">
+                <div class="related-image">
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=500&fit=crop" alt="Cotton Oxford">
+                </div>
+                <h4>Cotton Oxford Shirt</h4>
+                <p>$345</p>
+            </div>
+            <div class="related-card">
+                <div class="related-image">
+                    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=400&h=500&fit=crop" alt="Oxford Shoes">
+                </div>
+                <h4>Oxford Brogue Shoes</h4>
+                <p>$980</p>
+            </div>
+            <div class="related-card">
+                <div class="related-image">
+                    <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=400&h=500&fit=crop" alt="Leather Tote">
+                </div>
+                <h4>Artisan Leather Tote</h4>
+                <p>$1,850</p>
+            </div>
+            <div class="related-card">
+                <div class="related-image">
+                    <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=400&h=500&fit=crop" alt="Cashmere Sweater">
+                </div>
+                <h4>Cashmere V-Neck Sweater</h4>
+                <p>$645</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
             <div class="footer-brand">
-                <div class="logo">ELEGANTE</div>
-                <p>Where timeless elegance meets modern sophistication.</p>
-                <div class="social">
+                <a href="index.html" class="logo">ELEGAN<span>T</span>E</a>
+                <p>Where timeless elegance meets modern sophistication. Crafting luxury since 1952.</p>
+                <div class="footer-social">
                     <a href="#"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-pinterest-p"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
-            <div class="footer-links">
-                <h4>Quick Links</h4>
+            <div class="footer-col">
+                <h4>Shop</h4>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="collections.html">Collections</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="shop.html">New Arrivals</a></li>
+                    <li><a href="shop.html">Women</a></li>
+                    <li><a href="shop.html">Men</a></li>
+                    <li><a href="shop.html">Accessories</a></li>
+                    <li><a href="shop.html">Sale</a></li>
                 </ul>
             </div>
-            <div class="footer-links">
-                <h4>Customer Care</h4>
+            <div class="footer-col">
+                <h4>About</h4>
                 <ul>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="about.html">Craftsmanship</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
                     <li><a href="#">Shipping & Returns</a></li>
                     <li><a href="#">Size Guide</a></li>
                     <li><a href="#">FAQs</a></li>
                     <li><a href="#">Track Order</a></li>
                 </ul>
             </div>
-            <div class="footer-links">
-                <h4>About</h4>
-                <ul>
-                    <li><a href="#">Our Story</a></li>
-                    <li><a href="#">Craftsmanship</a></li>
-                    <li><a href="#">Sustainability</a></li>
-                    <li><a href="#">Press</a></li>
-                </ul>
-            </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 ELEGANTE. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Settings</a>
+            </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
-    <style>
-        .container { max-width: 1400px; margin: 0 auto; padding: 0 3rem; }
-        
-        .breadcrumbs {
-            padding: 10rem 3rem 2rem;
-            font-family: var(--font-sans);
-            font-size: 0.85rem;
-            color: var(--text-light);
-        }
-        .breadcrumbs a { color: var(--text-light); text-decoration: none; }
-        .breadcrumbs a:hover { color: var(--accent); }
-        .breadcrumbs span { color: var(--primary); }
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+    const mobileMenuClose = document.querySelector('.mobile-menu-close');
+    const mobileMenuLinks = document.querySelectorAll('.mobile-menu-links a');
 
-        .product-detail-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            padding-bottom: 6rem;
-        }
+    function openMenu() { mobileMenu.classList.add('active'); mobileMenuOverlay.classList.add('active'); document.body.style.overflow = 'hidden'; }
+    function closeMenu() { mobileMenu.classList.remove('active'); mobileMenuOverlay.classList.remove('active'); document.body.style.overflow = ''; }
 
-        .gallery-main {
-            background: var(--light-gray);
-            margin-bottom: 1rem;
-            overflow: hidden;
-        }
-        .gallery-main img {
-            width: 100%;
-            height: 600px;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-        .gallery-main:hover img { transform: scale(1.05); }
+    menuToggle.addEventListener('click', openMenu);
+    mobileMenuClose.addEventListener('click', closeMenu);
+    mobileMenuOverlay.addEventListener('click', closeMenu);
+    mobileMenuLinks.forEach(link => link.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && mobileMenu.classList.contains('active')) closeMenu(); });
 
-        .gallery-thumbs {
-            display: flex;
-            gap: 1rem;
-        }
-        .gallery-thumbs img {
-            width: 80px;
-            height: 100px;
-            object-fit: cover;
-            cursor: pointer;
-            border: 2px solid transparent;
-            transition: border-color 0.3s;
-        }
-        .gallery-thumbs img.active,
-        .gallery-thumbs img:hover { border-color: var(--accent); }
-
-        .product-info-detail { padding-top: 2rem; }
-        .product-category {
-            font-family: var(--font-sans);
-            font-size: 0.75rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--text-light);
-        }
-        .product-info-detail h1 {
-            font-family: var(--font-display);
-            font-size: 2.5rem;
-            margin: 0.5rem 0 1rem;
-        }
-
-        .product-rating {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-        .stars { color: var(--accent); }
-        .product-rating span {
-            font-family: var(--font-sans);
-            font-size: 0.85rem;
-            color: var(--text-light);
-        }
-
-        .product-price-detail {
-            margin-bottom: 2rem;
-        }
-        .price {
-            font-family: var(--font-display);
-            font-size: 2rem;
-            color: var(--accent);
-        }
-        .tax {
-            display: block;
-            font-family: var(--font-sans);
-            font-size: 0.8rem;
-            color: var(--text-light);
-            margin-top: 0.25rem;
-        }
-
-        .option-group {
-            margin-bottom: 1.5rem;
-        }
-        .option-group label {
-            font-family: var(--font-sans);
-            font-size: 0.85rem;
-            display: block;
-            margin-bottom: 0.75rem;
-        }
-        .option-group label strong { color: var(--primary); }
-
-        .color-options-detail {
-            display: flex;
-            gap: 0.75rem;
-        }
-        .color-options-detail .color {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            cursor: pointer;
-            border: 2px solid transparent;
-            transition: all 0.3s;
-        }
-        .color-options-detail .color.active,
-        .color-options-detail .color:hover {
-            box-shadow: 0 0 0 3px var(--white), 0 0 0 5px var(--accent);
-        }
-
-        .size-options-detail {
-            display: flex;
-            gap: 0.5rem;
-        }
-        .size-options-detail button {
-            width: 50px;
-            height: 50px;
-            background: transparent;
-            border: 1px solid var(--light-gray);
-            font-family: var(--font-sans);
-            font-size: 0.9rem;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        .size-options-detail button:hover,
-        .size-options-detail button.active {
-            background: var(--primary);
-            border-color: var(--primary);
-            color: var(--white);
-        }
-
-        .size-guide {
-            display: inline-block;
-            font-family: var(--font-sans);
-            font-size: 0.8rem;
-            color: var(--accent);
-            margin-top: 0.75rem;
-            text-decoration: underline;
-        }
-
-        .quantity-selector {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            width: fit-content;
-            border: 1px solid var(--light-gray);
-            padding: 0.5rem 1rem;
-        }
-        .quantity-selector button {
-            background: none;
-            border: none;
-            font-size: 1.25rem;
-            cursor: pointer;
-            color: var(--text);
-        }
-        .quantity-selector input {
-            width: 50px;
-            text-align: center;
-            border: none;
-            font-family: var(--font-sans);
-            font-size: 1rem;
-            background: transparent;
-        }
-
-        .product-actions-detail {
-            display: flex;
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-        .btn-lg {
-            padding: 1.25rem 3rem;
-            font-size: 0.9rem;
-        }
-
-        .product-features {
-            border-top: 1px solid var(--light-gray);
-            padding: 1.5rem 0;
-            margin-bottom: 2rem;
-        }
-        .feature-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 0.5rem 0;
-            font-family: var(--font-sans);
-            font-size: 0.85rem;
-            color: var(--text-light);
-        }
-        .feature-item i {
-            color: var(--accent);
-            width: 20px;
-        }
-
-        .product-description h3 {
-            font-family: var(--font-display);
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-        }
-        .product-description p {
-            color: var(--text-light);
-            margin-bottom: 1rem;
-        }
-        .product-description ul {
-            list-style: none;
-            margin-bottom: 2rem;
-        }
-        .product-description li {
-            padding: 0.5rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-            color: var(--text-light);
-        }
-        .product-description li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--accent);
-        }
-
-        .accordion-item {
-            border-bottom: 1px solid var(--light-gray);
-        }
-        .accordion-header {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.25rem 0;
-            background: none;
-            border: none;
-            font-family: var(--font-sans);
-            font-size: 0.9rem;
-            font-weight: 500;
-            cursor: pointer;
-            text-align: left;
-        }
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s;
-        }
-        .accordion-content p {
-            padding-bottom: 1.25rem;
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-        .accordion-item.active .accordion-content { max-height: 200px; }
-        .accordion-item.active .fa-plus { transform: rotate(45deg); }
-
-        .related-products {
-            padding: 4rem 0 6rem;
-            border-top: 1px solid var(--light-gray);
-        }
-        .related-products h2 {
-            font-family: var(--font-display);
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-        }
-
-        @media (max-width: 992px) {
-            .product-detail-grid { grid-template-columns: 1fr; }
-            .products-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media (max-width: 768px) { .gallery-main img { height: 400px; } .products-grid { grid-template-columns: 1fr; } .product-actions-detail { flex-direction: column; } }
-    </style>
-
-    <script>
-        function changeImage(thumb) {
-            document.getElementById('mainImage').src = thumb.src.replace('w=200&h=250', 'w=800&h=1000');
-            document.querySelectorAll('.gallery-thumbs img').forEach(img => img.classList.remove('active'));
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    const mainImage = document.querySelector('.main-image img');
+    thumbnails.forEach(thumb => {
+        thumb.addEventListener('click', () => {
+            thumbnails.forEach(t => t.classList.remove('active'));
             thumb.classList.add('active');
-        }
-        function increaseQty() { const input = document.getElementById('quantity'); if (input.value < 10) input.value = parseInt(input.value) + 1; }
-        function decreaseQty() { const input = document.getElementById('quantity'); if (input.value > 1) input.value = parseInt(input.value) - 1; }
-        function toggleAccordion(btn) { btn.parentElement.classList.toggle('active'); }
-        function addToCart() { alert('Product added to bag!'); }
-        document.querySelectorAll('.size-options-detail button').forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.querySelectorAll('.size-options-detail button').forEach(b => b.classList.remove('active'));
+            mainImage.src = thumb.querySelector('img').src.replace('w=200&h=200', 'w=800&h=1000');
+        });
+    });
+
+    const sizeBtns = document.querySelectorAll('.size-btn');
+    sizeBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            if (!btn.disabled) {
+                sizeBtns.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
-            });
-        });
-        document.querySelectorAll('.color-options-detail .color').forEach(color => {
-            color.addEventListener('click', () => {
-                document.querySelectorAll('.color-options-detail .color').forEach(c => c.classList.remove('active'));
-                color.classList.add('active');
-                color.parentElement.querySelector('label strong').textContent = color.dataset.color;
-            });
-        });
-        document.addEventListener('DOMContentLoaded', () => {
-            const cursor = document.querySelector('.cursor');
-            const cursorFollower = document.querySelector('.cursor-follower');
-            const navToggle = document.querySelector('.nav-toggle');
-            if (cursor && cursorFollower) {
-                document.addEventListener('mousemove', (e) => {
-                    cursor.style.left = e.clientX + 'px';
-                    cursor.style.top = e.clientY + 'px';
-                    setTimeout(() => { cursorFollower.style.left = e.clientX + 'px'; cursorFollower.style.top = e.clientY + 'px'; }, 50);
-                });
-            }
-            if (navToggle) {
-                navToggle.addEventListener('click', () => { navToggle.classList.toggle('active'); });
             }
         });
-    </script>
+    });
+
+    const colorBtns = document.querySelectorAll('.color-btn');
+    colorBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            colorBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+        });
+    });
+
+    let qty = 1;
+    const qtyValue = document.getElementById('qty-value');
+    document.getElementById('qty-minus').addEventListener('click', () => { if (qty > 1) { qty--; qtyValue.textContent = qty; }});
+    document.getElementById('qty-plus').addEventListener('click', () => { qty++; qtyValue.textContent = qty; });
+
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            tabBtns.forEach(b => b.classList.remove('active'));
+            tabContents.forEach(c => c.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById(btn.dataset.tab).classList.add('active');
+        });
+    });
+
+    document.getElementById('add-to-cart').addEventListener('click', function() {
+        this.textContent = 'Added to Bag ✓';
+        this.style.background = 'var(--champagne)';
+        this.style.borderColor = 'var(--champagne)';
+        setTimeout(() => {
+            this.textContent = 'Add to Bag';
+            this.style.background = '';
+            this.style.borderColor = '';
+        }, 2000);
+    });
+</script>
 </body>
 </html>

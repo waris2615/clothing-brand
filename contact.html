@@ -3,811 +3,628 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - ELEGANTE | Luxury Clothing Brand</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Contact Us | ELEGANTE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-:root { --primary: #1a1a1a; --accent: #c9a959; --accent-dark: #a68b3d; --cream: #f8f5f0; --light-gray: #e8e4df; --text: #333333; --text-light: #666666; --white: #ffffff; --font-display: 'Playfair Display', serif; --font-body: 'Cormorant Garamond', serif; --font-sans: 'Montserrat', sans-serif; }
-html { scroll-behavior: smooth; }
-body { font-family: var(--font-body); color: var(--text); background: var(--cream); line-height: 1.6; overflow-x: hidden; cursor: none; }
-.cursor { width: 20px; height: 20px; border: 2px solid var(--accent); border-radius: 50%; position: fixed; pointer-events: none; z-index: 10000; transition: transform 0.1s ease; }
-.cursor-follower { width: 8px; height: 8px; background: var(--accent); border-radius: 50%; position: fixed; pointer-events: none; z-index: 10000; transition: transform 0.3s ease; }
-.navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1.5rem 3rem; background: rgba(248, 245, 240, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
-.nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-.logo { font-family: var(--font-display); font-size: 2rem; font-weight: 700; letter-spacing: 8px; color: var(--primary); text-decoration: none; }
-.nav-links { display: flex; list-style: none; gap: 3rem; }
-.nav-links a { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--text); text-decoration: none; position: relative; padding: 0.5rem 0; }
-.nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1px; background: var(--accent); transition: width 0.3s ease; }
-.nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
-.nav-icons { display: flex; gap: 1.5rem; }
-.icon-btn { background: none; border: none; font-size: 1.1rem; color: var(--primary); cursor: pointer; transition: color 0.3s; position: relative; }
-.icon-btn:hover { color: var(--accent); }
-.cart-count { position: absolute; top: -8px; right: -8px; width: 18px; height: 18px; background: var(--accent); color: var(--white); font-size: 0.65rem; font-family: var(--font-sans); font-weight: 600; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
-.nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; }
-.nav-toggle span { width: 25px; height: 2px; background: var(--primary); transition: all 0.3s; }
-.btn { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; padding: 1rem 2rem; border-radius: 0; text-decoration: none; cursor: pointer; transition: all 0.4s ease; display: inline-flex; align-items: center; gap: 0.5rem; border: 2px solid var(--primary); }
-.btn-primary { background: var(--primary); color: var(--white); border: 2px solid var(--primary); }
-.btn-primary:hover { background: var(--accent); border-color: var(--accent); }
-.btn-outline { background: transparent; color: var(--primary); border: 1px solid var(--primary); }
-.btn-outline:hover { background: var(--primary); color: var(--white); }
-.footer { background: var(--primary); color: var(--white); padding: 4rem 3rem 2rem; }
-.footer-top { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
-.footer-brand .logo { margin-bottom: 1rem; }
-.footer-brand p { color: rgba(255, 255, 255, 0.6); margin-bottom: 1.5rem; font-size: 0.95rem; }
-.social { display: flex; gap: 1rem; }
-.social a { width: 40px; height: 40px; border: 1px solid rgba(255, 255, 255, 0.3); display: flex; align-items: center; justify-content: center; color: var(--white); transition: all 0.3s ease; text-decoration: none; }
-.social a:hover { background: var(--accent); border-color: var(--accent); }
-.footer-links h4 { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.5rem; }
-.footer-links ul { list-style: none; }
-.footer-links li { margin-bottom: 0.75rem; }
-.footer-links a { color: rgba(255, 255, 255, 0.6); text-decoration: none; font-size: 0.9rem; transition: color 0.3s ease; }
-.footer-links a:hover { color: var(--accent); }
-.footer-bottom { max-width: 1400px; margin: 0 auto; padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; }
-.footer-bottom p { font-family: var(--font-sans); font-size: 0.8rem; color: rgba(255, 255, 255, 0.5); }
-</style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --ivory: #FAF7F2;
+            --champagne: #C9A96E;
+            --champagne-light: #D4B88A;
+            --charcoal: #1A1A1A;
+            --noir: #0D0D0D;
+            --graphite: #2A2A2A;
+            --sand: #B8A88A;
+            --warm-gray: #8C8477;
+            --rose: #C4A484;
+            --transition: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--ivory);
+            color: var(--charcoal);
+            overflow-x: hidden;
+            line-height: 1.7;
+            font-weight: 300;
+            -webkit-font-smoothing: antialiased;
+        }
+        ::selection { background: var(--champagne); color: var(--ivory); }
+        a { text-decoration: none; color: inherit; }
+        
+        nav {
+            position: fixed;
+            top: 0; width: 100%;
+            z-index: 1000;
+            padding: 28px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(250, 247, 242, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 1px 0 rgba(201, 169, 110, 0.15);
+        }
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 400;
+            letter-spacing: 10px;
+            color: var(--charcoal);
+        }
+        .logo span { color: var(--champagne); }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 45px;
+        }
+        .nav-links a {
+            color: var(--charcoal);
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 500;
+            position: relative;
+            padding: 5px 0;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 0; height: 1px;
+            background: var(--champagne);
+            transition: width 0.4s var(--transition);
+        }
+        .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+        .nav-links a:hover, .nav-links a.active { color: var(--champagne); }
+        .nav-icons { display: flex; gap: 25px; align-items: center; }
+        .nav-icons a {
+            color: var(--charcoal);
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        .nav-icons a:hover { color: var(--champagne); }
+        .cart-icon { position: relative; }
+        .cart-count {
+            position: absolute;
+            top: -8px; right: -10px;
+            background: var(--champagne);
+            color: var(--ivory);
+            font-size: 9px;
+            width: 16px; height: 16px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 5px; }
+        .menu-toggle span { width: 24px; height: 1.5px; background: var(--charcoal); }
+
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100vh;
+            background: rgba(0,0,0,0.5);
+            z-index: 9998;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+        }
+        .mobile-menu-overlay.active { opacity: 1; visibility: visible; }
+        .mobile-menu {
+            position: fixed;
+            top: 0; right: -100%;
+            width: 85%;
+            max-width: 400px;
+            height: 100vh;
+            background: var(--charcoal);
+            z-index: 9999;
+            transition: right 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+        }
+        .mobile-menu.active { right: 0; }
+        .mobile-menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 30px;
+            border-bottom: 1px solid rgba(201,169,110,0.15);
+        }
+        .mobile-menu-logo { font-family: 'Playfair Display', serif; font-size: 24px; letter-spacing: 6px; color: var(--ivory); }
+        .mobile-menu-logo span { color: var(--champagne); }
+        .mobile-menu-close {
+            width: 40px; height: 40px;
+            background: none;
+            border: 1px solid rgba(201,169,110,0.3);
+            color: var(--ivory);
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .mobile-menu-close:hover { background: var(--champagne); border-color: var(--champagne); color: var(--charcoal); }
+        .mobile-menu-links { list-style: none; padding: 40px 30px; flex: 1; }
+        .mobile-menu-links li { border-bottom: 1px solid rgba(201,169,110,0.08); }
+        .mobile-menu-links a {
+            display: block;
+            padding: 18px 0;
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            color: var(--ivory);
+            transition: all 0.3s;
+        }
+        .mobile-menu-links a:hover { color: var(--champagne); padding-left: 10px; }
+        .mobile-menu-footer { padding: 30px; border-top: 1px solid rgba(201,169,110,0.15); }
+        .mobile-menu-footer-title { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--warm-gray); margin-bottom: 15px; }
+        .mobile-menu-social { display: flex; gap: 12px; }
+        .mobile-menu-social a {
+            width: 40px; height: 40px;
+            border: 1px solid rgba(201,169,110,0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--ivory);
+            font-size: 14px;
+        }
+        .mobile-menu-social a:hover { background: var(--champagne); border-color: var(--champagne); color: var(--charcoal); }
+
+        .page-header {
+            height: 55vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--charcoal);
+            position: relative;
+            overflow: hidden;
+            margin-top: 80px;
+        }
+        .page-header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 0L60 40L100 50L60 60L50 100L40 60L0 50L40 40Z' fill='%23C9A96E' fill-opacity='0.03'/%3E%3C/svg%3E");
+        }
+        .page-header-content { text-align: center; position: relative; z-index: 1; }
+        .page-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(42px, 6vw, 72px);
+            font-weight: 400;
+            color: var(--ivory);
+            margin-bottom: 15px;
+        }
+        .page-title em { font-style: italic; color: var(--champagne); }
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(250,247,242,0.5);
+        }
+        .breadcrumb a:hover { color: var(--champagne); }
+        .breadcrumb span { color: var(--champagne); }
+
+        .contact-section { padding: 100px 0; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 60px; }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 80px;
+        }
+        
+        .contact-info { padding-right: 40px; }
+        .contact-info h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            margin-bottom: 25px;
+            line-height: 1.3;
+        }
+        .contact-info h2 em { font-style: italic; color: var(--champagne); }
+        .contact-info > p {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 18px;
+            color: var(--warm-gray);
+            margin-bottom: 50px;
+            line-height: 1.8;
+        }
+        
+        .info-block { margin-bottom: 40px; }
+        .info-block h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 16px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--champagne);
+            margin-bottom: 15px;
+        }
+        .info-block p { font-size: 15px; color: var(--charcoal); line-height: 1.8; }
+        .info-block a { color: var(--charcoal); transition: color 0.3s; }
+        .info-block a:hover { color: var(--champagne); }
+        
+        .boutiques { margin-top: 60px; }
+        .boutiques h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        .boutique { padding: 25px 0; border-bottom: 1px solid rgba(201,169,110,0.15); }
+        .boutique h5 { font-family: 'Playfair Display', serif; font-size: 18px; margin-bottom: 8px; }
+        .boutique p { font-size: 14px; color: var(--warm-gray); line-height: 1.7; }
+        .boutique span { font-size: 12px; color: var(--sand); letter-spacing: 1px; }
+
+        .contact-form-wrapper {
+            background: white;
+            padding: 60px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.05);
+        }
+        .contact-form-wrapper h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .contact-form-wrapper > p {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 16px;
+            color: var(--warm-gray);
+            margin-bottom: 40px;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+        .form-group { margin-bottom: 25px; }
+        .form-group label {
+            display: block;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--charcoal);
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 16px 20px;
+            border: 1px solid rgba(201,169,110,0.25);
+            background: var(--ivory);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            color: var(--charcoal);
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--champagne);
+        }
+        .form-group textarea { resize: vertical; min-height: 150px; }
+        .form-group select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23C9A96E' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+        }
+        
+        .btn {
+            padding: 18px 45px;
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.4s var(--transition);
+        }
+        .btn-primary {
+            background: var(--charcoal);
+            color: var(--ivory);
+            border: 1px solid var(--charcoal);
+        }
+        .btn-primary:hover {
+            background: var(--champagne);
+            border-color: var(--champagne);
+        }
+
+        footer {
+            background: var(--noir);
+            color: var(--ivory);
+            padding: 80px 0 40px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+        .footer-brand .logo { margin-bottom: 25px; display: inline-block; }
+        .footer-brand p {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 16px;
+            color: rgba(250,247,242,0.5);
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+        .footer-social { display: flex; gap: 15px; }
+        .footer-social a {
+            width: 42px; height: 42px;
+            border: 1px solid rgba(201,169,110,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--ivory);
+            transition: all 0.3s;
+        }
+        .footer-social a:hover { background: var(--champagne); border-color: var(--champagne); color: var(--charcoal); }
+        .footer-col h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            color: var(--champagne);
+        }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 12px; }
+        .footer-col a { color: rgba(250,247,242,0.5); font-size: 13px; transition: color 0.3s; }
+        .footer-col a:hover { color: var(--champagne); }
+        .footer-bottom {
+            padding-top: 40px;
+            border-top: 1px solid rgba(201,169,110,0.15);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer-bottom p { font-size: 12px; color: rgba(250,247,242,0.4); }
+        .footer-legal { display: flex; gap: 30px; }
+        .footer-legal a { font-size: 12px; color: rgba(250,247,242,0.4); }
+        .footer-legal a:hover { color: var(--champagne); }
+
+        @media (max-width: 1024px) {
+            .contact-grid { grid-template-columns: 1fr; gap: 60px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            nav { padding: 20px 30px; }
+            .nav-links { display: none; }
+            .nav-icons { display: none; }
+            .menu-toggle { display: flex; }
+            .container { padding: 0 30px; }
+            .page-header { height: 45vh; margin-top: 70px; }
+            .contact-section { padding: 60px 0; }
+            .contact-form-wrapper { padding: 40px 30px; }
+            .form-row { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+            .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
+        }
+    </style>
 </head>
 <body>
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
 
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">ELEGANTE</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="collections.html">Collections</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-            </ul>
-            <div class="nav-icons">
-                <button class="icon-btn"><i class="fas fa-search"></i></button>
-                <button class="icon-btn"><i class="fas fa-heart"></i></button>
-                <button class="icon-btn cart-btn">
-                    <i class="fas fa-shopping-bag"></i>
-                    <span class="cart-count">0</span>
-                </button>
-            </div>
-            <button class="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+<nav>
+    <a href="index.html" class="logo">ELEGAN<span>T</span>E</a>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="nav-icons">
+        <a href="#"><i class="fas fa-search"></i></a>
+        <a href="#"><i class="far fa-heart"></i></a>
+        <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-bag"></i><span class="cart-count">2</span></a>
+    </div>
+    <div class="menu-toggle"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mobile-menu-overlay"></div>
+<div class="mobile-menu">
+    <div class="mobile-menu-header">
+        <a href="index.html" class="mobile-menu-logo">ELEGAN<span>T</span>E</a>
+        <button class="mobile-menu-close"><i class="fas fa-times"></i></button>
+    </div>
+    <ul class="mobile-menu-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html">My Bag (2)</a></li>
+    </ul>
+    <div class="mobile-menu-footer">
+        <div class="mobile-menu-footer-title">Follow Us</div>
+        <div class="mobile-menu-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
         </div>
-    </nav>
+    </div>
+</div>
 
-    <header class="page-header">
-        <div class="header-bg"></div>
-        <div class="header-content">
-            <h1>Contact Us</h1>
-            <p>We'd love to hear from you</p>
+<header class="page-header">
+    <div class="page-header-content">
+        <h1 class="page-title">Get in <em>Touch</em></h1>
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <a href="contact.html">Contact</a>
         </div>
-    </header>
+    </div>
+</header>
 
-    <section class="contact-main">
-        <div class="contact-container">
+<section class="contact-section">
+    <div class="container">
+        <div class="contact-grid">
             <div class="contact-info">
-                <div class="info-section">
-                    <h2>Get in Touch</h2>
-                    <p>Whether you have a question about our collections, need styling advice, or want to book a private appointment, our team is here to help.</p>
+                <h2>We'd Love to<br><em>Hear From You</em></h2>
+                <p>Whether you have a question about our collections, sizing, or need styling advice, our concierge team is here to assist you.</p>
+                
+                <div class="info-block">
+                    <h4>Customer Service</h4>
+                    <p><a href="tel:+18003534263">+1 800 ELEGANTE</a></p>
+                    <p><a href="mailto:concierge@elegante.com">concierge@elegante.com</a></p>
+                    <p>Monday - Friday: 9am - 8pm EST</p>
+                    <p>Saturday: 10am - 6pm EST</p>
                 </div>
-
-                <div class="contact-methods">
-                    <div class="method">
-                        <div class="method-icon"><i class="fas fa-map-marker-alt"></i></div>
-                        <div class="method-content">
-                            <h3>Visit Our Boutiques</h3>
-                            <p>Experience ELEGANTE in person at one of our locations worldwide.</p>
-                        </div>
-                    </div>
-                    <div class="method">
-                        <div class="method-icon"><i class="fas fa-phone"></i></div>
-                        <div class="method-content">
-                            <h3>Call Us</h3>
-                            <p>+1 (800) ELEGANTE</p>
-                            <span>Mon-Sat: 9am - 8pm EST</span>
-                        </div>
-                    </div>
-                    <div class="method">
-                        <div class="method-icon"><i class="fas fa-envelope"></i></div>
-                        <div class="method-content">
-                            <h3>Email Us</h3>
-                            <p>concierge@elegante.com</p>
-                            <span>We respond within 24 hours</span>
-                        </div>
-                    </div>
-                    <div class="method">
-                        <div class="method-icon"><i class="fas fa-comments"></i></div>
-                        <div class="method-content">
-                            <h3>Live Chat</h3>
-                            <p>Chat with our style advisors</p>
-                            <span>Available during business hours</span>
-                        </div>
-                    </div>
+                
+                <div class="info-block">
+                    <h4>Private Appointments</h4>
+                    <p>Experience our collections in an intimate setting. Book a private appointment at your nearest boutique.</p>
+                    <p><a href="#">Schedule an Appointment →</a></p>
                 </div>
-
-                <div class="social-section">
-                    <h3>Follow Us</h3>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                
+                <div class="boutiques">
+                    <h3>Our Boutiques</h3>
+                    <div class="boutique">
+                        <h5>Milan</h5>
+                        <p>Via Montenapoleone 12, 20121<br>Milano, Italy</p>
+                        <span>Mon-Sat 10:00 - 19:00</span>
+                    </div>
+                    <div class="boutique">
+                        <h5>Paris</h5>
+                        <p>24 Rue du Faubourg Saint-Honoré, 75008<br>Paris, France</p>
+                        <span>Mon-Sat 10:00 - 19:00</span>
+                    </div>
+                    <div class="boutique">
+                        <h5>New York</h5>
+                        <p>725 Fifth Avenue, 10022<br>New York, NY</p>
+                        <span>Mon-Sat 10:00 - 20:00</span>
                     </div>
                 </div>
             </div>
-
-            <div class="contact-form-section">
-                <form class="contact-form">
-                    <h3>Send us a Message</h3>
+            
+            <div class="contact-form-wrapper">
+                <h3>Send Us a Message</h3>
+                <p>Fill out the form below and we'll get back to you within 24 hours.</p>
+                <form>
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="firstName">First Name *</label>
-                            <input type="text" id="firstName" required>
+                            <label>First Name</label>
+                            <input type="text" placeholder="Your first name" required>
                         </div>
                         <div class="form-group">
-                            <label for="lastName">Last Name *</label>
-                            <input type="text" id="lastName" required>
+                            <label>Last Name</label>
+                            <input type="text" placeholder="Your last name" required>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" required>
+                        <label>Email Address</label>
+                        <input type="email" placeholder="your@email.com" required>
                     </div>
                     <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone">
+                        <label>Phone (Optional)</label>
+                        <input type="tel" placeholder="+1 (555) 000-0000">
                     </div>
                     <div class="form-group">
-                        <label for="subject">Subject *</label>
-                        <select id="subject" required>
-                            <option value="">Select a subject</option>
+                        <label>Subject</label>
+                        <select required>
+                            <option value="">Select an option</option>
                             <option value="order">Order Inquiry</option>
-                            <option value="appointment">Book an Appointment</option>
+                            <option value="product">Product Information</option>
+                            <option value="appointment">Book Appointment</option>
                             <option value="custom">Custom Tailoring</option>
                             <option value="returns">Returns & Exchanges</option>
-                            <option value="styling">Styling Advice</option>
                             <option value="other">Other</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="message">Your Message *</label>
-                        <textarea id="message" rows="6" required placeholder="How can we help you?"></textarea>
+                        <label>Message</label>
+                        <textarea placeholder="How can we help you?"></textarea>
                     </div>
-                    <div class="form-group checkbox">
-                        <input type="checkbox" id="newsletter">
-                        <label for="newsletter">Subscribe to our newsletter for exclusive updates</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-full">Send Message <i class="fas fa-paper-plane"></i></button>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="boutiques">
-        <div class="section-header">
-            <span class="tag">Locations</span>
-            <h2>Our <span class="highlight">Boutiques</span></h2>
-        </div>
-        <div class="boutiques-grid">
-            <div class="boutique-card">
-                <div class="boutique-img">
-                    <img src="https://images.unsplash.com/photo-1534430480872-3498386e7856?w=600&h=400&fit=crop" alt="Milan Boutique">
-                    <div class="boutique-badge">Flagship</div>
-                </div>
-                <div class="boutique-info">
-                    <h3>Milan</h3>
-                    <p class="address">Via Montenapoleone 12<br>20121 Milano, Italy</p>
-                    <div class="boutique-details">
-                        <span><i class="fas fa-clock"></i> Mon-Sat: 10am - 7pm</span>
-                        <span><i class="fas fa-phone"></i> +39 02 1234 5678</span>
-                    </div>
-                    <a href="#" class="btn btn-outline">Get Directions</a>
-                </div>
-            </div>
-
-            <div class="boutique-card">
-                <div class="boutique-img">
-                    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&h=400&fit=crop" alt="Paris Boutique">
-                </div>
-                <div class="boutique-info">
-                    <h3>Paris</h3>
-                    <p class="address">24 Rue du Faubourg Saint-Honoré<br>75008 Paris, France</p>
-                    <div class="boutique-details">
-                        <span><i class="fas fa-clock"></i> Mon-Sat: 10am - 7pm</span>
-                        <span><i class="fas fa-phone"></i> +33 1 23 45 67 89</span>
-                    </div>
-                    <a href="#" class="btn btn-outline">Get Directions</a>
-                </div>
-            </div>
-
-            <div class="boutique-card">
-                <div class="boutique-img">
-                    <img src="https://images.unsplash.com/photo-1534430480872-3498386e7856?w=600&h=400&fit=crop" alt="New York Boutique">
-                </div>
-                <div class="boutique-info">
-                    <h3>New York</h3>
-                    <p class="address">725 Fifth Avenue<br>New York, NY 10022</p>
-                    <div class="boutique-details">
-                        <span><i class="fas fa-clock"></i> Mon-Sat: 10am - 8pm</span>
-                        <span><i class="fas fa-phone"></i> +1 (212) 555-0123</span>
-                    </div>
-                    <a href="#" class="btn btn-outline">Get Directions</a>
-                </div>
-            </div>
-
-            <div class="boutique-card">
-                <div class="boutique-img">
-                    <img src="https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?w=600&h=400&fit=crop" alt="London Boutique">
-                </div>
-                <div class="boutique-info">
-                    <h3>London</h3>
-                    <p class="address">171 New Bond Street<br>London W1S 4RD, UK</p>
-                    <div class="boutique-details">
-                        <span><i class="fas fa-clock"></i> Mon-Sat: 10am - 6pm</span>
-                        <span><i class="fas fa-phone"></i> +44 20 7123 4567</span>
-                    </div>
-                    <a href="#" class="btn btn-outline">Get Directions</a>
-                </div>
-            </div>
-
-            <div class="boutique-card">
-                <div class="boutique-img">
-                    <img src="https://images.unsplash.com/photo-1534430480872-3498386e7856?w=600&h=400&fit=crop" alt="Tokyo Boutique">
-                </div>
-                <div class="boutique-info">
-                    <h3>Tokyo</h3>
-                    <p class="address">5-8-1 Ginza, Chuo-ku<br>Tokyo 104-0061</p>
-                    <div class="boutique-details">
-                        <span><i class="fas fa-clock"></i> Daily: 11am - 8pm</span>
-                        <span><i class="fas fa-phone"></i> +81 3 1234 5678</span>
-                    </div>
-                    <a href="#" class="btn btn-outline">Get Directions</a>
-                </div>
-            </div>
-
-            <div class="boutique-card">
-                <div class="boutique-img">
-                    <img src="https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?w=600&h=400&fit=crop" alt="Dubai Boutique">
-                </div>
-                <div class="boutique-info">
-                    <h3>Dubai</h3>
-                    <p class="address">The Dubai Mall, Fashion Avenue<br>Dubai, UAE</p>
-                    <div class="boutique-details">
-                        <span><i class="fas fa-clock"></i> Sun-Thu: 10am - 10pm</span>
-                        <span><i class="fas fa-phone"></i> +971 4 123 4567</span>
-                    </div>
-                    <a href="#" class="btn btn-outline">Get Directions</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="appointment">
-        <div class="appointment-content">
-            <div class="appointment-text">
-                <span class="tag">Personal Shopping</span>
-                <h2>Book a Private Appointment</h2>
-                <p>Experience personalized service with one of our expert style advisors. Enjoy a private fitting room, champagne, and curated selections tailored to your taste.</p>
-                <ul class="appointment-features">
-                    <li><i class="fas fa-check"></i> One-on-one styling consultation</li>
-                    <li><i class="fas fa-check"></i> Access to exclusive pieces</li>
-                    <li><i class="fas fa-check"></i> Complimentary alterations</li>
-                    <li><i class="fas fa-check"></i> Complimentary refreshments</li>
-                </ul>
-                <a href="#" class="btn btn-primary">Schedule Now</a>
-            </div>
-            <div class="appointment-image">
-                <img src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=600&h=800&fit=crop" alt="Private Appointment">
-            </div>
-        </div>
-    </section>
-
-    <section class="features">
-        <div class="feature">
-            <div class="feature-icon"><i class="fas fa-gem"></i></div>
-            <h3>Premium Quality</h3>
-            <p>Only the finest materials and craftsmanship</p>
-        </div>
-        <div class="feature">
-            <div class="feature-icon"><i class="fas fa-truck"></i></div>
-            <h3>Free Shipping</h3>
-            <p>Complimentary delivery on all orders</p>
-        </div>
-        <div class="feature">
-            <div class="feature-icon"><i class="fas fa-undo"></i></div>
-            <h3>Easy Returns</h3>
-            <p>30-day hassle-free return policy</p>
-        </div>
-        <div class="feature">
-            <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
-            <h3>Secure Payment</h3>
-            <p>Your transactions are fully protected</p>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="footer-top">
+<footer>
+    <div class="container">
+        <div class="footer-grid">
             <div class="footer-brand">
-                <div class="logo">ELEGANTE</div>
-                <p>Where timeless elegance meets modern sophistication.</p>
-                <div class="social">
+                <a href="index.html" class="logo">ELEGAN<span>T</span>E</a>
+                <p>Where timeless elegance meets modern sophistication. Crafting luxury since 1952.</p>
+                <div class="footer-social">
                     <a href="#"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-pinterest-p"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
-            <div class="footer-links">
-                <h4>Quick Links</h4>
+            <div class="footer-col">
+                <h4>Shop</h4>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="collections.html">Collections</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="shop.html">New Arrivals</a></li>
+                    <li><a href="shop.html">Women</a></li>
+                    <li><a href="shop.html">Men</a></li>
+                    <li><a href="shop.html">Accessories</a></li>
+                    <li><a href="shop.html">Sale</a></li>
                 </ul>
             </div>
-            <div class="footer-links">
-                <h4>Customer Care</h4>
+            <div class="footer-col">
+                <h4>About</h4>
                 <ul>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="about.html">Craftsmanship</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
                     <li><a href="#">Shipping & Returns</a></li>
                     <li><a href="#">Size Guide</a></li>
                     <li><a href="#">FAQs</a></li>
                     <li><a href="#">Track Order</a></li>
                 </ul>
             </div>
-            <div class="footer-links">
-                <h4>About</h4>
-                <ul>
-                    <li><a href="#">Our Story</a></li>
-                    <li><a href="#">Craftsmanship</a></li>
-                    <li><a href="#">Sustainability</a></li>
-                    <li><a href="#">Press</a></li>
-                </ul>
-            </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 ELEGANTE. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Settings</a>
+            </div>
         </div>
-    </footer>
-
-    <style>
-        .page-header {
-            padding: 12rem 3rem 6rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .header-bg {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, var(--cream) 0%, #e8dfd4 100%);
-            z-index: 0;
-        }
-
-        .header-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .page-header h1 {
-            font-family: var(--font-display);
-            font-size: 4rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .page-header p {
-            font-size: 1.2rem;
-            color: var(--text-light);
-        }
-
-        .contact-main {
-            padding: 4rem 3rem 6rem;
-        }
-
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1.5fr;
-            gap: 6rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .info-section h2 {
-            font-family: var(--font-display);
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .info-section > p {
-            color: var(--text-light);
-            margin-bottom: 3rem;
-        }
-
-        .contact-methods {
-            margin-bottom: 3rem;
-        }
-
-        .method {
-            display: flex;
-            gap: 1.5rem;
-            padding: 1.5rem 0;
-            border-bottom: 1px solid var(--light-gray);
-        }
-
-        .method-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--accent);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-size: 1.25rem;
-        }
-
-        .method-content h3 {
-            font-family: var(--font-display);
-            font-size: 1rem;
-            margin-bottom: 0.25rem;
-        }
-
-        .method-content p {
-            font-family: var(--font-sans);
-            font-size: 0.9rem;
-            color: var(--text);
-        }
-
-        .method-content span {
-            font-family: var(--font-sans);
-            font-size: 0.8rem;
-            color: var(--text-light);
-        }
-
-        .social-section h3 {
-            font-family: var(--font-display);
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 0.75rem;
-        }
-
-        .social-links a {
-            width: 45px;
-            height: 45px;
-            border: 1px solid var(--light-gray);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary);
-            transition: all 0.3s ease;
-        }
-
-        .social-links a:hover {
-            background: var(--accent);
-            border-color: var(--accent);
-            color: var(--white);
-        }
-
-        .contact-form-section {
-            background: var(--white);
-            padding: 3rem;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
-        }
-
-        .contact-form h3 {
-            font-family: var(--font-display);
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            font-family: var(--font-sans);
-            font-size: 0.8rem;
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-            color: var(--primary);
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 1rem;
-            background: var(--cream);
-            border: 1px solid var(--light-gray);
-            font-family: var(--font-sans);
-            font-size: 0.95rem;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--accent);
-        }
-
-        .form-group textarea {
-            resize: none;
-        }
-
-        .form-group.checkbox {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .form-group.checkbox input {
-            width: auto;
-        }
-
-        .form-group.checkbox label {
-            margin-bottom: 0;
-            font-weight: 400;
-            color: var(--text-light);
-        }
-
-        .btn-full {
-            width: 100%;
-            justify-content: center;
-        }
-
-        .boutiques {
-            padding: 6rem 3rem;
-            background: var(--cream);
-        }
-
-        .section-header {
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto 4rem;
-        }
-
-        .tag {
-            font-family: var(--font-sans);
-            font-size: 0.7rem;
-            font-weight: 500;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: var(--accent);
-        }
-
-        .section-header h2 {
-            font-family: var(--font-display);
-            font-size: 3rem;
-            margin: 1rem 0;
-        }
-
-        .highlight {
-            color: var(--accent);
-            font-style: italic;
-        }
-
-        .boutiques-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .boutique-card {
-            background: var(--white);
-        }
-
-        .boutique-img {
-            position: relative;
-            height: 220px;
-            overflow: hidden;
-        }
-
-        .boutique-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s ease;
-        }
-
-        .boutique-card:hover .boutique-img img {
-            transform: scale(1.05);
-        }
-
-        .boutique-badge {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            padding: 0.35rem 0.75rem;
-            background: var(--accent);
-            color: var(--white);
-            font-family: var(--font-sans);
-            font-size: 0.7rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .boutique-info {
-            padding: 1.5rem;
-        }
-
-        .boutique-info h3 {
-            font-family: var(--font-display);
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .boutique-info .address {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            line-height: 1.5;
-            margin-bottom: 1rem;
-        }
-
-        .boutique-details {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .boutique-details span {
-            font-family: var(--font-sans);
-            font-size: 0.8rem;
-            color: var(--text-light);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .boutique-details i {
-            color: var(--accent);
-            width: 16px;
-        }
-
-        .appointment {
-            padding: 6rem 3rem;
-        }
-
-        .appointment-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            max-width: 1400px;
-            margin: 0 auto;
-            align-items: center;
-        }
-
-        .appointment-text .tag {
-            display: block;
-        }
-
-        .appointment-text h2 {
-            font-family: var(--font-display);
-            font-size: 2.5rem;
-            margin: 1rem 0;
-        }
-
-        .appointment-text > p {
-            color: var(--text-light);
-            margin-bottom: 2rem;
-        }
-
-        .appointment-features {
-            list-style: none;
-            margin-bottom: 2rem;
-        }
-
-        .appointment-features li {
-            padding: 0.75rem 0;
-            font-family: var(--font-sans);
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .appointment-features i {
-            color: var(--accent);
-        }
-
-        .appointment-image {
-            overflow: hidden;
-        }
-
-        .appointment-image img {
-            width: 100%;
-            height: 500px;
-            object-fit: cover;
-        }
-
-        @media (max-width: 992px) {
-            .contact-container {
-                grid-template-columns: 1fr;
-                gap: 4rem;
-            }
-
-            .boutiques-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .appointment-content {
-                grid-template-columns: 1fr;
-            }
-
-            .appointment-image {
-                order: -1;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .page-header h1 {
-                font-size: 2.5rem;
-            }
-
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-
-            .boutiques-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const cursor = document.querySelector('.cursor');
-            const cursorFollower = document.querySelector('.cursor-follower');
-            const navToggle = document.querySelector('.nav-toggle');
-            const navLinks = document.querySelector('.nav-links');
-            const header = document.querySelector('.navbar');
-
-            if (cursor && cursorFollower) {
-                document.addEventListener('mousemove', (e) => {
-                    cursor.style.left = e.clientX + 'px';
-                    cursor.style.top = e.clientY + 'px';
-                    setTimeout(() => {
-                        cursorFollower.style.left = e.clientX + 'px';
-                        cursorFollower.style.top = e.clientY + 'px';
-                    }, 50);
-                });
-            }
-
-            if (navToggle && navLinks) {
-                navToggle.addEventListener('click', () => {
-                    navLinks.classList.toggle('active');
-                    navToggle.classList.toggle('active');
-                });
-            }
-
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 100) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
-            });
-        });
-    </script>
+    </div>
+</footer>
+
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+    const mobileMenuClose = document.querySelector('.mobile-menu-close');
+    const mobileMenuLinks = document.querySelectorAll('.mobile-menu-links a');
+
+    function openMenu() {
+        mobileMenu.classList.add('active');
+        mobileMenuOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeMenu() {
+        mobileMenu.classList.remove('active');
+        mobileMenuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    menuToggle.addEventListener('click', openMenu);
+    mobileMenuClose.addEventListener('click', closeMenu);
+    mobileMenuOverlay.addEventListener('click', closeMenu);
+    mobileMenuLinks.forEach(link => link.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && mobileMenu.classList.contains('active')) closeMenu(); });
+</script>
 </body>
 </html>

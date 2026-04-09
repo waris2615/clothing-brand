@@ -3,823 +3,481 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - ELEGANTE | Luxury Clothing Brand</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Our Story | ELEGANTE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-:root { --primary: #1a1a1a; --accent: #c9a959; --accent-dark: #a68b3d; --cream: #f8f5f0; --light-gray: #e8e4df; --text: #333333; --text-light: #666666; --white: #ffffff; --font-display: 'Playfair Display', serif; --font-body: 'Cormorant Garamond', serif; --font-sans: 'Montserrat', sans-serif; }
-html { scroll-behavior: smooth; }
-body { font-family: var(--font-body); color: var(--text); background: var(--cream); line-height: 1.6; overflow-x: hidden; cursor: none; }
-.cursor { width: 20px; height: 20px; border: 2px solid var(--accent); border-radius: 50%; position: fixed; pointer-events: none; z-index: 10000; transition: transform 0.1s ease; }
-.cursor-follower { width: 8px; height: 8px; background: var(--accent); border-radius: 50%; position: fixed; pointer-events: none; z-index: 10000; transition: transform 0.3s ease; }
-.navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1.5rem 3rem; background: rgba(248, 245, 240, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
-.nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-.logo { font-family: var(--font-display); font-size: 2rem; font-weight: 700; letter-spacing: 8px; color: var(--primary); text-decoration: none; }
-.nav-links { display: flex; list-style: none; gap: 3rem; }
-.nav-links a { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--text); text-decoration: none; position: relative; padding: 0.5rem 0; }
-.nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1px; background: var(--accent); transition: width 0.3s ease; }
-.nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
-.nav-icons { display: flex; gap: 1.5rem; }
-.icon-btn { background: none; border: none; font-size: 1.1rem; color: var(--primary); cursor: pointer; transition: color 0.3s; position: relative; }
-.icon-btn:hover { color: var(--accent); }
-.cart-count { position: absolute; top: -8px; right: -8px; width: 18px; height: 18px; background: var(--accent); color: var(--white); font-size: 0.65rem; font-family: var(--font-sans); font-weight: 600; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
-.nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; }
-.nav-toggle span { width: 25px; height: 2px; background: var(--primary); transition: all 0.3s; }
-.btn { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; padding: 1rem 2rem; border-radius: 0; text-decoration: none; cursor: pointer; transition: all 0.4s ease; display: inline-flex; align-items: center; gap: 0.5rem; border: 2px solid var(--primary); }
-.btn-primary { background: var(--primary); color: var(--white); border: 2px solid var(--primary); }
-.btn-primary:hover { background: var(--accent); border-color: var(--accent); }
-.btn-secondary { background: transparent; color: var(--primary); border: 2px solid var(--primary); }
-.btn-secondary:hover { background: var(--primary); color: var(--white); }
-.btn-outline { background: transparent; color: var(--primary); border: 1px solid var(--primary); }
-.btn-outline:hover { background: var(--primary); color: var(--white); }
-.footer { background: var(--primary); color: var(--white); padding: 4rem 3rem 2rem; }
-.footer-top { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
-.footer-brand .logo { margin-bottom: 1rem; }
-.footer-brand p { color: rgba(255, 255, 255, 0.6); margin-bottom: 1.5rem; font-size: 0.95rem; }
-.social { display: flex; gap: 1rem; }
-.social a { width: 40px; height: 40px; border: 1px solid rgba(255, 255, 255, 0.3); display: flex; align-items: center; justify-content: center; color: var(--white); transition: all 0.3s ease; text-decoration: none; }
-.social a:hover { background: var(--accent); border-color: var(--accent); }
-.footer-links h4 { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.5rem; }
-.footer-links ul { list-style: none; }
-.footer-links li { margin-bottom: 0.75rem; }
-.footer-links a { color: rgba(255, 255, 255, 0.6); text-decoration: none; font-size: 0.9rem; transition: color 0.3s ease; }
-.footer-links a:hover { color: var(--accent); }
-.footer-bottom { max-width: 1400px; margin: 0 auto; padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; }
-.footer-bottom p { font-family: var(--font-sans); font-size: 0.8rem; color: rgba(255, 255, 255, 0.5); }
-</style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --ivory: #FAF7F2;
+            --champagne: #C9A96E;
+            --champagne-light: #D4B88A;
+            --charcoal: #1A1A1A;
+            --noir: #0D0D0D;
+            --graphite: #2A2A2A;
+            --sand: #B8A88A;
+            --warm-gray: #8C8477;
+            --rose: #C4A484;
+            --transition: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--ivory);
+            color: var(--charcoal);
+            overflow-x: hidden;
+            line-height: 1.7;
+            font-weight: 300;
+            -webkit-font-smoothing: antialiased;
+        }
+        ::selection { background: var(--champagne); color: var(--ivory); }
+        a { text-decoration: none; color: inherit; }
+        
+        nav {
+            position: fixed;
+            top: 0; width: 100%;
+            z-index: 1000;
+            padding: 28px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(250, 247, 242, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 1px 0 rgba(201, 169, 110, 0.15);
+        }
+        .logo { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 400; letter-spacing: 10px; color: var(--charcoal); }
+        .logo span { color: var(--champagne); }
+        .nav-links { display: flex; list-style: none; gap: 45px; }
+        .nav-links a { color: var(--charcoal); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 500; position: relative; padding: 5px 0; }
+        .nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1px; background: var(--champagne); transition: width 0.4s var(--transition); }
+        .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+        .nav-links a:hover, .nav-links a.active { color: var(--champagne); }
+        .nav-icons { display: flex; gap: 25px; align-items: center; }
+        .nav-icons a { color: var(--charcoal); font-size: 18px; transition: color 0.3s; }
+        .nav-icons a:hover { color: var(--champagne); }
+        .cart-icon { position: relative; }
+        .cart-count { position: absolute; top: -8px; right: -10px; background: var(--champagne); color: var(--ivory); font-size: 9px; width: 16px; height: 16px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+        .menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 5px; }
+        .menu-toggle span { width: 24px; height: 1.5px; background: var(--charcoal); }
+
+        .mobile-menu-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: rgba(0,0,0,0.5); z-index: 9998; opacity: 0; visibility: hidden; transition: all 0.4s ease; }
+        .mobile-menu-overlay.active { opacity: 1; visibility: visible; }
+        .mobile-menu { position: fixed; top: 0; right: -100%; width: 85%; max-width: 400px; height: 100vh; background: var(--charcoal); z-index: 9999; transition: right 0.5s cubic-bezier(0.4, 0, 0.2, 1); display: flex; flex-direction: column; }
+        .mobile-menu.active { right: 0; }
+        .mobile-menu-header { display: flex; justify-content: space-between; align-items: center; padding: 25px 30px; border-bottom: 1px solid rgba(201,169,110,0.15); }
+        .mobile-menu-logo { font-family: 'Playfair Display', serif; font-size: 24px; letter-spacing: 6px; color: var(--ivory); }
+        .mobile-menu-logo span { color: var(--champagne); }
+        .mobile-menu-close { width: 40px; height: 40px; background: none; border: 1px solid rgba(201,169,110,0.3); color: var(--ivory); font-size: 18px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+        .mobile-menu-close:hover { background: var(--champagne); border-color: var(--champagne); color: var(--charcoal); }
+        .mobile-menu-links { list-style: none; padding: 40px 30px; flex: 1; }
+        .mobile-menu-links li { border-bottom: 1px solid rgba(201,169,110,0.08); }
+        .mobile-menu-links a { display: block; padding: 18px 0; font-family: 'Playfair Display', serif; font-size: 20px; color: var(--ivory); transition: all 0.3s; }
+        .mobile-menu-links a:hover { color: var(--champagne); padding-left: 10px; }
+        .mobile-menu-footer { padding: 30px; border-top: 1px solid rgba(201,169,110,0.15); }
+        .mobile-menu-footer-title { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--warm-gray); margin-bottom: 15px; }
+        .mobile-menu-social { display: flex; gap: 12px; }
+        .mobile-menu-social a { width: 40px; height: 40px; border: 1px solid rgba(201,169,110,0.25); display: flex; align-items: center; justify-content: center; color: var(--ivory); font-size: 14px; }
+        .mobile-menu-social a:hover { background: var(--champagne); border-color: var(--champagne); color: var(--charcoal); }
+
+        .page-header {
+            height: 55vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--charcoal);
+            position: relative;
+            overflow: hidden;
+            margin-top: 80px;
+        }
+        .page-header::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 0L60 40L100 50L60 60L50 100L40 60L0 50L40 40Z' fill='%23C9A96E' fill-opacity='0.03'/%3E%3C/svg%3E"); }
+        .page-header-content { text-align: center; position: relative; z-index: 1; }
+        .page-title { font-family: 'Playfair Display', serif; font-size: clamp(42px, 6vw, 72px); font-weight: 400; color: var(--ivory); margin-bottom: 15px; }
+        .page-title em { font-style: italic; color: var(--champagne); }
+        .breadcrumb { display: flex; justify-content: center; gap: 15px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: rgba(250,247,242,0.5); }
+        .breadcrumb a:hover { color: var(--champagne); }
+        .breadcrumb span { color: var(--champagne); }
+
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 60px; }
+
+        .hero-story {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            padding: 100px 0;
+            align-items: center;
+        }
+        .story-image { position: relative; }
+        .story-image img { width: 100%; filter: grayscale(10%); }
+        .story-image::after {
+            content: '';
+            position: absolute;
+            top: 30px; left: 30px;
+            right: -30px; bottom: -30px;
+            border: 1px solid var(--champagne);
+            z-index: -1;
+        }
+        .story-content h2 { font-family: 'Playfair Display', serif; font-size: 42px; margin-bottom: 30px; line-height: 1.2; }
+        .story-content h2 em { font-style: italic; color: var(--champagne); }
+        .story-content p { font-family: 'Cormorant Garamond', serif; font-size: 18px; color: var(--warm-gray); line-height: 1.9; margin-bottom: 20px; }
+
+        .stats-section { background: var(--charcoal); padding: 80px 0; }
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; text-align: center; }
+        .stat-item h3 { font-family: 'Playfair Display', serif; font-size: 56px; color: var(--champagne); margin-bottom: 10px; }
+        .stat-item p { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(250,247,242,0.5); }
+
+        .values-section { padding: 100px 0; }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header h2 { font-family: 'Playfair Display', serif; font-size: 42px; margin-bottom: 15px; }
+        .section-header h2 em { font-style: italic; color: var(--champagne); }
+        .section-header p { font-family: 'Cormorant Garamond', serif; font-size: 18px; color: var(--warm-gray); }
+        .section-line { width: 50px; height: 1px; background: var(--champagne); margin: 25px auto; }
+
+        .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+        .value-card { text-align: center; padding: 50px 40px; background: white; transition: all 0.5s var(--transition); }
+        .value-card:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(0,0,0,0.08); }
+        .value-icon { font-size: 48px; color: var(--champagne); margin-bottom: 25px; }
+        .value-card h4 { font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 15px; }
+        .value-card p { font-family: 'Cormorant Garamond', serif; font-size: 16px; color: var(--warm-gray); line-height: 1.8; }
+
+        .timeline-section { background: var(--ivory); padding: 100px 0; }
+        .timeline { max-width: 800px; margin: 0 auto; position: relative; }
+        .timeline::before { content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: rgba(201,169,110,0.3); }
+        .timeline-item { display: flex; align-items: center; margin-bottom: 60px; }
+        .timeline-item:nth-child(even) { flex-direction: row-reverse; }
+        .timeline-content { width: 45%; padding: 30px; background: white; box-shadow: 0 10px 40px rgba(0,0,0,0.05); }
+        .timeline-content h4 { font-family: 'Playfair Display', serif; font-size: 24px; color: var(--champagne); margin-bottom: 10px; }
+        .timeline-content h5 { font-family: 'Playfair Display', serif; font-size: 16px; margin-bottom: 10px; }
+        .timeline-content p { font-size: 14px; color: var(--warm-gray); line-height: 1.7; }
+        .timeline-dot { width: 16px; height: 16px; background: var(--champagne); border-radius: 50%; margin: 0 30px; flex-shrink: 0; }
+
+        .team-section { padding: 100px 0; background: white; }
+        .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
+        .team-member { text-align: center; }
+        .team-photo { width: 100%; aspect-ratio: 3/4; overflow: hidden; margin-bottom: 25px; background: var(--graphite); }
+        .team-photo img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(20%); transition: filter 0.5s; }
+        .team-member:hover .team-photo img { filter: grayscale(0%); }
+        .team-member h4 { font-family: 'Playfair Display', serif; font-size: 20px; margin-bottom: 5px; }
+        .team-member p { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--warm-gray); }
+
+        .cta-section { background: var(--charcoal); padding: 100px 0; text-align: center; }
+        .cta-section h2 { font-family: 'Playfair Display', serif; font-size: 48px; color: var(--ivory); margin-bottom: 20px; }
+        .cta-section h2 em { font-style: italic; color: var(--champagne); }
+        .cta-section p { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: rgba(250,247,242,0.6); margin-bottom: 40px; }
+        .btn { padding: 18px 45px; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; font-weight: 500; cursor: pointer; transition: all 0.4s var(--transition); display: inline-block; }
+        .btn-primary { background: var(--champagne); color: var(--charcoal); border: 1px solid var(--champagne); }
+        .btn-primary:hover { background: var(--champagne-light); border-color: var(--champagne-light); }
+        .btn-outline { background: transparent; color: var(--ivory); border: 1px solid var(--ivory); margin-left: 20px; }
+        .btn-outline:hover { background: var(--ivory); color: var(--charcoal); }
+
+        footer { background: var(--noir); color: var(--ivory); padding: 80px 0 40px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; margin-bottom: 60px; }
+        .footer-brand .logo { margin-bottom: 25px; display: inline-block; }
+        .footer-brand p { font-family: 'Cormorant Garamond', serif; font-size: 16px; color: rgba(250,247,242,0.5); line-height: 1.8; margin-bottom: 25px; }
+        .footer-social { display: flex; gap: 15px; }
+        .footer-social a { width: 42px; height: 42px; border: 1px solid rgba(201,169,110,0.3); display: flex; align-items: center; justify-content: center; color: var(--ivory); transition: all 0.3s; }
+        .footer-social a:hover { background: var(--champagne); border-color: var(--champagne); color: var(--charcoal); }
+        .footer-col h4 { font-family: 'Playfair Display', serif; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 25px; color: var(--champagne); }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 12px; }
+        .footer-col a { color: rgba(250,247,242,0.5); font-size: 13px; transition: color 0.3s; }
+        .footer-col a:hover { color: var(--champagne); }
+        .footer-bottom { padding-top: 40px; border-top: 1px solid rgba(201,169,110,0.15); display: flex; justify-content: space-between; align-items: center; }
+        .footer-bottom p { font-size: 12px; color: rgba(250,247,242,0.4); }
+        .footer-legal { display: flex; gap: 30px; }
+        .footer-legal a { font-size: 12px; color: rgba(250,247,242,0.4); }
+        .footer-legal a:hover { color: var(--champagne); }
+
+        @media (max-width: 1024px) {
+            .hero-story { grid-template-columns: 1fr; gap: 60px; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .values-grid { grid-template-columns: repeat(2, 1fr); }
+            .team-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .timeline::before { left: 20px; }
+            .timeline-item, .timeline-item:nth-child(even) { flex-direction: column; align-items: flex-start; padding-left: 50px; }
+            .timeline-content { width: 100%; }
+            .timeline-dot { position: absolute; left: 13px; }
+        }
+        @media (max-width: 768px) {
+            nav { padding: 20px 30px; }
+            .nav-links { display: none; }
+            .nav-icons { display: none; }
+            .menu-toggle { display: flex; }
+            .container { padding: 0 30px; }
+            .page-header { height: 45vh; margin-top: 70px; }
+            .stats-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
+            .stat-item h3 { font-size: 42px; }
+            .values-grid { grid-template-columns: 1fr; }
+            .team-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+            .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
+        }
+    </style>
 </head>
 <body>
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
 
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">ELEGANTE</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="collections.html">Collections</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="nav-icons">
-                <button class="icon-btn"><i class="fas fa-search"></i></button>
-                <button class="icon-btn"><i class="fas fa-heart"></i></button>
-                <button class="icon-btn cart-btn">
-                    <i class="fas fa-shopping-bag"></i>
-                    <span class="cart-count">0</span>
-                </button>
-            </div>
-            <button class="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+<nav>
+    <a href="index.html" class="logo">ELEGAN<span>T</span>E</a>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-icons">
+        <a href="#"><i class="fas fa-search"></i></a>
+        <a href="#"><i class="far fa-heart"></i></a>
+        <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-bag"></i><span class="cart-count">2</span></a>
+    </div>
+    <div class="menu-toggle"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mobile-menu-overlay"></div>
+<div class="mobile-menu">
+    <div class="mobile-menu-header">
+        <a href="index.html" class="mobile-menu-logo">ELEGAN<span>T</span>E</a>
+        <button class="mobile-menu-close"><i class="fas fa-times"></i></button>
+    </div>
+    <ul class="mobile-menu-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html">My Bag (2)</a></li>
+    </ul>
+    <div class="mobile-menu-footer">
+        <div class="mobile-menu-footer-title">Follow Us</div>
+        <div class="mobile-menu-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
         </div>
-    </nav>
+    </div>
+</div>
 
-    <header class="page-header">
-        <div class="header-bg"></div>
-        <div class="header-content">
-            <h1>Our Story</h1>
-            <p>A legacy of craftsmanship and elegance since 1952</p>
+<header class="page-header">
+    <div class="page-header-content">
+        <h1 class="page-title">Our <em>Story</em></h1>
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <a href="about.html">About</a>
         </div>
-    </header>
+    </div>
+</header>
 
-    <section class="heritage">
-        <div class="heritage-content">
-            <div class="heritage-text">
-                <span class="tag">Heritage</span>
-                <h2>Seven Decades of<br>Timeless Elegance</h2>
-                <p>In 1952, in the heart of Milan's fashion district, a young tailor named Marco ELEGANTE opened a small atelier with a simple vision: to create garments that would stand the test of time.</p>
-                <p>What began as a single workshop has grown into an internationally recognized luxury brand, yet the principles remain unchanged. Every piece that bears our name is still crafted with the same devotion to quality, the same attention to detail, and the same respect for tradition that defined our founder's original work.</p>
+<section class="hero-story">
+    <div class="container" style="display: contents;">
+        <div class="story-image">
+            <img src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=700&h=900&fit=crop" alt="ELEGANTE Atelier">
+        </div>
+        <div class="story-content">
+            <h2>Crafting <em>Excellence</em><br>Since 1952</h2>
+            <p>In the heart of Milan, a vision was born. ELEGANTE emerged from a small atelier where master craftsmen dedicated their lives to the art of tailoring. Our founder, Antonio Romano, believed that true luxury lies not in ostentation, but in the invisible details that transform ordinary garments into timeless treasures.</p>
+            <p>For over seven decades, we have upheld this philosophy. Each piece that bears our name represents hundreds of hours of meticulous handwork, the finest materials sourced from the world's most prestigious mills, and an unwavering commitment to perfection.</p>
+            <p>Today, ELEGANTE stands as a testament to the enduring power of craftsmanship. Our collections grace the wardrobes of discerning individuals across the globe, from the streets of Milan to the boulevards of Paris.</p>
+        </div>
+    </div>
+</section>
+
+<section class="stats-section">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3>70+</h3>
+                <p>Years of Excellence</p>
             </div>
-            <div class="heritage-images">
-                <div class="heritage-img large">
-                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=800&fit=crop" alt="Atelier">
-                </div>
-                <div class="heritage-img small">
-                    <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=400&h=300&fit=crop" alt="Craftsmanship">
-                </div>
+            <div class="stat-item">
+                <h3>150</h3>
+                <p>Master Artisans</p>
+            </div>
+            <div class="stat-item">
+                <h3>50K</h3>
+                <p>Happy Clients</p>
+            </div>
+            <div class="stat-item">
+                <h3>12</h3>
+                <p>Flagship Boutiques</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="values">
+<section class="values-section">
+    <div class="container">
         <div class="section-header">
-            <span class="tag">Philosophy</span>
-            <h2>The ELEGANTE <span class="highlight">Way</span></h2>
-            <p>Our values guide every stitch, every fabric choice, every design decision</p>
+            <h2>Our <em>Values</em></h2>
+            <div class="section-line"></div>
+            <p>The principles that guide everything we do</p>
         </div>
         <div class="values-grid">
             <div class="value-card">
                 <div class="value-icon"><i class="fas fa-gem"></i></div>
-                <h3>Uncompromising Quality</h3>
-                <p>We source only the finest materials from the world's most renowned mills. Italian wool, French silk, and cashmere from Inner Mongolia form the foundation of every piece we create.</p>
+                <h4>Exceptional Quality</h4>
+                <p>We source only the finest materials—Italian woolens, French silks, and cashmere from Mongolia—ensuring each piece meets our exacting standards.</p>
             </div>
             <div class="value-card">
                 <div class="value-icon"><i class="fas fa-hand-holding-heart"></i></div>
-                <h3>Handcrafted Excellence</h3>
-                <p>Each garment requires over 40 hours of skilled labor. Our master artisans, many of whom have trained for decades, bring unparalleled expertise to every stitch.</p>
+                <h4>Handcrafted Care</h4>
+                <p>Every stitch, every seam, every buttonhole is crafted by hand by our master artisans, preserving techniques passed down through generations.</p>
             </div>
             <div class="value-card">
                 <div class="value-icon"><i class="fas fa-leaf"></i></div>
-                <h3>Sustainable Future</h3>
-                <p>We believe luxury and sustainability go hand in hand. From ethically sourced materials to zero-waste production, we're committed to protecting our planet.</p>
-            </div>
-            <div class="value-card">
-                <div class="value-icon"><i class="fas fa-users"></i></div>
-                <h3>Timeless Design</h3>
-                <p>We create pieces that transcend seasons and trends. Our designs are meant to be cherished for generations, not discarded after a single season.</p>
+                <h4>Sustainable Future</h4>
+                <p>We are committed to responsible luxury—ethical sourcing, sustainable practices, and creating pieces designed to last generations, not seasons.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="atelier">
-        <div class="atelier-content">
-            <div class="atelier-images">
-                <img src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=800&h=600&fit=crop" alt="Our Atelier">
-                <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=400&h=300&fit=crop" alt="Craftsmen at work" class="floating-img">
-            </div>
-            <div class="atelier-text">
-                <span class="tag">The Atelier</span>
-                <h2>Where Magic Happens</h2>
-                <p>Our Milan atelier is the heart of ELEGANTE. Here, over 150 skilled craftsmen and women work together to bring our designs to life. Each room in our historic building serves a unique purpose in the creation of our garments.</p>
-                <ul class="atelier-features">
-                    <li><i class="fas fa-check"></i> Pattern Making Studio</li>
-                    <li><i class="fas fa-check"></i> Hand-Stitching Workshop</li>
-                    <li><i class="fas fa-check"></i> Fabric Selection Room</li>
-                    <li><i class="fas fa-check"></i> Quality Control Suite</li>
-                    <li><i class="fas fa-check"></i> Private Fitting Salon</li>
-                </ul>
-                <a href="contact.html" class="btn btn-primary">Book a Visit</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="team">
+<section class="timeline-section">
+    <div class="container">
         <div class="section-header">
-            <span class="tag">Leadership</span>
-            <h2>The Faces Behind <span class="highlight">ELEGANTE</span></h2>
+            <h2>Our <em>Journey</em></h2>
+            <div class="section-line"></div>
+            <p>Key milestones in our heritage</p>
         </div>
-        <div class="team-grid">
-            <div class="team-member">
-                <div class="member-img">
-                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop" alt="Alessandro ELEGANTE">
-                    <div class="member-overlay">
-                        <div class="social">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h4>1952</h4>
+                    <h5>The Beginning</h5>
+                    <p>Antonio Romano opens his first atelier in Milan's Via Montenapoleone, specializing in bespoke tailoring for discerning clientele.</p>
                 </div>
-                <h3>Alessandro ELEGANTE</h3>
-                <span class="role">Creative Director</span>
-                <p>The grandson of our founder, Alessandro brings a fresh perspective while honoring our rich heritage.</p>
+                <div class="timeline-dot"></div>
+                <div style="width: 45%;"></div>
             </div>
-            <div class="team-member">
-                <div class="member-img">
-                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=500&fit=crop" alt="Sofia Marchetti">
-                    <div class="member-overlay">
-                        <div class="social">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
+            <div class="timeline-item">
+                <div style="width: 45%;"></div>
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h4>1978</h4>
+                    <h5>Parisian Expansion</h5>
+                    <p>ELEGANTE opens its first international boutique on Rue du Faubourg Saint-Honoré, bringing Italian craftsmanship to France.</p>
                 </div>
-                <h3>Sofia Marchetti</h3>
-                <span class="role">Head of Design</span>
-                <p>With 20 years of experience, Sofia leads our design team with vision and precision.</p>
             </div>
-            <div class="team-member">
-                <div class="member-img">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop" alt="Giovanni Rossi">
-                    <div class="member-overlay">
-                        <div class="social">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h4>1995</h4>
+                    <h5>Women's Collection</h5>
+                    <p>Launch of our inaugural women's ready-to-wear collection, blending feminine elegance with our signature artisanal techniques.</p>
                 </div>
-                <h3>Giovanni Rossi</h3>
-                <span class="role">Master Tailor</span>
-                <p>Our head tailor with 35 years of experience, Giovanni ensures every garment meets our exacting standards.</p>
+                <div class="timeline-dot"></div>
+                <div style="width: 45%;"></div>
             </div>
-            <div class="team-member">
-                <div class="member-img">
-                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=500&fit=crop" alt="Elena Bianchi">
-                    <div class="member-overlay">
-                        <div class="social">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
+            <div class="timeline-item">
+                <div style="width: 45%;"></div>
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h4>2026</h4>
+                    <h5>The Future</h5>
+                    <p>Continuing our legacy while embracing innovation—sustainable materials, modern silhouettes, and timeless elegance.</p>
                 </div>
-                <h3>Elena Bianchi</h3>
-                <span class="role">Sustainability Director</span>
-                <p>Elena leads our environmental initiatives and ensures our commitment to sustainable luxury.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="stats">
-        <div class="stat-item">
-            <span class="stat-number" data-target="70">0</span>
-            <span class="stat-label">Years of Excellence</span>
-        </div>
-        <div class="stat-item">
-            <span class="stat-number" data-target="150">0</span>
-            <span class="stat-label">Master Craftsmen</span>
-        </div>
-        <div class="stat-item">
-            <span class="stat-number" data-target="50">0</span>
-            <span class="stat-label">Countries Served</span>
-        </div>
-        <div class="stat-item">
-            <span class="stat-number" data-target="100">0</span>
-            <span class="stat-label">Awards Won</span>
-        </div>
-    </section>
-
-    <section class="timeline">
+<section class="team-section">
+    <div class="container">
         <div class="section-header">
-            <span class="tag">Milestones</span>
-            <h2>Our <span class="highlight">Journey</span></h2>
+            <h2>The <em>Founder</em></h2>
+            <div class="section-line"></div>
+            <p>Visionary behind the brand</p>
         </div>
-        <div class="timeline-content">
-            <div class="timeline-item">
-                <div class="timeline-year">1952</div>
-                <div class="timeline-content">
-                    <h3>The Beginning</h3>
-                    <p>Marco ELEGANTE opens his first atelier in Milan, creating bespoke suits for discerning gentlemen.</p>
+        <div class="team-grid" style="max-width: 600px; margin: 0 auto;">
+            <div class="team-member">
+                <div class="team-photo">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop" alt="Antonio Romano">
                 </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-year">1968</div>
-                <div class="timeline-content">
-                    <h3>Women's Collection</h3>
-                    <p>Following popular demand, we launch our first women's collection, bringing our craftsmanship to a new audience.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-year">1985</div>
-                <div class="timeline-content">
-                    <h3>International Expansion</h3>
-                    <p>Boutiques open in Paris, London, and New York, establishing ELEGANTE as a global luxury brand.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-year">2002</div>
-                <div class="timeline-content">
-                    <h3>50th Anniversary</h3>
-                    <p>The anniversary collection becomes our most successful, featuring collaborations with world-renowned artists.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-year">2020</div>
-                <div class="timeline-content">
-                    <h3>Sustainability Initiative</h3>
-                    <p>Launch of our comprehensive sustainability program, committing to carbon neutrality by 2030.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-year">2026</div>
-                <div class="timeline-content">
-                    <h3>The Future</h3>
-                    <p>Continuing our legacy while embracing innovation. The next chapter of ELEGANTE unfolds.</p>
-                </div>
+                <h4>Antonio Romano</h4>
+                <p>Founder & Creative Director</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="features">
-        <div class="feature">
-            <div class="feature-icon"><i class="fas fa-gem"></i></div>
-            <h3>Premium Quality</h3>
-            <p>Only the finest materials and craftsmanship</p>
-        </div>
-        <div class="feature">
-            <div class="feature-icon"><i class="fas fa-truck"></i></div>
-            <h3>Free Shipping</h3>
-            <p>Complimentary delivery on all orders</p>
-        </div>
-        <div class="feature">
-            <div class="feature-icon"><i class="fas fa-undo"></i></div>
-            <h3>Easy Returns</h3>
-            <p>30-day hassle-free return policy</p>
-        </div>
-        <div class="feature">
-            <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
-            <h3>Secure Payment</h3>
-            <p>Your transactions are fully protected</p>
-        </div>
-    </section>
+<section class="cta-section">
+    <div class="container">
+        <h2>Experience <em>ELEGANTE</em></h2>
+        <p>Visit one of our boutiques or explore our collections online</p>
+        <a href="shop.html" class="btn btn-primary">Shop Now</a>
+        <a href="contact.html" class="btn btn-outline">Contact Us</a>
+    </div>
+</section>
 
-    <footer class="footer">
-        <div class="footer-top">
+<footer>
+    <div class="container">
+        <div class="footer-grid">
             <div class="footer-brand">
-                <div class="logo">ELEGANTE</div>
-                <p>Where timeless elegance meets modern sophistication.</p>
-                <div class="social">
+                <a href="index.html" class="logo">ELEGAN<span>T</span>E</a>
+                <p>Where timeless elegance meets modern sophistication. Crafting luxury since 1952.</p>
+                <div class="footer-social">
                     <a href="#"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-pinterest-p"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
-            <div class="footer-links">
-                <h4>Quick Links</h4>
+            <div class="footer-col">
+                <h4>Shop</h4>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="collections.html">Collections</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="shop.html">New Arrivals</a></li>
+                    <li><a href="shop.html">Women</a></li>
+                    <li><a href="shop.html">Men</a></li>
+                    <li><a href="shop.html">Accessories</a></li>
+                    <li><a href="shop.html">Sale</a></li>
                 </ul>
             </div>
-            <div class="footer-links">
-                <h4>Customer Care</h4>
+            <div class="footer-col">
+                <h4>About</h4>
                 <ul>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="about.html">Craftsmanship</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
                     <li><a href="#">Shipping & Returns</a></li>
                     <li><a href="#">Size Guide</a></li>
                     <li><a href="#">FAQs</a></li>
                     <li><a href="#">Track Order</a></li>
                 </ul>
             </div>
-            <div class="footer-links">
-                <h4>About</h4>
-                <ul>
-                    <li><a href="#">Our Story</a></li>
-                    <li><a href="#">Craftsmanship</a></li>
-                    <li><a href="#">Sustainability</a></li>
-                    <li><a href="#">Press</a></li>
-                </ul>
-            </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 ELEGANTE. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Settings</a>
+            </div>
         </div>
-    </footer>
-
-    <style>
-        .page-header {
-            padding: 12rem 3rem 6rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .header-bg {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, var(--cream) 0%, #e8dfd4 100%);
-            z-index: 0;
-        }
-
-        .header-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .page-header h1 {
-            font-family: var(--font-display);
-            font-size: 4rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .page-header p {
-            font-size: 1.2rem;
-            color: var(--text-light);
-        }
-
-        .heritage {
-            padding: 6rem 3rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .heritage-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .heritage-text .tag {
-            font-family: var(--font-sans);
-            font-size: 0.7rem;
-            font-weight: 500;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: var(--accent);
-        }
-
-        .heritage-text h2 {
-            font-family: var(--font-display);
-            font-size: 2.5rem;
-            margin: 1rem 0 1.5rem;
-        }
-
-        .heritage-text p {
-            color: var(--text-light);
-            font-size: 1.05rem;
-            margin-bottom: 1rem;
-        }
-
-        .heritage-images {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-        }
-
-        .heritage-img {
-            overflow: hidden;
-        }
-
-        .heritage-img.large {
-            grid-row: span 2;
-        }
-
-        .heritage-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s ease;
-        }
-
-        .heritage-img:hover img {
-            transform: scale(1.05);
-        }
-
-        .values {
-            padding: 6rem 3rem;
-            background: var(--cream);
-        }
-
-        .section-header {
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto 4rem;
-        }
-
-        .tag {
-            font-family: var(--font-sans);
-            font-size: 0.7rem;
-            font-weight: 500;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: var(--accent);
-        }
-
-        .section-header h2 {
-            font-family: var(--font-display);
-            font-size: 3rem;
-            margin: 1rem 0;
-        }
-
-        .highlight {
-            color: var(--accent);
-            font-style: italic;
-        }
-
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .value-card {
-            text-align: center;
-            padding: 2.5rem;
-            background: var(--white);
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-        }
-
-        .value-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .value-icon {
-            width: 70px;
-            height: 70px;
-            margin: 0 auto 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.75rem;
-            color: var(--accent);
-            border: 1px solid var(--accent);
-            border-radius: 50%;
-        }
-
-        .value-card h3 {
-            font-family: var(--font-display);
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-        }
-
-        .value-card p {
-            font-size: 0.95rem;
-            color: var(--text-light);
-        }
-
-        .atelier {
-            padding: 6rem 3rem;
-        }
-
-        .atelier-content {
-            display: grid;
-            grid-template-columns: 1.5fr 1fr;
-            gap: 4rem;
-            max-width: 1400px;
-            margin: 0 auto;
-            align-items: center;
-        }
-
-        .atelier-images {
-            position: relative;
-        }
-
-        .atelier-images img {
-            width: 100%;
-            border-radius: 4px;
-        }
-
-        .atelier-images .floating-img {
-            position: absolute;
-            bottom: -2rem;
-            right: -2rem;
-            width: 50%;
-            border: 4px solid var(--cream);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-        }
-
-        .atelier-text .tag {
-            display: block;
-        }
-
-        .atelier-text h2 {
-            font-family: var(--font-display);
-            font-size: 2.5rem;
-            margin: 1rem 0;
-        }
-
-        .atelier-text > p {
-            color: var(--text-light);
-            font-size: 1.05rem;
-            margin-bottom: 2rem;
-        }
-
-        .atelier-features {
-            list-style: none;
-            margin-bottom: 2rem;
-        }
-
-        .atelier-features li {
-            padding: 0.75rem 0;
-            font-family: var(--font-sans);
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            border-bottom: 1px solid var(--light-gray);
-        }
-
-        .atelier-features i {
-            color: var(--accent);
-        }
-
-        .team {
-            padding: 6rem 3rem;
-            background: var(--cream);
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .team-member {
-            text-align: center;
-        }
-
-        .member-img {
-            position: relative;
-            margin-bottom: 1.5rem;
-            overflow: hidden;
-        }
-
-        .member-img img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            transition: transform 0.6s ease;
-        }
-
-        .team-member:hover .member-img img {
-            transform: scale(1.05);
-        }
-
-        .member-overlay {
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.5);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-
-        .team-member:hover .member-overlay {
-            opacity: 1;
-        }
-
-        .member-overlay .social {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .member-overlay .social a {
-            width: 40px;
-            height: 40px;
-            background: var(--white);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary);
-            transition: background 0.3s ease, color 0.3s ease;
-        }
-
-        .member-overlay .social a:hover {
-            background: var(--accent);
-            color: var(--white);
-        }
-
-        .team-member h3 {
-            font-family: var(--font-display);
-            font-size: 1.1rem;
-            margin-bottom: 0.25rem;
-        }
-
-        .team-member .role {
-            display: block;
-            font-family: var(--font-sans);
-            font-size: 0.75rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--accent);
-            margin-bottom: 0.75rem;
-        }
-
-        .team-member p {
-            font-size: 0.9rem;
-            color: var(--text-light);
-        }
-
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            padding: 6rem 3rem;
-            background: var(--primary);
-        }
-
-        .stat-item {
-            text-align: center;
-            color: var(--white);
-        }
-
-        .stat-number {
-            display: block;
-            font-family: var(--font-display);
-            font-size: 3.5rem;
-            color: var(--accent);
-        }
-
-        .stat-number::after {
-            content: '+';
-        }
-
-        .stat-label {
-            font-family: var(--font-sans);
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            opacity: 0.7;
-        }
-
-        .timeline {
-            padding: 6rem 3rem;
-        }
-
-        .timeline-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .timeline-item {
-            display: flex;
-            gap: 2rem;
-            padding: 2rem 0;
-            border-bottom: 1px solid var(--light-gray);
-        }
-
-        .timeline-year {
-            font-family: var(--font-display);
-            font-size: 2rem;
-            color: var(--accent);
-            min-width: 100px;
-        }
-
-        .timeline-item h3 {
-            font-family: var(--font-display);
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .timeline-item p {
-            color: var(--text-light);
-        }
-
-        @media (max-width: 992px) {
-            .heritage-content {
-                grid-template-columns: 1fr;
-            }
-
-            .values-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .atelier-content {
-                grid-template-columns: 1fr;
-            }
-
-            .atelier-images .floating-img {
-                position: static;
-                width: 100%;
-                margin-top: 1rem;
-            }
-
-            .team-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .stats {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .page-header h1 { font-size: 2.5rem; }
-            .values-grid, .team-grid { grid-template-columns: 1fr; }
-            .timeline-item { flex-direction: column; gap: 0.5rem; }
-            .timeline-year { font-size: 1.5rem; }
-        }
-    </style>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const cursor = document.querySelector('.cursor');
-            const cursorFollower = document.querySelector('.cursor-follower');
-            const navToggle = document.querySelector('.nav-toggle');
-            const navLinks = document.querySelector('.nav-links');
-            const header = document.querySelector('.navbar');
-
-            if (cursor && cursorFollower) {
-                document.addEventListener('mousemove', (e) => {
-                    cursor.style.left = e.clientX + 'px';
-                    cursor.style.top = e.clientY + 'px';
-                    setTimeout(() => {
-                        cursorFollower.style.left = e.clientX + 'px';
-                        cursorFollower.style.top = e.clientY + 'px';
-                    }, 50);
-                });
-            }
-
-            if (navToggle && navLinks) {
-                navToggle.addEventListener('click', () => {
-                    navLinks.classList.toggle('active');
-                    navToggle.classList.toggle('active');
-                });
-            }
-
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 100) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
-            });
-        });
-    </script>
+    </div>
+</footer>
+
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+    const mobileMenuClose = document.querySelector('.mobile-menu-close');
+    const mobileMenuLinks = document.querySelectorAll('.mobile-menu-links a');
+
+    function openMenu() { mobileMenu.classList.add('active'); mobileMenuOverlay.classList.add('active'); document.body.style.overflow = 'hidden'; }
+    function closeMenu() { mobileMenu.classList.remove('active'); mobileMenuOverlay.classList.remove('active'); document.body.style.overflow = ''; }
+
+    menuToggle.addEventListener('click', openMenu);
+    mobileMenuClose.addEventListener('click', closeMenu);
+    mobileMenuOverlay.addEventListener('click', closeMenu);
+    mobileMenuLinks.forEach(link => link.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && mobileMenu.classList.contains('active')) closeMenu(); });
+</script>
 </body>
 </html>
