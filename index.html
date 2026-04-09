@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELEGANTE - Luxury Clothing Brand</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">ELEGANTE</div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#collections">Collections</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <button class="icon-btn"><i class="fas fa-search"></i></button>
+                <button class="icon-btn"><i class="fas fa-heart"></i></button>
+                <button class="icon-btn cart-btn">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+            <button class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="bg-layer layer-1"></div>
+            <div class="bg-layer layer-2"></div>
+            <div class="bg-layer layer-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="subtitle">Autumn/Winter 2026</span>
+                <h1>The Art of<br><span class="highlight">Timeless</span> Elegance</h1>
+                <p>Discover our exclusive collection of handcrafted luxury garments, where classic sophistication meets modern refinement.</p>
+                <div class="hero-buttons">
+                    <a href="#collections" class="btn btn-primary">Explore Collection</a>
+                    <a href="#about" class="btn btn-secondary">Our Story</a>
+                </div>
+            </div>
+            <div class="hero-3d">
+                <div class="mannequin">
+                    <div class="mannequin-head"></div>
+                    <div class="mannequin-body">
+                        <div class="jacket">
+                            <div class="jacket-front"></div>
+                            <div class="jacket-left"></div>
+                            <div class="jacket-right"></div>
+                            <div class="jacket-sleeve left"></div>
+                            <div class="jacket-sleeve right"></div>
+                        </div>
+                    </div>
+                    <div class="mannequin-base"></div>
+                </div>
+                <div class="reflection"></div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <div class="feature-icon"><i class="fas fa-gem"></i></div>
+            <h3>Premium Quality</h3>
+            <p>Only the finest materials and craftsmanship</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon"><i class="fas fa-truck"></i></div>
+            <h3>Free Shipping</h3>
+            <p>Complimentary delivery on all orders</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon"><i class="fas fa-undo"></i></div>
+            <h3>Easy Returns</h3>
+            <p>30-day hassle-free return policy</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+            <h3>Secure Payment</h3>
+            <p>Your transactions are fully protected</p>
+        </div>
+    </section>
+
+    <section class="collections" id="collections">
+        <div class="section-header">
+            <span class="tag">Collections</span>
+            <h2>Curated for <span class="highlight">Distinction</span></h2>
+            <p>Each piece tells a story of heritage and craftsmanship</p>
+        </div>
+        <div class="collections-grid">
+            <div class="collection-card large">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=800&h=1000&fit=crop" alt="Men's Collection">
+                        <div class="card-overlay">
+                            <span class="tag">New Arrival</span>
+                            <h3>Men's Collection</h3>
+                            <p>Sophisticated tailoring for the modern gentleman</p>
+                            <a href="#" class="explore-btn">Explore <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="collection-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="https://images.unsplash.com/photo-1485968579169-a6d3c5b5a7c9?w=600&h=500&fit=crop" alt="Women's Collection">
+                        <div class="card-overlay">
+                            <span class="tag">Exclusive</span>
+                            <h3>Women's Collection</h3>
+                            <p>Timeless elegance reimagined</p>
+                            <a href="#" class="explore-btn">Explore <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="collection-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&h=500&fit=crop" alt="Accessories">
+                        <div class="card-overlay">
+                            <span class="tag">Limited</span>
+                            <h3>Accessories</h3>
+                            <p>The finishing touches of perfection</p>
+                            <a href="#" class="explore-btn">Explore <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="collection-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=600&h=500&fit=crop" alt="Outerwear">
+                        <div class="card-overlay">
+                            <span class="tag">Seasonal</span>
+                            <h3>Outerwear</h3>
+                            <p>Luxurious warmth meets style</p>
+                            <a href="#" class="explore-btn">Explore <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="collection-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=500&fit=crop" alt="Footwear">
+                        <div class="card-overlay">
+                            <span class="tag">Premium</span>
+                            <h3>Footwear</h3>
+                            <p>Handcrafted for comfort and style</p>
+                            <a href="#" class="explore-btn">Explore <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="showcase">
+        <div class="showcase-content">
+            <div class="showcase-text">
+                <span class="tag">Signature Piece</span>
+                <h2>The Classic<br>Wool Overcoat</h2>
+                <p>Hand-tailored from the finest Italian wool, this masterpiece embodies decades of sartorial excellence. A investment in timeless style.</p>
+                <div class="price">$2,450</div>
+                <div class="showcase-buttons">
+                    <button class="btn btn-primary">Add to Bag</button>
+                    <button class="btn btn-outline"><i class="far fa-heart"></i> Save</button>
+                </div>
+            </div>
+            <div class="showcase-3d">
+                <div class="coat-3d">
+                    <div class="coat-body">
+                        <div class="coat-side left"></div>
+                        <div class="coat-side right"></div>
+                        <div class="coat-front"></div>
+                        <div class="coat-collar"></div>
+                        <div class="coat-lapel left"></div>
+                        <div class="coat-lapel right"></div>
+                        <div class="coat-button"></div>
+                        <div class="coat-pocket left"></div>
+                        <div class="coat-pocket right"></div>
+                        <div class="coat-sleeve left"></div>
+                        <div class="coat-sleeve right"></div>
+                    </div>
+                    <div class="coat-shadow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products" id="products">
+        <div class="section-header">
+            <span class="tag">Featured</span>
+            <h2>Signature <span class="highlight">Pieces</span></h2>
+            <p>Hand-selected favorites from our collection</p>
+        </div>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-3d">
+                    <div class="product-wrapper">
+                        <div class="product-img">
+                            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400&h=500&fit=crop" alt="Wool Jacket">
+                        </div>
+                        <div class="product-img hover-img">
+                            <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=500&fit=crop" alt="Wool Jacket Back">
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="action-btn"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn"><i class="fas fa-heart"></i></button>
+                        <button class="action-btn"><i class="fas fa-sync-alt"></i></button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Men's Outerwear</span>
+                    <h3>Classic Wool Jacket</h3>
+                    <div class="product-price">$895</div>
+                    <div class="product-colors">
+                        <span class="color" style="background: #1a1a1a;"></span>
+                        <span class="color" style="background: #2c3e50;"></span>
+                        <span class="color" style="background: #8b4513;"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-3d">
+                    <div class="product-wrapper">
+                        <div class="product-img">
+                            <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=500&fit=crop" alt="Silk Dress">
+                        </div>
+                        <div class="product-img hover-img">
+                            <img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=400&h=500&fit=crop" alt="Silk Dress Back">
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="action-btn"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn"><i class="fas fa-heart"></i></button>
+                        <button class="action-btn"><i class="fas fa-sync-alt"></i></button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Women's Dresses</span>
+                    <h3>Silk Evening Dress</h3>
+                    <div class="product-price">$1,250</div>
+                    <div class="product-colors">
+                        <span class="color" style="background: #c9a959;"></span>
+                        <span class="color" style="background: #1a1a1a;"></span>
+                        <span class="color" style="background: #800020;"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-3d">
+                    <div class="product-wrapper">
+                        <div class="product-img">
+                            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=500&fit=crop" alt="Cotton Shirt">
+                        </div>
+                        <div class="product-img hover-img">
+                            <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=400&h=500&fit=crop" alt="Cotton Shirt Back">
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="action-btn"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn"><i class="fas fa-heart"></i></button>
+                        <button class="action-btn"><i class="fas fa-sync-alt"></i></button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Men's Shirts</span>
+                    <h3>Cotton Oxford Shirt</h3>
+                    <div class="product-price">$285</div>
+                    <div class="product-colors">
+                        <span class="color" style="background: #ffffff; border: 1px solid #ddd;"></span>
+                        <span class="color" style="background: #1e3a5f;"></span>
+                        <span class="color" style="background: #c9e4de;"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-3d">
+                    <div class="product-wrapper">
+                        <div class="product-img">
+                            <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=400&h=500&fit=crop" alt="Leather Bag">
+                        </div>
+                        <div class="product-img hover-img">
+                            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=500&fit=crop" alt="Leather Bag Side">
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="action-btn"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn"><i class="fas fa-heart"></i></button>
+                        <button class="action-btn"><i class="fas fa-sync-alt"></i></button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Accessories</span>
+                    <h3>Italian Leather Tote</h3>
+                    <div class="product-price">$1,450</div>
+                    <div class="product-colors">
+                        <span class="color" style="background: #8b4513;"></span>
+                        <span class="color" style="background: #1a1a1a;"></span>
+                        <span class="color" style="background: #800020;"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-3d">
+                    <div class="product-wrapper">
+                        <div class="product-img">
+                            <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=400&h=500&fit=crop" alt="Oxford Shoes">
+                        </div>
+                        <div class="product-img hover-img">
+                            <img src="https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=400&h=500&fit=crop" alt="Oxford Shoes Side">
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="action-btn"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn"><i class="fas fa-heart"></i></button>
+                        <button class="action-btn"><i class="fas fa-sync-alt"></i></button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Footwear</span>
+                    <h3>Oxford Brogue Shoes</h3>
+                    <div class="product-price">$780</div>
+                    <div class="product-colors">
+                        <span class="color" style="background: #1a1a1a;"></span>
+                        <span class="color" style="background: #654321;"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-3d">
+                    <div class="product-wrapper">
+                        <div class="product-img">
+                            <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=400&h=500&fit=crop" alt="Cashmere Sweater">
+                        </div>
+                        <div class="product-img hover-img">
+                            <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&h=500&fit=crop" alt="Cashmere Sweater Detail">
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="action-btn"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn"><i class="fas fa-heart"></i></button>
+                        <button class="action-btn"><i class="fas fa-sync-alt"></i></button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Women's Knitwear</span>
+                    <h3>Cashmere V-Neck Sweater</h3>
+                    <div class="product-price">$520</div>
+                    <div class="product-colors">
+                        <span class="color" style="background: #f5f5dc;"></span>
+                        <span class="color" style="background: #1a1a1a;"></span>
+                        <span class="color" style="background: #b87333;"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="products-cta">
+            <a href="#" class="btn btn-secondary">View All Products <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-image">
+            <div class="image-frame">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=800&fit=crop" alt="Atelier">
+                <div class="frame-accent"></div>
+            </div>
+        </div>
+        <div class="about-content">
+            <span class="tag">Our Heritage</span>
+            <h2>Crafting Excellence<br>Since <span class="highlight">1952</span></h2>
+            <p>For over seven decades, ELEGANTE has been synonymous with uncompromising quality and timeless design. Our master craftsmen in Milan transform the finest materials into garments that transcend seasons.</p>
+            <div class="about-stats">
+                <div class="stat">
+                    <span class="number">70+</span>
+                    <span class="label">Years of Excellence</span>
+                </div>
+                <div class="stat">
+                    <span class="number">150+</span>
+                    <span class="label">Artisan Craftsmen</span>
+                </div>
+                <div class="stat">
+                    <span class="number">50K+</span>
+                    <span class="label">Happy Clients</span>
+                </div>
+            </div>
+            <a href="#" class="btn btn-outline">Discover Our Story</a>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="section-header">
+            <span class="tag">Testimonials</span>
+            <h2>Client <span class="highlight">Appreciation</span></h2>
+        </div>
+        <div class="testimonials-container">
+            <div class="testimonial-card">
+                <div class="quote"><i class="fas fa-quote-left"></i></div>
+                <p>"The quality of ELEGANTE's craftsmanship is unparalleled. Each piece I've purchased has become a treasured part of my wardrobe."</p>
+                <div class="client">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop" alt="Client">
+                    <div class="client-info">
+                        <strong>James Morrison</strong>
+                        <span>Fashion Executive, London</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="quote"><i class="fas fa-quote-left"></i></div>
+                <p>"From the moment I opened the package, I knew this was different. The attention to detail, the feel of the fabric - pure luxury."</p>
+                <div class="client">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" alt="Client">
+                    <div class="client-info">
+                        <strong>Isabella Romano</strong>
+                        <span>Creative Director, Milan</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="quote"><i class="fas fa-quote-left"></i></div>
+                <p>"ELEGANTE represents everything I look for in luxury fashion - heritage, quality, and timeless elegance that never goes out of style."</p>
+                <div class="client">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="Client">
+                    <div class="client-info">
+                        <strong>Alexander Chen</strong>
+                        <span>Art Collector, New York</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2>Join the ELEGANTE Circle</h2>
+            <p>Subscribe for exclusive previews, styling tips, and early access to new collections.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+            <p class="privacy">By subscribing, you agree to our Privacy Policy and consent to receive updates.</p>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Visit Our<br>Boutiques</h2>
+                <div class="locations">
+                    <div class="location">
+                        <h4><i class="fas fa-map-marker-alt"></i> Milan</h4>
+                        <p>Via Montenapoleone 12<br>20121 Milano, Italy</p>
+                        <span>Mon-Sat: 10:00 - 19:00</span>
+                    </div>
+                    <div class="location">
+                        <h4><i class="fas fa-map-marker-alt"></i> Paris</h4>
+                        <p>24 Rue du Faubourg Saint-Honoré<br>75008 Paris, France</p>
+                        <span>Mon-Sat: 10:00 - 19:00</span>
+                    </div>
+                    <div class="location">
+                        <h4><i class="fas fa-map-marker-alt"></i> New York</h4>
+                        <p>725 Fifth Avenue<br>New York, NY 10022</p>
+                        <span>Mon-Sat: 10:00 - 20:00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3>Get in Touch</h3>
+                <form>
+                    <div class="form-row">
+                        <input type="text" placeholder="First Name" required>
+                        <input type="text" placeholder="Last Name" required>
+                    </div>
+                    <input type="email" placeholder="Email Address" required>
+                    <select>
+                        <option value="">Select Inquiry Type</option>
+                        <option value="order">Order Inquiry</option>
+                        <option value="appointment">Book Appointment</option>
+                        <option value="custom">Custom Tailoring</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <textarea rows="4" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="logo">ELEGANTE</div>
+                <p>Where timeless elegance meets modern sophistication.</p>
+                <div class="social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Men's Collection</a></li>
+                    <li><a href="#">Women's Collection</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Sale</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Customer Care</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Track Order</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Craftsmanship</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ELEGANTE. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Settings</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
