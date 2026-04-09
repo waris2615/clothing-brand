@@ -22,9 +22,15 @@ clothing-brand/
 ├── index.html          # Home page - Landing with hero, featured products
 ├── shop.html           # Shop page - Product listing with filters
 ├── shop.css            # Shop page specific styles
-├── collections.html     # Collections page - Seasonal & category showcases
+├── collections.html    # Collections page - Seasonal & category showcases
 ├── about.html          # About page - Brand heritage, team, timeline
 ├── contact.html        # Contact page - Form & boutique locations
+├── product.html        # Product detail page - Gallery, options, reviews
+├── cart.html           # Shopping cart - Items, summary, promo codes
+├── checkout.html       # Checkout - Shipping, payment, order summary
+├── account.html        # My Account - Dashboard, orders, wishlist, profile
+├── blog.html           # Journal/Blog - Articles, categories, newsletter
+├── blog-post.html      # Blog post - Full article with related posts
 ├── style.css          # Main stylesheet - Global styles & components
 ├── script.js          # JavaScript - Interactions & animations
 ├── .gitignore         # Git ignore file
