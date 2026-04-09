@@ -4,9 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Account - ELEGANTE</title>
-    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root { --primary: #1a1a1a; --accent: #c9a959; --cream: #f8f5f0; --light-gray: #e8e4df; --text: #333333; --text-light: #666666; --white: #ffffff; --font-display: 'Playfair Display', serif; --font-body: 'Cormorant Garamond', serif; --font-sans: 'Montserrat', sans-serif; }
+body { font-family: var(--font-body); color: var(--text); background: var(--cream); line-height: 1.6; }
+.cursor { width: 20px; height: 20px; border: 2px solid var(--accent); border-radius: 50%; position: fixed; pointer-events: none; z-index: 10000; }
+.cursor-follower { width: 8px; height: 8px; background: var(--accent); border-radius: 50%; position: fixed; pointer-events: none; z-index: 10000; }
+.navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1.5rem 3rem; background: rgba(248, 245, 240, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+.nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+.logo { font-family: var(--font-display); font-size: 2rem; font-weight: 700; letter-spacing: 8px; color: var(--primary); text-decoration: none; }
+.nav-links { display: flex; list-style: none; gap: 3rem; }
+.nav-links a { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--text); text-decoration: none; }
+.nav-icons { display: flex; gap: 1.5rem; }
+.icon-btn { background: none; border: none; font-size: 1.1rem; color: var(--primary); cursor: pointer; position: relative; }
+.icon-btn a { color: var(--primary); }
+.cart-count { position: absolute; top: -8px; right: -8px; width: 18px; height: 18px; background: var(--accent); color: var(--white); font-size: 0.65rem; font-family: var(--font-sans); font-weight: 600; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+.nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; }
+.nav-toggle span { width: 25px; height: 2px; background: var(--primary); }
+.footer { background: var(--primary); color: var(--white); padding: 4rem 3rem 2rem; }
+.footer-top { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+.footer-brand .logo { margin-bottom: 1rem; }
+.footer-brand p { color: rgba(255, 255, 255, 0.6); margin-bottom: 1.5rem; font-size: 0.95rem; }
+.social { display: flex; gap: 1rem; }
+.social a { width: 40px; height: 40px; border: 1px solid rgba(255, 255, 255, 0.3); display: flex; align-items: center; justify-content: center; color: var(--white); text-decoration: none; }
+.social a:hover { background: var(--accent); border-color: var(--accent); }
+.footer-links h4 { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.5rem; }
+.footer-links ul { list-style: none; }
+.footer-links li { margin-bottom: 0.75rem; }
+.footer-links a { color: rgba(255, 255, 255, 0.6); text-decoration: none; font-size: 0.9rem; }
+.footer-links a:hover { color: var(--accent); }
+.footer-bottom { max-width: 1400px; margin: 0 auto; padding-top: 2rem; }
+.footer-bottom p { font-family: var(--font-sans); font-size: 0.8rem; color: rgba(255, 255, 255, 0.5); }
+.btn { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; padding: 1rem 2rem; border-radius: 0; text-decoration: none; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem; border: 2px solid var(--primary); }
+.btn-primary { background: var(--primary); color: var(--white); border: 2px solid var(--primary); }
+.account-layout { display: grid; grid-template-columns: 280px 1fr; gap: 3rem; padding: 10rem 3rem 6rem; max-width: 1400px; margin: 0 auto; }
+.sidebar { background: var(--white); padding: 2rem; height: fit-content; }
+.sidebar-menu { list-style: none; }
+.sidebar-menu li { margin-bottom: 0.5rem; }
+.sidebar-menu a { display: flex; align-items: center; gap: 1rem; padding: 1rem; color: var(--text); text-decoration: none; font-family: var(--font-sans); font-size: 0.9rem; transition: all 0.3s; border-radius: 4px; }
+.sidebar-menu a:hover, .sidebar-menu a.active { background: var(--cream); color: var(--accent); }
+.sidebar-menu i { width: 20px; }
+.main-content h1 { font-family: var(--font-display); font-size: 2rem; margin-bottom: 2rem; }
+.dashboard-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 3rem; }
+.stat-card { background: var(--white); padding: 1.5rem; }
+.stat-card h3 { font-family: var(--font-sans); font-size: 0.8rem; color: var(--text-light); margin-bottom: 0.5rem; }
+.stat-card .value { font-family: var(--font-display); font-size: 2rem; }
+.orders-table { background: var(--white); width: 100%; border-collapse: collapse; }
+.orders-table th { text-align: left; padding: 1rem; font-family: var(--font-sans); font-size: 0.8rem; color: var(--text-light); border-bottom: 1px solid var(--light-gray); }
+.orders-table td { padding: 1rem; font-family: var(--font-sans); font-size: 0.9rem; border-bottom: 1px solid var(--light-gray); }
+.status { padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem; }
+.status.processing { background: #fff3cd; color: #856404; }
+.status.shipped { background: #cce5ff; color: #004085; }
+.status.delivered { background: #d4edda; color: #155724; }
+@media (max-width: 992px) { .account-layout { grid-template-columns: 1fr; } .dashboard-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 768px) { .dashboard-grid { grid-template-columns: 1fr; } }
+</style>
 </head>
 <body>
     <div class="cursor"></div>
@@ -876,11 +930,7 @@
             .addresses-grid { grid-template-columns: 1fr 1fr; }
         }
 
-        @media (max-width: 768px) {
-            .wishlist-grid { grid-template-columns: 1fr 1fr; }
-            .addresses-grid { grid-template-columns: 1fr; }
-            .form-row { grid-template-columns: 1fr; }
-        }
+        @media (max-width: 768px) { .wishlist-grid { grid-template-columns: 1fr 1fr; } .addresses-grid { grid-template-columns: 1fr; } .form-row { grid-template-columns: 1fr; } }
     </style>
 
     <script>
@@ -888,25 +938,24 @@
             item.addEventListener('click', (e) => {
                 e.preventDefault();
                 const target = item.getAttribute('href').substring(1);
-                
                 document.querySelectorAll('.account-nav .nav-item').forEach(i => i.classList.remove('active'));
                 item.classList.add('active');
-                
-                document.querySelectorAll('.account-content section').forEach(section => {
-                    section.classList.add('hidden');
-                });
-                
+                document.querySelectorAll('.account-content section').forEach(section => { section.classList.add('hidden'); });
                 document.getElementById(target).classList.remove('hidden');
             });
         });
-
-        document.querySelectorAll('.remove-wishlist').forEach(btn => {
-            btn.addEventListener('click', () => {
-                btn.closest('.wishlist-item').remove();
-            });
+        document.querySelectorAll('.remove-wishlist').forEach(btn => { btn.addEventListener('click', () => { btn.closest('.wishlist-item').remove(); }); });
+        document.addEventListener('DOMContentLoaded', () => {
+            const cursor = document.querySelector('.cursor');
+            const cursorFollower = document.querySelector('.cursor-follower');
+            if (cursor && cursorFollower) {
+                document.addEventListener('mousemove', (e) => {
+                    cursor.style.left = e.clientX + 'px';
+                    cursor.style.top = e.clientY + 'px';
+                    setTimeout(() => { cursorFollower.style.left = e.clientX + 'px'; cursorFollower.style.top = e.clientY + 'px'; }, 50);
+                });
+            }
         });
     </script>
-
-    <script src="script.js"></script>
 </body>
 </html>
