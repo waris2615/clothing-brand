@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal - ELEGANTE</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">ELEGANTE</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <button class="icon-btn"><i class="fas fa-search"></i></button>
+                <button class="icon-btn"><i class="fas fa-heart"></i></button>
+                <button class="icon-btn cart-btn">
+                    <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+            <button class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="blog-header">
+        <div class="header-content">
+            <span class="tag">The Journal</span>
+            <h1>Stories of Elegance</h1>
+            <p>Discover the world of luxury fashion, craftsmanship, and timeless style.</p>
+        </div>
+    </header>
+
+    <main class="blog-page">
+        <div class="blog-container">
+            <aside class="blog-sidebar">
+                <div class="search-widget">
+                    <input type="text" placeholder="Search articles...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+
+                <div class="categories-widget">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#" class="active">All Posts</a></li>
+                        <li><a href="#">Fashion</a></li>
+                        <li><a href="#">Style Guide</a></li>
+                        <li><a href="#">Craftsmanship</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Behind the Scenes</a></li>
+                        <li><a href="#">Travel</a></li>
+                    </ul>
+                </div>
+
+                <div class="featured-widget">
+                    <h3>Featured</h3>
+                    <div class="featured-post">
+                        <img src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=100&h=100&fit=crop" alt="Post">
+                        <div>
+                            <h4>The Art of Italian Tailoring</h4>
+                            <span>Apr 2, 2026</span>
+                        </div>
+                    </div>
+                    <div class="featured-post">
+                        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=100&h=100&fit=crop" alt="Post">
+                        <div>
+                            <h4>Spring Colors Guide</h4>
+                            <span>Mar 28, 2026</span>
+                        </div>
+                    </div>
+                    <div class="featured-post">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=100&h=100&fit=crop" alt="Post">
+                        <div>
+                            <h4>Behind Our Atelier</h4>
+                            <span>Mar 15, 2026</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="newsletter-widget">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe for exclusive content and early access to new collections.</p>
+                    <form>
+                        <input type="email" placeholder="Your email">
+                        <button class="btn btn-primary btn-sm">Subscribe</button>
+                    </form>
+                </div>
+            </aside>
+
+            <div class="blog-content">
+                <article class="featured-article">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=800&h=500&fit=crop" alt="Featured Article">
+                        <span class="article-category">Fashion</span>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="date">April 5, 2026</span>
+                            <span class="read-time">8 min read</span>
+                        </div>
+                        <h2>The Renaissance of Classic Tailoring in Modern Fashion</h2>
+                        <p>As fashion cycles continue to evolve, we're witnessing a remarkable resurgence of classic tailoring techniques. At ELEGANTE, our master craftsmen in Milan are embracing traditional methods while incorporating contemporary aesthetics...</p>
+                        <a href="blog-post.html" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <div class="articles-grid">
+                    <article class="article-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400&h=300&fit=crop" alt="Article">
+                            <span class="card-category">Style Guide</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="date">April 2, 2026</span>
+                                <span class="read-time">5 min read</span>
+                            </div>
+                            <h3>Building a Timeless Wardrobe: The Essentials</h3>
+                            <p>Invest in pieces that transcend seasons and trends. Here's our curated guide to essential garments every gentleman should own.</p>
+                            <a href="blog-post.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" alt="Article">
+                            <span class="card-category">Craftsmanship</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="date">March 28, 2026</span>
+                                <span class="read-time">6 min read</span>
+                            </div>
+                            <h3>Inside Our Milan Atelier: A Day with Master Tailor Giovanni</h3>
+                            <p>Step behind the scenes and discover the passion and precision that goes into every ELEGANTE garment.</p>
+                            <a href="blog-post.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=400&h=300&fit=crop" alt="Article">
+                            <span class="card-category">Sustainability</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="date">March 22, 2026</span>
+                                <span class="read-time">7 min read</span>
+                            </div>
+                            <h3>Our Commitment to Sustainable Luxury</h3>
+                            <p>True luxury means responsibility. Learn about our initiatives to create beautiful fashion while protecting our planet.</p>
+                            <a href="blog-post.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&h=300&fit=crop" alt="Article">
+                            <span class="card-category">Travel</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="date">March 18, 2026</span>
+                                <span class="read-time">4 min read</span>
+                            </div>
+                            <h3>Packing for a European Summer Vacation</h3>
+                            <p>Expert tips on how to pack light but elegantly for your next trip to the Continent.</p>
+                            <a href="blog-post.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=400&h=300&fit=crop" alt="Article">
+                            <span class="card-category">Fashion</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="date">March 12, 2026</span>
+                                <span class="read-time">5 min read</span>
+                            </div>
+                            <h3>The Perfect Sweater: A Guide to Cashmere Care</h3>
+                            <p>Invest in quality cashmere and learn how to make it last a lifetime with proper care techniques.</p>
+                            <a href="blog-post.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop" alt="Article">
+                            <span class="card-category">Behind the Scenes</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="date">March 8, 2026</span>
+                                <span class="read-time">6 min read</span>
+                            </div>
+                            <h3>Meet the Designer: Sofia Marchetti on AW26 Collection</h3>
+                            <p>Our Head of Design shares insights into the creative process behind our latest collection.</p>
+                            <a href="blog-post.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="pagination">
+                    <button class="page-btn"><i class="fas fa-arrow-left"></i> Previous</button>
+                    <div class="page-numbers">
+                        <span class="active">1</span>
+                        <span>2</span>
+                        <span>3</span>
+                    </div>
+                    <button class="page-btn">Next <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="features">
+        <div class="feature">
+            <div class="feature-icon"><i class="fas fa-gem"></i></div>
+            <h3>Premium Quality</h3>
+            <p>Only the finest materials and craftsmanship</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon"><i class="fas fa-truck"></i></div>
+            <h3>Free Shipping</h3>
+            <p>Complimentary delivery on all orders</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon"><i class="fas fa-undo"></i></div>
+            <h3>Easy Returns</h3>
+            <p>30-day hassle-free return policy</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+            <h3>Secure Payment</h3>
+            <p>Your transactions are fully protected</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="logo">ELEGANTE</div>
+                <p>Where timeless elegance meets modern sophistication.</p>
+                <div class="social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Customer Care</h4>
+                <ul>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Track Order</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Craftsmanship</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ELEGANTE. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <style>
+        .blog-header {
+            padding: 12rem 3rem 6rem;
+            text-align: center;
+            background: linear-gradient(135deg, var(--cream) 0%, #e8dfd4 100%);
+        }
+
+        .blog-header .header-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .tag {
+            font-family: var(--font-sans);
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--accent);
+        }
+
+        .blog-header h1 {
+            font-family: var(--font-display);
+            font-size: 3.5rem;
+            margin: 1rem 0;
+        }
+
+        .blog-header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .blog-page {
+            padding: 4rem 3rem;
+        }
+
+        .blog-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 4rem;
+        }
+
+        .blog-sidebar {
+            position: sticky;
+            top: 120px;
+            height: fit-content;
+        }
+
+        .search-widget {
+            display: flex;
+            margin-bottom: 2rem;
+        }
+
+        .search-widget input {
+            flex: 1;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--light-gray);
+            font-family: var(--font-sans);
+        }
+
+        .search-widget button {
+            padding: 0.75rem 1rem;
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            cursor: pointer;
+        }
+
+        .categories-widget,
+        .featured-widget,
+        .newsletter-widget {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .categories-widget h3,
+        .featured-widget h3,
+        .newsletter-widget h3 {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .categories-widget ul {
+            list-style: none;
+        }
+
+        .categories-widget li {
+            margin-bottom: 0.5rem;
+        }
+
+        .categories-widget a {
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            color: var(--text-light);
+            text-decoration: none;
+            display: block;
+            padding: 0.5rem 0;
+            transition: color 0.3s;
+        }
+
+        .categories-widget a:hover,
+        .categories-widget a.active {
+            color: var(--accent);
+        }
+
+        .featured-post {
+            display: flex;
+            gap: 1rem;
+            padding: 0.75rem 0;
+        }
+
+        .featured-post img {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+        }
+
+        .featured-post h4 {
+            font-family: var(--font-display);
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .featured-post span {
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            color: var(--text-light);
+        }
+
+        .newsletter-widget p {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .newsletter-widget input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--light-gray);
+            margin-bottom: 0.75rem;
+            font-family: var(--font-sans);
+        }
+
+        .newsletter-widget .btn {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .btn-sm {
+            padding: 0.75rem 1.5rem;
+            font-size: 0.8rem;
+        }
+
+        .featured-article {
+            margin-bottom: 3rem;
+        }
+
+        .article-image {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .article-category,
+        .card-category {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            padding: 0.35rem 0.75rem;
+            background: var(--accent);
+            color: var(--white);
+            font-family: var(--font-sans);
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .article-meta,
+        .card-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .article-meta .date,
+        .article-meta .read-time,
+        .card-meta .date,
+        .card-meta .read-time {
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .article-content h2 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-content p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .read-more {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--accent);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .article-card {
+            background: var(--white);
+        }
+
+        .card-image {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.6s;
+        }
+
+        .article-card:hover .card-image img {
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-content h3 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-content p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .page-btn {
+            padding: 0.75rem 1.5rem;
+            background: transparent;
+            border: 1px solid var(--light-gray);
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+        }
+
+        .page-btn:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: var(--white);
+        }
+
+        .page-numbers {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .page-numbers span {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .page-numbers span:hover,
+        .page-numbers span.active {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 3rem;
+            border-top: 1px solid var(--light-gray);
+        }
+
+        @media (max-width: 992px) {
+            .blog-container {
+                grid-template-columns: 1fr;
+            }
+
+            .blog-sidebar {
+                position: static;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+
+            .categories-widget,
+            .featured-widget,
+            .newsletter-widget {
+                margin-bottom: 0;
+                padding-bottom: 0;
+                border-bottom: none;
+            }
+
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .features {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .blog-sidebar {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-article .article-image img {
+                height: 250px;
+            }
+
+            .pagination {
+                flex-wrap: wrap;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <script src="script.js"></script>
+</body>
+</html>

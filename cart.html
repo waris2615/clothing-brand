@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Bag - ELEGANTE</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">ELEGANTE</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <button class="icon-btn"><i class="fas fa-search"></i></button>
+                <button class="icon-btn"><i class="fas fa-heart"></i></button>
+                <button class="icon-btn cart-btn">
+                    <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
+                    <span class="cart-count">2</span>
+                </button>
+            </div>
+            <button class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="cart-page">
+        <div class="container">
+            <h1>Shopping Bag</h1>
+            <p class="cart-count-text">2 items in your bag</p>
+
+            <div class="cart-layout">
+                <div class="cart-items">
+                    <div class="cart-item">
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=200&h=250&fit=crop" alt="Classic Wool Jacket">
+                        </div>
+                        <div class="item-details">
+                            <span class="item-category">Men's Outerwear</span>
+                            <h3>Classic Wool Jacket</h3>
+                            <p class="item-option">Color: Charcoal / Size: M</p>
+                            <div class="item-price-mobile">$895</div>
+                        </div>
+                        <div class="item-quantity">
+                            <button onclick="updateQty(this, -1)">-</button>
+                            <input type="number" value="1" min="1">
+                            <button onclick="updateQty(this, 1)">+</button>
+                        </div>
+                        <div class="item-price">$895</div>
+                        <button class="remove-item"><i class="fas fa-times"></i></button>
+                    </div>
+
+                    <div class="cart-item">
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=200&h=250&fit=crop" alt="Cotton Oxford Shirt">
+                        </div>
+                        <div class="item-details">
+                            <span class="item-category">Men's Shirts</span>
+                            <h3>Cotton Oxford Shirt</h3>
+                            <p class="item-option">Color: White / Size: L</p>
+                            <div class="item-price-mobile">$285</div>
+                        </div>
+                        <div class="item-quantity">
+                            <button onclick="updateQty(this, -1)">-</button>
+                            <input type="number" value="1" min="1">
+                            <button onclick="updateQty(this, 1)">+</button>
+                        </div>
+                        <div class="item-price">$285</div>
+                        <button class="remove-item"><i class="fas fa-times"></i></button>
+                    </div>
+
+                    <div class="cart-actions">
+                        <a href="shop.html" class="continue-shopping">
+                            <i class="fas fa-arrow-left"></i> Continue Shopping
+                        </a>
+                        <button class="update-cart">Update Bag</button>
+                    </div>
+                </div>
+
+                <div class="cart-summary">
+                    <h2>Order Summary</h2>
+                    
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span>$1,180</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <span class="free-shipping">FREE</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Estimated Tax</span>
+                        <span>$94.40</span>
+                    </div>
+                    
+                    <div class="summary-total">
+                        <span>Total</span>
+                        <span>$1,274.40</span>
+                    </div>
+
+                    <div class="promo-code">
+                        <input type="text" placeholder="Promo code">
+                        <button>Apply</button>
+                    </div>
+
+                    <a href="checkout.html" class="btn btn-primary btn-full">Proceed to Checkout</a>
+                    
+                    <div class="secure-checkout">
+                        <i class="fas fa-lock"></i>
+                        <span>Secure checkout with SSL encryption</span>
+                    </div>
+
+                    <div class="payment-methods">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/100px-Visa_Inc._logo.svg.png" alt="Visa">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/100px-Mastercard-logo.svg.png" alt="Mastercard">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/100px-PayPal.svg.png" alt="PayPal">
+                    </div>
+                </div>
+            </div>
+
+            <section class="free-shipping-banner">
+                <div class="banner-content">
+                    <i class="fas fa-truck"></i>
+                    <div>
+                        <h4>You qualify for FREE shipping!</h4>
+                        <p>Add $320 more to your bag for free standard shipping</p>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 78%"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="you-may-like">
+                <h2>You May Also Like</h2>
+                <div class="related-items">
+                    <div class="related-item">
+                        <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=200&h=250&fit=crop" alt="Accessory">
+                        <h4>Italian Leather Tote</h4>
+                        <span class="price">$1,450</span>
+                        <button class="btn btn-outline btn-sm">Quick Add</button>
+                    </div>
+                    <div class="related-item">
+                        <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=200&h=250&fit=crop" alt="Shoes">
+                        <h4>Oxford Brogue Shoes</h4>
+                        <span class="price">$780</span>
+                        <button class="btn btn-outline btn-sm">Quick Add</button>
+                    </div>
+                    <div class="related-item">
+                        <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=200&h=250&fit=crop" alt="Sweater">
+                        <h4>Cashmere Sweater</h4>
+                        <span class="price">$520</span>
+                        <button class="btn btn-outline btn-sm">Quick Add</button>
+                    </div>
+                    <div class="related-item">
+                        <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=200&h=250&fit=crop" alt="Dress">
+                        <h4>Silk Evening Dress</h4>
+                        <span class="price">$1,250</span>
+                        <button class="btn btn-outline btn-sm">Quick Add</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="logo">ELEGANTE</div>
+                <p>Where timeless elegance meets modern sophistication.</p>
+                <div class="social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Customer Care</h4>
+                <ul>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Track Order</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Craftsmanship</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ELEGANTE. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <style>
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 3rem; }
+
+        .cart-page {
+            padding: 10rem 0 6rem;
+            min-height: 80vh;
+        }
+
+        .cart-page h1 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .cart-count-text {
+            font-family: var(--font-sans);
+            color: var(--text-light);
+            margin-bottom: 3rem;
+        }
+
+        .cart-layout {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 4rem;
+        }
+
+        .cart-item {
+            display: grid;
+            grid-template-columns: 120px 1fr auto auto auto;
+            gap: 2rem;
+            align-items: center;
+            padding: 2rem 0;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .item-image {
+            width: 120px;
+            height: 150px;
+            background: var(--light-gray);
+            overflow: hidden;
+        }
+
+        .item-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .item-details .item-category {
+            font-family: var(--font-sans);
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-light);
+        }
+
+        .item-details h3 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            margin: 0.25rem 0;
+        }
+
+        .item-option {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .item-quantity {
+            display: flex;
+            align-items: center;
+            border: 1px solid var(--light-gray);
+        }
+
+        .item-quantity button {
+            width: 35px;
+            height: 35px;
+            background: none;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .item-quantity input {
+            width: 40px;
+            text-align: center;
+            border: none;
+            font-family: var(--font-sans);
+        }
+
+        .item-price {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            text-align: right;
+        }
+
+        .remove-item {
+            background: none;
+            border: none;
+            font-size: 1rem;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .remove-item:hover { color: #c0392b; }
+
+        .cart-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 2rem;
+        }
+
+        .continue-shopping {
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            color: var(--text);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .continue-shopping:hover { color: var(--accent); }
+
+        .update-cart {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            padding: 0.75rem 2rem;
+            background: none;
+            border: 1px solid var(--light-gray);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .update-cart:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: var(--white);
+        }
+
+        .cart-summary {
+            background: var(--cream);
+            padding: 2rem;
+            height: fit-content;
+            position: sticky;
+            top: 120px;
+        }
+
+        .cart-summary h2 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .free-shipping { color: #27ae60; font-weight: 500; }
+
+        .summary-total {
+            display: flex;
+            justify-content: space-between;
+            padding: 1.5rem 0;
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .promo-code {
+            display: flex;
+            gap: 0.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .promo-code input {
+            flex: 1;
+            padding: 0.75rem;
+            border: 1px solid var(--light-gray);
+            font-family: var(--font-sans);
+        }
+
+        .promo-code button {
+            padding: 0.75rem 1.5rem;
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            font-family: var(--font-sans);
+            cursor: pointer;
+        }
+
+        .btn-full { width: 100%; justify-content: center; }
+
+        .secure-checkout {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 1.5rem 0;
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .secure-checkout i { color: var(--accent); }
+
+        .payment-methods {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--light-gray);
+        }
+
+        .payment-methods img {
+            height: 24px;
+            opacity: 0.6;
+        }
+
+        .free-shipping-banner {
+            margin-top: 4rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(201, 169, 89, 0.1), rgba(201, 169, 89, 0.05));
+            border: 1px solid var(--accent);
+        }
+
+        .banner-content {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .banner-content > i {
+            font-size: 2rem;
+            color: var(--accent);
+        }
+
+        .banner-content h4 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .banner-content p {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .progress-bar {
+            flex: 1;
+            height: 8px;
+            background: var(--light-gray);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress {
+            height: 100%;
+            background: var(--accent);
+            border-radius: 4px;
+        }
+
+        .you-may-like {
+            margin-top: 6rem;
+        }
+
+        .you-may-like h2 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .related-items {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .related-item {
+            text-align: center;
+        }
+
+        .related-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+
+        .related-item h4 {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .related-item .price {
+            display: block;
+            font-family: var(--font-sans);
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .btn-sm {
+            padding: 0.5rem 1.5rem;
+            font-size: 0.75rem;
+        }
+
+        @media (max-width: 992px) {
+            .cart-layout { grid-template-columns: 1fr; }
+            .cart-summary { position: static; }
+            .related-items { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .cart-item {
+                grid-template-columns: 80px 1fr;
+                gap: 1rem;
+            }
+            .item-quantity, .item-price { grid-column: 2; }
+            .remove-item { grid-column: 2; justify-self: end; }
+            .banner-content { flex-direction: column; text-align: center; }
+            .related-items { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+
+    <script>
+        function updateQty(btn, change) {
+            const input = btn.parentElement.querySelector('input');
+            let val = parseInt(input.value) + change;
+            if (val < 1) val = 1;
+            if (val > 10) val = 10;
+            input.value = val;
+        }
+
+        document.querySelectorAll('.remove-item').forEach(btn => {
+            btn.addEventListener('click', () => {
+                if (confirm('Remove this item from your bag?')) {
+                    btn.closest('.cart-item').remove();
+                }
+            });
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

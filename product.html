@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Wool Jacket - ELEGANTE</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">ELEGANTE</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <button class="icon-btn"><i class="fas fa-search"></i></button>
+                <button class="icon-btn"><i class="fas fa-heart"></i></button>
+                <button class="icon-btn cart-btn">
+                    <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+            <button class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="product-detail">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a> / 
+                <a href="shop.html">Shop</a> / 
+                <a href="shop.html">Men's Outerwear</a> / 
+                <span>Classic Wool Jacket</span>
+            </div>
+
+            <div class="product-detail-grid">
+                <div class="product-gallery">
+                    <div class="gallery-main">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&h=1000&fit=crop" alt="Classic Wool Jacket" id="mainImage">
+                    </div>
+                    <div class="gallery-thumbs">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=200&h=250&fit=crop" alt="Front" class="active" onclick="changeImage(this)">
+                        <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=200&h=250&fit=crop" alt="Back" onclick="changeImage(this)">
+                        <img src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=200&h=250&fit=crop" alt="Side" onclick="changeImage(this)">
+                        <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=200&h=250&fit=crop" alt="Detail" onclick="changeImage(this)">
+                    </div>
+                </div>
+
+                <div class="product-info-detail">
+                    <span class="product-category">Men's Outerwear</span>
+                    <h1>Classic Wool Jacket</h1>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span>(24 reviews)</span>
+                    </div>
+                    <div class="product-price-detail">
+                        <span class="price">$895</span>
+                        <span class="tax">Tax included</span>
+                    </div>
+
+                    <div class="product-options">
+                        <div class="option-group">
+                            <label>Color: <strong>Charcoal</strong></label>
+                            <div class="color-options-detail">
+                                <span class="color active" style="background: #1a1a1a;" data-color="Charcoal"></span>
+                                <span class="color" style="background: #2c3e50;" data-color="Navy"></span>
+                                <span class="color" style="background: #8b4513;" data-color="Brown"></span>
+                            </div>
+                        </div>
+
+                        <div class="option-group">
+                            <label>Size</label>
+                            <div class="size-options-detail">
+                                <button>S</button>
+                                <button class="active">M</button>
+                                <button>L</button>
+                                <button>XL</button>
+                                <button>XXL</button>
+                            </div>
+                            <a href="#" class="size-guide">Size Guide</a>
+                        </div>
+
+                        <div class="option-group">
+                            <label>Quantity</label>
+                            <div class="quantity-selector">
+                                <button onclick="decreaseQty()">-</button>
+                                <input type="number" value="1" min="1" max="10" id="quantity">
+                                <button onclick="increaseQty()">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-actions-detail">
+                        <button class="btn btn-primary btn-lg" onclick="addToCart()">Add to Bag</button>
+                        <button class="btn btn-outline"><i class="far fa-heart"></i> Save to Wishlist</button>
+                    </div>
+
+                    <div class="product-features">
+                        <div class="feature-item">
+                            <i class="fas fa-truck"></i>
+                            <span>Free shipping on orders over $500</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-undo"></i>
+                            <span>30-day returns</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Authenticity guaranteed</span>
+                        </div>
+                    </div>
+
+                    <div class="product-description">
+                        <h3>Description</h3>
+                        <p>Crafted from the finest Italian wool, this classic jacket represents the pinnacle of traditional tailoring. The relaxed fit offers comfort while maintaining a sharp silhouette, making it perfect for both professional and casual occasions.</p>
+                        <ul>
+                            <li>100% Italian Virgin Wool</li>
+                            <li>Relaxed fit for comfort</li>
+                            <li>Peak lapels with horn buttons</li>
+                            <li>Two-button closure</li>
+                            <li>Four-button surgeon cuffs</li>
+                            <li>Fully lined with premium viscose</li>
+                            <li>Dry clean only</li>
+                        </ul>
+                    </div>
+
+                    <div class="product-details-accordion">
+                        <div class="accordion-item">
+                            <button class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>Shipping & Returns</span>
+                                <i class="fas fa-plus"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p>Free standard shipping on all orders over $500. Express shipping available at checkout. Returns accepted within 30 days of delivery. Items must be unworn with original tags attached.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>Care Instructions</span>
+                                <i class="fas fa-plus"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p>Dry clean only. Store on a padded hanger in a breathable garment bag. Avoid direct sunlight. Steam to remove wrinkles. Do not iron directly on the wool.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>Size & Fit</span>
+                                <i class="fas fa-plus"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p>The model is 6'1" / 185cm wearing size M. This style fits true to size. For a more relaxed fit, we recommend sizing up.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="related-products">
+                <h2>You May Also Like</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-3d">
+                            <div class="product-wrapper">
+                                <div class="product-img">
+                                    <img src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=400&h=500&fit=crop" alt="Wool Blazer">
+                                </div>
+                                <div class="product-img hover-img">
+                                    <img src="https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=400&h=500&fit=crop" alt="Wool Blazer Back">
+                                </div>
+                            </div>
+                            <div class="product-actions">
+                                <button class="action-btn"><i class="fas fa-eye"></i></button>
+                                <button class="action-btn"><i class="fas fa-heart"></i></button>
+                            </div>
+                            <a href="product.html" class="product-link"></a>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Men's Outerwear</span>
+                            <h3>Wool Blend Blazer</h3>
+                            <div class="product-price">$1,195</div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-3d">
+                            <div class="product-wrapper">
+                                <div class="product-img">
+                                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=500&fit=crop" alt="Dress Shirt">
+                                </div>
+                                <div class="product-img hover-img">
+                                    <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=400&h=500&fit=crop" alt="Dress Shirt Back">
+                                </div>
+                            </div>
+                            <div class="product-actions">
+                                <button class="action-btn"><i class="fas fa-eye"></i></button>
+                                <button class="action-btn"><i class="fas fa-heart"></i></button>
+                            </div>
+                            <a href="product.html" class="product-link"></a>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Men's Shirts</span>
+                            <h3>Cotton Oxford Shirt</h3>
+                            <div class="product-price">$285</div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-3d">
+                            <div class="product-wrapper">
+                                <div class="product-img">
+                                    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=400&h=500&fit=crop" alt="Oxford Shoes">
+                                </div>
+                                <div class="product-img hover-img">
+                                    <img src="https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=400&h=500&fit=crop" alt="Oxford Shoes Side">
+                                </div>
+                            </div>
+                            <div class="product-actions">
+                                <button class="action-btn"><i class="fas fa-eye"></i></button>
+                                <button class="action-btn"><i class="fas fa-heart"></i></button>
+                            </div>
+                            <a href="product.html" class="product-link"></a>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Footwear</span>
+                            <h3>Oxford Brogue Shoes</h3>
+                            <div class="product-price">$780</div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-3d">
+                            <div class="product-wrapper">
+                                <div class="product-img">
+                                    <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=400&h=500&fit=crop" alt="Leather Belt">
+                                </div>
+                                <div class="product-img hover-img">
+                                    <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=500&fit=crop" alt="Leather Belt Side">
+                                </div>
+                            </div>
+                            <div class="product-actions">
+                                <button class="action-btn"><i class="fas fa-eye"></i></button>
+                                <button class="action-btn"><i class="fas fa-heart"></i></button>
+                            </div>
+                            <a href="product.html" class="product-link"></a>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Accessories</span>
+                            <h3>Italian Leather Belt</h3>
+                            <div class="product-price">$245</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="logo">ELEGANTE</div>
+                <p>Where timeless elegance meets modern sophistication.</p>
+                <div class="social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Customer Care</h4>
+                <ul>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Track Order</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Craftsmanship</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ELEGANTE. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <style>
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 3rem; }
+        
+        .breadcrumbs {
+            padding: 10rem 3rem 2rem;
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+        .breadcrumbs a { color: var(--text-light); text-decoration: none; }
+        .breadcrumbs a:hover { color: var(--accent); }
+        .breadcrumbs span { color: var(--primary); }
+
+        .product-detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            padding-bottom: 6rem;
+        }
+
+        .gallery-main {
+            background: var(--light-gray);
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+        .gallery-main img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        .gallery-main:hover img { transform: scale(1.05); }
+
+        .gallery-thumbs {
+            display: flex;
+            gap: 1rem;
+        }
+        .gallery-thumbs img {
+            width: 80px;
+            height: 100px;
+            object-fit: cover;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+        .gallery-thumbs img.active,
+        .gallery-thumbs img:hover { border-color: var(--accent); }
+
+        .product-info-detail { padding-top: 2rem; }
+        .product-category {
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-light);
+        }
+        .product-info-detail h1 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            margin: 0.5rem 0 1rem;
+        }
+
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .stars { color: var(--accent); }
+        .product-rating span {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .product-price-detail {
+            margin-bottom: 2rem;
+        }
+        .price {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            color: var(--accent);
+        }
+        .tax {
+            display: block;
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-top: 0.25rem;
+        }
+
+        .option-group {
+            margin-bottom: 1.5rem;
+        }
+        .option-group label {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            display: block;
+            margin-bottom: 0.75rem;
+        }
+        .option-group label strong { color: var(--primary); }
+
+        .color-options-detail {
+            display: flex;
+            gap: 0.75rem;
+        }
+        .color-options-detail .color {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+        .color-options-detail .color.active,
+        .color-options-detail .color:hover {
+            box-shadow: 0 0 0 3px var(--white), 0 0 0 5px var(--accent);
+        }
+
+        .size-options-detail {
+            display: flex;
+            gap: 0.5rem;
+        }
+        .size-options-detail button {
+            width: 50px;
+            height: 50px;
+            background: transparent;
+            border: 1px solid var(--light-gray);
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .size-options-detail button:hover,
+        .size-options-detail button.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: var(--white);
+        }
+
+        .size-guide {
+            display: inline-block;
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-top: 0.75rem;
+            text-decoration: underline;
+        }
+
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            width: fit-content;
+            border: 1px solid var(--light-gray);
+            padding: 0.5rem 1rem;
+        }
+        .quantity-selector button {
+            background: none;
+            border: none;
+            font-size: 1.25rem;
+            cursor: pointer;
+            color: var(--text);
+        }
+        .quantity-selector input {
+            width: 50px;
+            text-align: center;
+            border: none;
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            background: transparent;
+        }
+
+        .product-actions-detail {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .btn-lg {
+            padding: 1.25rem 3rem;
+            font-size: 0.9rem;
+        }
+
+        .product-features {
+            border-top: 1px solid var(--light-gray);
+            padding: 1.5rem 0;
+            margin-bottom: 2rem;
+        }
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.5rem 0;
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+        .feature-item i {
+            color: var(--accent);
+            width: 20px;
+        }
+
+        .product-description h3 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        .product-description p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+        .product-description ul {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        .product-description li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-light);
+        }
+        .product-description li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
+        .accordion-item {
+            border-bottom: 1px solid var(--light-gray);
+        }
+        .accordion-header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 0;
+            background: none;
+            border: none;
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            text-align: left;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s;
+        }
+        .accordion-content p {
+            padding-bottom: 1.25rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        .accordion-item.active .accordion-content { max-height: 200px; }
+        .accordion-item.active .fa-plus { transform: rotate(45deg); }
+
+        .related-products {
+            padding: 4rem 0 6rem;
+            border-top: 1px solid var(--light-gray);
+        }
+        .related-products h2 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        @media (max-width: 992px) {
+            .product-detail-grid { grid-template-columns: 1fr; }
+            .products-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .gallery-main img { height: 400px; }
+            .products-grid { grid-template-columns: 1fr; }
+            .product-actions-detail { flex-direction: column; }
+        }
+    </style>
+
+    <script>
+        function changeImage(thumb) {
+            document.getElementById('mainImage').src = thumb.src.replace('w=200&h=250', 'w=800&h=1000');
+            document.querySelectorAll('.gallery-thumbs img').forEach(img => img.classList.remove('active'));
+            thumb.classList.add('active');
+        }
+
+        function increaseQty() {
+            const input = document.getElementById('quantity');
+            if (input.value < 10) input.value = parseInt(input.value) + 1;
+        }
+
+        function decreaseQty() {
+            const input = document.getElementById('quantity');
+            if (input.value > 1) input.value = parseInt(input.value) - 1;
+        }
+
+        function toggleAccordion(btn) {
+            btn.parentElement.classList.toggle('active');
+        }
+
+        function addToCart() {
+            alert('Product added to bag!');
+        }
+
+        document.querySelectorAll('.size-options-detail button').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.size-options-detail button').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+
+        document.querySelectorAll('.color-options-detail .color').forEach(color => {
+            color.addEventListener('click', () => {
+                document.querySelectorAll('.color-options-detail .color').forEach(c => c.classList.remove('active'));
+                color.classList.add('active');
+                color.parentElement.querySelector('label strong').textContent = color.dataset.color;
+            });
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

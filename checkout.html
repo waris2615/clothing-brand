@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - ELEGANTE</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <header class="checkout-header">
+        <a href="index.html" class="logo">ELEGANTE</a>
+        <div class="checkout-steps">
+            <span class="step active">Bag</span>
+            <i class="fas fa-chevron-right"></i>
+            <span class="step active">Checkout</span>
+            <i class="fas fa-chevron-right"></i>
+            <span class="step">Confirmation</span>
+        </div>
+        <div class="secure-badge">
+            <i class="fas fa-lock"></i> Secure Checkout
+        </div>
+    </header>
+
+    <main class="checkout-page">
+        <div class="checkout-container">
+            <div class="checkout-form">
+                <section class="checkout-section">
+                    <h2>Contact Information</h2>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="newsletter">
+                        <label for="newsletter">Email me with news and offers</label>
+                    </div>
+                </section>
+
+                <section class="checkout-section">
+                    <h2>Shipping Address</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address *</label>
+                        <input type="text" id="address" placeholder="Street address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="apartment">Apartment, suite, etc. (optional)</label>
+                        <input type="text" id="apartment" placeholder="Apt, Suite, Unit">
+                    </div>
+                    <div class="form-row three">
+                        <div class="form-group">
+                            <label for="city">City *</label>
+                            <input type="text" id="city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="state">State/Province *</label>
+                            <select id="state" required>
+                                <option value="">Select state</option>
+                                <option value="NY">New York</option>
+                                <option value="CA">California</option>
+                                <option value="TX">Texas</option>
+                                <option value="FL">Florida</option>
+                                <option value="IL">Illinois</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="zip">ZIP/Postal Code *</label>
+                            <input type="text" id="zip" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country *</label>
+                        <select id="country" required>
+                            <option value="US">United States</option>
+                            <option value="CA">Canada</option>
+                            <option value="UK">United Kingdom</option>
+                            <option value="FR">France</option>
+                            <option value="IT">Italy</option>
+                            <option value="DE">Germany</option>
+                            <option value="JP">Japan</option>
+                            <option value="AE">United Arab Emirates</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" placeholder="For delivery updates" required>
+                    </div>
+                </section>
+
+                <section class="checkout-section">
+                    <h2>Shipping Method</h2>
+                    <div class="shipping-methods">
+                        <label class="method-option selected">
+                            <input type="radio" name="shipping" checked>
+                            <div class="method-info">
+                                <span class="method-name">Standard Shipping</span>
+                                <span class="method-time">5-7 business days</span>
+                            </div>
+                            <span class="method-price">FREE</span>
+                        </label>
+                        <label class="method-option">
+                            <input type="radio" name="shipping">
+                            <div class="method-info">
+                                <span class="method-name">Express Shipping</span>
+                                <span class="method-time">2-3 business days</span>
+                            </div>
+                            <span class="method-price">$25.00</span>
+                        </label>
+                        <label class="method-option">
+                            <input type="radio" name="shipping">
+                            <div class="method-info">
+                                <span class="method-name">Next Day Delivery</span>
+                                <span class="method-time">Next business day</span>
+                            </div>
+                            <span class="method-price">$50.00</span>
+                        </label>
+                    </div>
+                </section>
+
+                <section class="checkout-section">
+                    <h2>Payment</h2>
+                    <div class="payment-methods-checkout">
+                        <label class="payment-option selected">
+                            <input type="radio" name="payment" checked>
+                            <span>Credit Card</span>
+                            <div class="card-icons">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/60px-Visa_Inc._logo.svg.png" alt="Visa">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/60px-Mastercard-logo.svg.png" alt="Mastercard">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/American_Express_logo_(2020).svg/60px-American_Express_logo_(2020).svg.png" alt="Amex">
+                            </div>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment">
+                            <span>PayPal</span>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/60px-PayPal.svg.png" alt="PayPal">
+                        </label>
+                    </div>
+                    <div class="card-form">
+                        <div class="form-group">
+                            <label for="cardNumber">Card Number *</label>
+                            <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+                            <i class="fas fa-credit-card card-icon"></i>
+                        </div>
+                        <div class="form-group">
+                            <label for="cardName">Name on Card *</label>
+                            <input type="text" id="cardName" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="expiry">Expiration (MM/YY) *</label>
+                                <input type="text" id="expiry" placeholder="MM/YY" maxlength="5">
+                            </div>
+                            <div class="form-group">
+                                <label for="cvv">CVV *</label>
+                                <input type="text" id="cvv" placeholder="123" maxlength="4">
+                                <i class="fas fa-question-circle cvv-help"></i>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <button type="submit" class="btn btn-primary btn-full btn-lg" onclick="placeOrder()">
+                    <i class="fas fa-lock"></i> Place Order - $1,274.40
+                </button>
+
+                <p class="terms">By placing your order, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+            </div>
+
+            <aside class="order-summary">
+                <div class="summary-header">
+                    <h3>Order Summary</h3>
+                    <a href="cart.html" class="edit-bag">Edit bag</a>
+                </div>
+
+                <div class="summary-items">
+                    <div class="summary-item">
+                        <div class="item-thumb">
+                            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=100&h=125&fit=crop" alt="Jacket">
+                            <span class="item-qty">1</span>
+                        </div>
+                        <div class="item-info">
+                            <h4>Classic Wool Jacket</h4>
+                            <p>Charcoal / M</p>
+                        </div>
+                        <span class="item-price">$895</span>
+                    </div>
+                    <div class="summary-item">
+                        <div class="item-thumb">
+                            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=100&h=125&fit=crop" alt="Shirt">
+                            <span class="item-qty">1</span>
+                        </div>
+                        <div class="item-info">
+                            <h4>Cotton Oxford Shirt</h4>
+                            <p>White / L</p>
+                        </div>
+                        <span class="item-price">$285</span>
+                    </div>
+                </div>
+
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span>$1,180.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span class="free">FREE</span>
+                </div>
+                <div class="summary-row">
+                    <span>Tax</span>
+                    <span>$94.40</span>
+                </div>
+
+                <div class="summary-total">
+                    <span>Total</span>
+                    <span>$1,274.40</span>
+                </div>
+
+                <div class="promo-summary">
+                    <input type="text" placeholder="Promo code">
+                    <button>Apply</button>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="checkout-footer">
+        <div class="footer-links-checkout">
+            <a href="#">Refund Policy</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <p>&copy; 2026 ELEGANTE. All rights reserved.</p>
+    </footer>
+
+    <style>
+        body { background: var(--cream); }
+
+        .checkout-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 3rem;
+            background: var(--white);
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            font-weight: 700;
+            letter-spacing: 6px;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .checkout-steps {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+        }
+
+        .checkout-steps .step { color: var(--text-light); }
+        .checkout-steps .step.active { color: var(--primary); font-weight: 500; }
+        .checkout-steps i { color: var(--text-light); font-size: 0.7rem; }
+
+        .secure-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .secure-badge i { color: var(--accent); }
+
+        .checkout-page {
+            padding: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .checkout-container {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+        }
+
+        .checkout-section {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .checkout-section h2 {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-row.three { grid-template-columns: 2fr 1fr 1fr; }
+
+        .form-group {
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            background: var(--white);
+            border: 1px solid var(--light-gray);
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .card-icon {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-light);
+        }
+
+        .cvv-help {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-light);
+            cursor: help;
+        }
+
+        .form-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+
+        .form-checkbox input { width: auto; }
+
+        .shipping-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .method-option {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25rem;
+            background: var(--white);
+            border: 1px solid var(--light-gray);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .method-option.selected {
+            border-color: var(--accent);
+            background: rgba(201, 169, 89, 0.05);
+        }
+
+        .method-option input { display: none; }
+
+        .method-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .method-name {
+            font-family: var(--font-sans);
+            font-weight: 500;
+        }
+
+        .method-time {
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .method-price {
+            font-family: var(--font-sans);
+            font-weight: 500;
+        }
+
+        .payment-methods-checkout {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .payment-option {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 1rem;
+            background: var(--white);
+            border: 1px solid var(--light-gray);
+            cursor: pointer;
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .payment-option.selected {
+            border-color: var(--accent);
+            background: rgba(201, 169, 89, 0.05);
+        }
+
+        .payment-option input { display: none; }
+
+        .card-icons {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .card-icons img,
+        .payment-option > img {
+            height: 20px;
+            opacity: 0.6;
+        }
+
+        .btn-lg {
+            padding: 1.25rem 3rem;
+            font-size: 1rem;
+            margin-top: 2rem;
+        }
+
+        .terms {
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            color: var(--text-light);
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .terms a { color: var(--accent); }
+
+        .order-summary {
+            background: var(--white);
+            padding: 2rem;
+            height: fit-content;
+            position: sticky;
+            top: 2rem;
+        }
+
+        .summary-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .summary-header h3 {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+        }
+
+        .edit-bag {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            color: var(--accent);
+        }
+
+        .summary-items {
+            margin-bottom: 1.5rem;
+        }
+
+        .summary-item {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .item-thumb {
+            position: relative;
+            width: 70px;
+            height: 88px;
+            background: var(--light-gray);
+        }
+
+        .item-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .item-qty {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            width: 22px;
+            height: 22px;
+            background: var(--primary);
+            color: var(--white);
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .item-info {
+            flex: 1;
+        }
+
+        .item-info h4 {
+            font-family: var(--font-display);
+            font-size: 0.95rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .item-info p {
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .item-price {
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .free { color: #27ae60; }
+
+        .summary-total {
+            display: flex;
+            justify-content: space-between;
+            padding: 1.25rem 0;
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .promo-summary {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .promo-summary input {
+            flex: 1;
+            padding: 0.75rem;
+            border: 1px solid var(--light-gray);
+            font-family: var(--font-sans);
+        }
+
+        .promo-summary button {
+            padding: 0.75rem 1.5rem;
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            font-family: var(--font-sans);
+            cursor: pointer;
+        }
+
+        .checkout-footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .footer-links-checkout {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links-checkout a {
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .checkout-footer p {
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            color: var(--text-light);
+        }
+
+        @media (max-width: 992px) {
+            .checkout-container { grid-template-columns: 1fr; }
+            .order-summary { position: static; order: -1; }
+        }
+
+        @media (max-width: 768px) {
+            .checkout-header { flex-direction: column; gap: 1rem; }
+            .checkout-page { padding: 2rem 1rem; }
+            .form-row { grid-template-columns: 1fr; }
+            .form-row.three { grid-template-columns: 1fr 1fr; }
+            .payment-methods-checkout { flex-direction: column; }
+        }
+    </style>
+
+    <script>
+        function placeOrder() {
+            alert('Order placed successfully! Thank you for shopping with ELEGANTE.');
+            window.location.href = 'index.html';
+        }
+
+        document.querySelectorAll('.method-option').forEach(option => {
+            option.addEventListener('click', () => {
+                document.querySelectorAll('.method-option').forEach(o => o.classList.remove('selected'));
+                option.classList.add('selected');
+                option.querySelector('input').checked = true;
+            });
+        });
+
+        document.querySelectorAll('.payment-option').forEach(option => {
+            option.addEventListener('click', () => {
+                document.querySelectorAll('.payment-option').forEach(o => o.classList.remove('selected'));
+                option.classList.add('selected');
+                option.querySelector('input').checked = true;
+            });
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

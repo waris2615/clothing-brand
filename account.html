@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - ELEGANTE</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">ELEGANTE</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <button class="icon-btn"><i class="fas fa-search"></i></button>
+                <button class="icon-btn"><i class="fas fa-heart"></i></button>
+                <button class="icon-btn cart-btn">
+                    <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
+                    <span class="cart-count">2</span>
+                </button>
+            </div>
+            <button class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="account-page">
+        <div class="account-container">
+            <div class="account-header">
+                <h1>My Account</h1>
+                <p>Welcome back, Alexander</p>
+            </div>
+
+            <div class="account-layout">
+                <aside class="account-sidebar">
+                    <nav class="account-nav">
+                        <a href="#dashboard" class="nav-item active">
+                            <i class="fas fa-home"></i> Dashboard
+                        </a>
+                        <a href="#orders" class="nav-item">
+                            <i class="fas fa-shopping-bag"></i> Orders
+                        </a>
+                        <a href="#wishlist" class="nav-item">
+                            <i class="fas fa-heart"></i> Wishlist
+                        </a>
+                        <a href="#addresses" class="nav-item">
+                            <i class="fas fa-map-marker-alt"></i> Addresses
+                        </a>
+                        <a href="#profile" class="nav-item">
+                            <i class="fas fa-user"></i> Profile
+                        </a>
+                        <a href="#" class="nav-item logout">
+                            <i class="fas fa-sign-out-alt"></i> Sign Out
+                        </a>
+                    </nav>
+                </aside>
+
+                <div class="account-content">
+                    <section class="dashboard" id="dashboard">
+                        <div class="welcome-card">
+                            <div class="welcome-text">
+                                <h2>Welcome back, Alexander!</h2>
+                                <p>From your account dashboard you can view your recent orders, manage your wishlist, and update your account details.</p>
+                            </div>
+                            <div class="member-badge">
+                                <i class="fas fa-crown"></i>
+                                <span>Gold Member</span>
+                            </div>
+                        </div>
+
+                        <div class="stats-cards">
+                            <div class="stat-card">
+                                <div class="stat-icon"><i class="fas fa-shopping-bag"></i></div>
+                                <div class="stat-info">
+                                    <span class="stat-number">12</span>
+                                    <span class="stat-label">Total Orders</span>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon"><i class="fas fa-heart"></i></div>
+                                <div class="stat-info">
+                                    <span class="stat-number">8</span>
+                                    <span class="stat-label">Wishlist Items</span>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon"><i class="fas fa-star"></i></div>
+                                <div class="stat-info">
+                                    <span class="stat-number">2,450</span>
+                                    <span class="stat-label">Reward Points</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="recent-orders">
+                            <div class="section-header">
+                                <h3>Recent Orders</h3>
+                                <a href="#orders">View All</a>
+                            </div>
+                            <table class="orders-table">
+                                <thead>
+                                    <tr>
+                                        <th>Order</th>
+                                        <th>Date</th>
+                                        <th>Status</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#ELE-2026-1247</td>
+                                        <td>Apr 5, 2026</td>
+                                        <td><span class="status delivered">Delivered</span></td>
+                                        <td>$895.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#ELE-2026-1198</td>
+                                        <td>Mar 28, 2026</td>
+                                        <td><span class="status delivered">Delivered</span></td>
+                                        <td>$1,250.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#ELE-2026-1142</td>
+                                        <td>Mar 15, 2026</td>
+                                        <td><span class="status delivered">Delivered</span></td>
+                                        <td>$520.00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <section class="orders hidden" id="orders">
+                        <h2>Order History</h2>
+                        <div class="order-filters">
+                            <select>
+                                <option>All Orders</option>
+                                <option>Processing</option>
+                                <option>Shipped</option>
+                                <option>Delivered</option>
+                            </select>
+                        </div>
+
+                        <div class="order-card">
+                            <div class="order-header">
+                                <div class="order-info">
+                                    <span class="order-id">#ELE-2026-1247</span>
+                                    <span class="order-date">April 5, 2026</span>
+                                </div>
+                                <span class="status delivered">Delivered</span>
+                            </div>
+                            <div class="order-items">
+                                <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=80&h=100&fit=crop" alt="Product">
+                                <div class="order-details">
+                                    <h4>Classic Wool Jacket</h4>
+                                    <p>Charcoal / M / Qty: 1</p>
+                                </div>
+                                <span class="order-price">$895.00</span>
+                            </div>
+                            <div class="order-actions">
+                                <button class="btn btn-outline btn-sm">View Details</button>
+                                <button class="btn btn-outline btn-sm">Reorder</button>
+                                <button class="btn btn-outline btn-sm">Write Review</button>
+                            </div>
+                        </div>
+
+                        <div class="order-card">
+                            <div class="order-header">
+                                <div class="order-info">
+                                    <span class="order-id">#ELE-2026-1198</span>
+                                    <span class="order-date">March 28, 2026</span>
+                                </div>
+                                <span class="status delivered">Delivered</span>
+                            </div>
+                            <div class="order-items">
+                                <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=80&h=100&fit=crop" alt="Product">
+                                <div class="order-details">
+                                    <h4>Silk Evening Dress</h4>
+                                    <p>Champagne / S / Qty: 1</p>
+                                </div>
+                                <span class="order-price">$1,250.00</span>
+                            </div>
+                            <div class="order-actions">
+                                <button class="btn btn-outline btn-sm">View Details</button>
+                                <button class="btn btn-outline btn-sm">Reorder</button>
+                                <button class="btn btn-outline btn-sm">Write Review</button>
+                            </div>
+                        </div>
+
+                        <div class="order-card">
+                            <div class="order-header">
+                                <div class="order-info">
+                                    <span class="order-id">#ELE-2026-1142</span>
+                                    <span class="order-date">March 15, 2026</span>
+                                </div>
+                                <span class="status delivered">Delivered</span>
+                            </div>
+                            <div class="order-items">
+                                <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=80&h=100&fit=crop" alt="Product">
+                                <div class="order-details">
+                                    <h4>Cashmere Sweater</h4>
+                                    <p>Camel / M / Qty: 1</p>
+                                </div>
+                                <span class="order-price">$520.00</span>
+                            </div>
+                            <div class="order-actions">
+                                <button class="btn btn-outline btn-sm">View Details</button>
+                                <button class="btn btn-outline btn-sm">Reorder</button>
+                                <button class="btn btn-outline btn-sm">Write Review</button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="wishlist hidden" id="wishlist">
+                        <h2>My Wishlist</h2>
+                        <div class="wishlist-grid">
+                            <div class="wishlist-item">
+                                <button class="remove-wishlist"><i class="fas fa-times"></i></button>
+                                <img src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=200&h=250&fit=crop" alt="Overcoat">
+                                <h4>Wool Blend Overcoat</h4>
+                                <span class="price">$2,450</span>
+                                <button class="btn btn-primary btn-sm">Add to Bag</button>
+                            </div>
+                            <div class="wishlist-item">
+                                <button class="remove-wishlist"><i class="fas fa-times"></i></button>
+                                <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=200&h=250&fit=crop" alt="Tote">
+                                <h4>Italian Leather Tote</h4>
+                                <span class="price">$1,450</span>
+                                <button class="btn btn-primary btn-sm">Add to Bag</button>
+                            </div>
+                            <div class="wishlist-item">
+                                <button class="remove-wishlist"><i class="fas fa-times"></i></button>
+                                <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=200&h=250&fit=crop" alt="Shoes">
+                                <h4>Oxford Brogue Shoes</h4>
+                                <span class="price">$780</span>
+                                <button class="btn btn-primary btn-sm">Add to Bag</button>
+                            </div>
+                            <div class="wishlist-item">
+                                <button class="remove-wishlist"><i class="fas fa-times"></i></button>
+                                <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=200&h=250&fit=crop" alt="Dress">
+                                <h4>Cocktail Midi Dress</h4>
+                                <span class="price">$890</span>
+                                <button class="btn btn-primary btn-sm">Add to Bag</button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="addresses hidden" id="addresses">
+                        <h2>Saved Addresses</h2>
+                        <div class="addresses-grid">
+                            <div class="address-card default">
+                                <div class="address-badge">Default</div>
+                                <h4>Alexander Chen</h4>
+                                <p>123 Fifth Avenue, Apt 4B</p>
+                                <p>New York, NY 10001</p>
+                                <p>United States</p>
+                                <p>+1 (212) 555-0123</p>
+                                <div class="address-actions">
+                                    <a href="#">Edit</a>
+                                    <a href="#">Delete</a>
+                                </div>
+                            </div>
+                            <div class="address-card">
+                                <h4>Alexander Chen</h4>
+                                <p>456 Madison Avenue</p>
+                                <p>Manhattan, NY 10022</p>
+                                <p>United States</p>
+                                <p>+1 (212) 555-0123</p>
+                                <div class="address-actions">
+                                    <a href="#">Edit</a>
+                                    <a href="#">Set as Default</a>
+                                </div>
+                            </div>
+                            <div class="address-card add-new">
+                                <i class="fas fa-plus"></i>
+                                <span>Add New Address</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="profile hidden" id="profile">
+                        <h2>Account Details</h2>
+                        <form class="profile-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>First Name</label>
+                                    <input type="text" value="Alexander">
+                                </div>
+                                <div class="form-group">
+                                    <label>Last Name</label>
+                                    <input type="text" value="Chen">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" value="alexander.chen@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <input type="tel" value="+1 (212) 555-0123">
+                            </div>
+                            <div class="form-group">
+                                <label>Date of Birth</label>
+                                <input type="date" value="1985-06-15">
+                            </div>
+                            
+                            <h3>Change Password</h3>
+                            <div class="form-group">
+                                <label>Current Password</label>
+                                <input type="password" placeholder="Enter current password">
+                            </div>
+                            <div class="form-group">
+                                <label>New Password</label>
+                                <input type="password" placeholder="Enter new password">
+                            </div>
+                            <div class="form-group">
+                                <label>Confirm New Password</label>
+                                <input type="password" placeholder="Confirm new password">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                        </form>
+
+                        <div class="newsletter-preferences">
+                            <h3>Email Preferences</h3>
+                            <label class="checkbox-option">
+                                <input type="checkbox" checked>
+                                <span>Receive newsletters with exclusive offers</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" checked>
+                                <span>Get updates about new collections</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox">
+                                <span>Order status notifications</span>
+                            </label>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="logo">ELEGANTE</div>
+                <p>Where timeless elegance meets modern sophistication.</p>
+                <div class="social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Customer Care</h4>
+                <ul>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Track Order</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Craftsmanship</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ELEGANTE. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <style>
+        .account-page {
+            padding: 10rem 0 6rem;
+            min-height: 100vh;
+            background: var(--cream);
+        }
+
+        .account-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 3rem;
+        }
+
+        .account-header {
+            margin-bottom: 3rem;
+        }
+
+        .account-header h1 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .account-header p {
+            font-family: var(--font-sans);
+            color: var(--text-light);
+        }
+
+        .account-layout {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 3rem;
+        }
+
+        .account-nav {
+            background: var(--white);
+            padding: 1.5rem;
+            position: sticky;
+            top: 120px;
+        }
+
+        .account-nav .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            color: var(--text);
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        .account-nav .nav-item:hover,
+        .account-nav .nav-item.active {
+            background: var(--accent);
+            color: var(--white);
+        }
+
+        .account-nav .logout { color: #c0392b; }
+        .account-nav .logout:hover { background: #c0392b; color: var(--white); }
+
+        .welcome-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, var(--primary), #333);
+            color: var(--white);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .welcome-text h2 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .welcome-text p {
+            opacity: 0.8;
+            font-size: 0.95rem;
+        }
+
+        .member-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--accent);
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .stats-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: var(--white);
+        }
+
+        .stat-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(201, 169, 89, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            color: var(--accent);
+        }
+
+        .stat-number {
+            display: block;
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-header h3 {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+        }
+
+        .section-header a {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            color: var(--accent);
+        }
+
+        .orders-table {
+            width: 100%;
+            background: var(--white);
+            border-collapse: collapse;
+        }
+
+        .orders-table th,
+        .orders-table td {
+            padding: 1rem;
+            text-align: left;
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .orders-table th {
+            font-weight: 500;
+            color: var(--text-light);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        .status {
+            padding: 0.25rem 0.75rem;
+            font-size: 0.75rem;
+            border-radius: 50px;
+        }
+
+        .status.delivered {
+            background: rgba(39, 174, 96, 0.1);
+            color: #27ae60;
+        }
+
+        .account-content section { display: block; }
+        .account-content section.hidden { display: none; }
+
+        .orders h2, .wishlist h2, .addresses h2, .profile h2 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .order-filters {
+            margin-bottom: 2rem;
+        }
+
+        .order-filters select {
+            padding: 0.75rem 1.5rem;
+            border: 1px solid var(--light-gray);
+            font-family: var(--font-sans);
+        }
+
+        .order-card {
+            background: var(--white);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .order-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--light-gray);
+            margin-bottom: 1rem;
+        }
+
+        .order-id {
+            font-family: var(--font-sans);
+            font-weight: 500;
+        }
+
+        .order-date {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .order-items {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1rem 0;
+        }
+
+        .order-items img {
+            width: 60px;
+            height: 75px;
+            object-fit: cover;
+        }
+
+        .order-details { flex: 1; }
+        .order-details h4 {
+            font-family: var(--font-display);
+            font-size: 0.95rem;
+        }
+        .order-details p {
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .order-price {
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+        }
+
+        .order-actions {
+            display: flex;
+            gap: 0.75rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--light-gray);
+        }
+
+        .btn-sm {
+            padding: 0.5rem 1rem;
+            font-size: 0.75rem;
+        }
+
+        .wishlist-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        .wishlist-item {
+            background: var(--white);
+            padding: 1rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .remove-wishlist {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            background: none;
+            border: none;
+            color: var(--text-light);
+            cursor: pointer;
+        }
+
+        .wishlist-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+
+        .wishlist-item h4 {
+            font-family: var(--font-display);
+            font-size: 0.95rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .wishlist-item .price {
+            display: block;
+            font-family: var(--font-sans);
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .addresses-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .address-card {
+            background: var(--white);
+            padding: 1.5rem;
+            position: relative;
+        }
+
+        .address-card.default {
+            border: 2px solid var(--accent);
+        }
+
+        .address-badge {
+            position: absolute;
+            top: -10px;
+            right: 1rem;
+            padding: 0.25rem 0.75rem;
+            background: var(--accent);
+            color: var(--white);
+            font-family: var(--font-sans);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+        }
+
+        .address-card h4 {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .address-card p {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        .address-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--light-gray);
+        }
+
+        .address-actions a {
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            color: var(--accent);
+        }
+
+        .address-card.add-new {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed var(--light-gray);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .address-card.add-new:hover {
+            border-color: var(--accent);
+        }
+
+        .address-card.add-new i {
+            font-size: 2rem;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .address-card.add-new span {
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .profile-form h3 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            margin: 2rem 0 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--light-gray);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 1px solid var(--light-gray);
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .newsletter-preferences {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--light-gray);
+        }
+
+        .newsletter-preferences h3 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            border: none;
+            padding: 0;
+        }
+
+        .checkbox-option {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 0;
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        .checkbox-option input { width: auto; }
+
+        @media (max-width: 992px) {
+            .account-layout { grid-template-columns: 1fr; }
+            .account-nav {
+                display: flex;
+                overflow-x: auto;
+                position: static;
+                gap: 0.5rem;
+            }
+            .account-nav .nav-item { white-space: nowrap; }
+            .stats-cards { grid-template-columns: 1fr; }
+            .wishlist-grid { grid-template-columns: repeat(2, 1fr); }
+            .addresses-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .wishlist-grid { grid-template-columns: 1fr 1fr; }
+            .addresses-grid { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+        }
+    </style>
+
+    <script>
+        document.querySelectorAll('.account-nav .nav-item').forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = item.getAttribute('href').substring(1);
+                
+                document.querySelectorAll('.account-nav .nav-item').forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+                
+                document.querySelectorAll('.account-content section').forEach(section => {
+                    section.classList.add('hidden');
+                });
+                
+                document.getElementById(target).classList.remove('hidden');
+            });
+        });
+
+        document.querySelectorAll('.remove-wishlist').forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.closest('.wishlist-item').remove();
+            });
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
