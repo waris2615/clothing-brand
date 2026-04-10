@@ -1,0 +1,13 @@
+{
+  "id": "task-20260410-003308-302824",
+  "project": "clothing-brand",
+  "prompt": "Design a luxury hero section for ELEGANTE clothing brand with the following specifications:
+- Color palette: ivory (#F5F0E8), champagne (#D4AF37), charcoal (#2C2C2C)
+- Use Playfair Display font for headings, Cormorant Garamond for body
+- Include: full-width background image placeholder, animated floating effect on product showcase, elegant CTA button
+- Add mouse parallax effect on hero elements
+- Keep minimal and sophisticated",
+  "context": "",
+  "created_at": "2026-04-10T00:33:08+00:00",
+  "status": "pending"
+}

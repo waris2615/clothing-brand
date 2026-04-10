@@ -1,0 +1,46 @@
+{
+  "models": [
+    {
+      "title": "DeepSeek Coder",
+      "provider": "ollama",
+      "model": "deepseek-coder:1.3b",
+      "apiBase": "http://localhost:11434"
+    },
+    {
+      "title": "Llama 3.2",
+      "provider": "ollama",
+      "model": "llama3.2:1b",
+      "apiBase": "http://localhost:11434"
+    }
+  ],
+  "tabAutocompleteModel": {
+    "title": "DeepSeek Coder",
+    "provider": "ollama",
+    "model": "deepseek-coder:1.3b",
+    "apiBase": "http://localhost:11434"
+  },
+  "allowAnonymousAccess": true,
+  "mcpServers": {
+    "stitch": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-stitch"],
+      "env": {
+        "STITCH_API_KEY": "YOUR_API_KEY_HERE"
+      }
+    }
+  },
+  "skills": [
+    {
+      "id": "3d-effects",
+      "dir": "./skills/3d-effects"
+    },
+    {
+      "id": "luxury-design",
+      "dir": "./skills/luxury-design"
+    },
+    {
+      "id": "mcp-stitch",
+      "dir": "./skills/mcp-stitch"
+    }
+  ]
+}
